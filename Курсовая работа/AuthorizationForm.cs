@@ -29,8 +29,9 @@ namespace Курсовая_работа
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Hide();
-            //Application.Run(new MainForm());
+            Hide();
+            MainForm mainForm = new MainForm();
+            mainForm.ShowDialog();
         }
     }
 }
