@@ -32,6 +32,7 @@ namespace Курсовая_работа
             Hide();
             MainForm mainForm = new MainForm();
             mainForm.ShowDialog();
+            Close();
         }
     }
 }

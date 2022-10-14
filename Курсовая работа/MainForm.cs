@@ -16,5 +16,10 @@ namespace Курсовая_работа
         {
             InitializeComponent();
         }
+
+        private void завершитьСеансToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
