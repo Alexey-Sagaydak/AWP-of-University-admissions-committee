@@ -34,5 +34,11 @@ namespace Курсовая_работа
             mainForm.ShowDialog();
             Close();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Registration registrationForm = new Registration();
+            registrationForm.ShowDialog();
+        }
     }
 }
