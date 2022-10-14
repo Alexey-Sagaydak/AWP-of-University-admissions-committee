@@ -37,7 +37,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -68,6 +67,15 @@
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -81,11 +89,10 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
+            this.tabControl1.Location = new System.Drawing.Point(12, 34);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(843, 626);
+            this.tabControl1.Size = new System.Drawing.Size(843, 616);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -118,7 +125,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(835, 600);
+            this.tabPage1.Size = new System.Drawing.Size(835, 590);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Основные данные";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -179,6 +186,13 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.checkBox7);
+            this.tabPage2.Controls.Add(this.checkBox6);
+            this.tabPage2.Controls.Add(this.checkBox5);
+            this.tabPage2.Controls.Add(this.label16);
+            this.tabPage2.Controls.Add(this.comboBox5);
+            this.tabPage2.Controls.Add(this.label15);
+            this.tabPage2.Controls.Add(this.label1);
             this.tabPage2.Controls.Add(this.checkBox4);
             this.tabPage2.Controls.Add(this.checkBox3);
             this.tabPage2.Controls.Add(this.checkBox2);
@@ -194,19 +208,10 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(835, 600);
+            this.tabPage2.Size = new System.Drawing.Size(835, 590);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Направления, экзамены";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(755, 581);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Зачисление";
-            this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -343,7 +348,7 @@
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox10.Size = new System.Drawing.Size(788, 121);
+            this.textBox10.Size = new System.Drawing.Size(788, 109);
             this.textBox10.TabIndex = 23;
             // 
             // numericUpDown1
@@ -351,7 +356,7 @@
             this.numericUpDown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.numericUpDown1.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.numericUpDown1.Location = new System.Drawing.Point(376, 88);
+            this.numericUpDown1.Location = new System.Drawing.Point(370, 59);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(62, 29);
             this.numericUpDown1.TabIndex = 1;
@@ -377,7 +382,7 @@
             // 
             this.numericUpDown2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.numericUpDown2.Location = new System.Drawing.Point(376, 133);
+            this.numericUpDown2.Location = new System.Drawing.Point(370, 104);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(62, 29);
             this.numericUpDown2.TabIndex = 2;
@@ -386,7 +391,7 @@
             // 
             this.numericUpDown11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.numericUpDown11.Location = new System.Drawing.Point(376, 219);
+            this.numericUpDown11.Location = new System.Drawing.Point(370, 190);
             this.numericUpDown11.Name = "numericUpDown11";
             this.numericUpDown11.Size = new System.Drawing.Size(62, 29);
             this.numericUpDown11.TabIndex = 11;
@@ -395,7 +400,7 @@
             // 
             this.numericUpDown12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDown12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.numericUpDown12.Location = new System.Drawing.Point(376, 176);
+            this.numericUpDown12.Location = new System.Drawing.Point(370, 147);
             this.numericUpDown12.Name = "numericUpDown12";
             this.numericUpDown12.Size = new System.Drawing.Size(62, 29);
             this.numericUpDown12.TabIndex = 12;
@@ -416,7 +421,7 @@
             "География",
             "Биология",
             "Химия"});
-            this.comboBox1.Location = new System.Drawing.Point(37, 86);
+            this.comboBox1.Location = new System.Drawing.Point(31, 57);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(333, 33);
             this.comboBox1.TabIndex = 13;
@@ -456,7 +461,7 @@
             "География",
             "Биология",
             "Химия"});
-            this.comboBox2.Location = new System.Drawing.Point(37, 129);
+            this.comboBox2.Location = new System.Drawing.Point(31, 100);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(333, 33);
             this.comboBox2.TabIndex = 14;
@@ -479,7 +484,7 @@
             "География",
             "Биология",
             "Химия"});
-            this.comboBox3.Location = new System.Drawing.Point(37, 172);
+            this.comboBox3.Location = new System.Drawing.Point(31, 143);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(333, 33);
             this.comboBox3.TabIndex = 15;
@@ -501,7 +506,7 @@
             "География",
             "Биология",
             "Химия"});
-            this.comboBox4.Location = new System.Drawing.Point(37, 215);
+            this.comboBox4.Location = new System.Drawing.Point(31, 186);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(333, 33);
             this.comboBox4.TabIndex = 16;
@@ -513,7 +518,7 @@
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.checkBox1.Location = new System.Drawing.Point(16, 94);
+            this.checkBox1.Location = new System.Drawing.Point(10, 65);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 17;
@@ -525,7 +530,7 @@
             this.checkBox2.Checked = true;
             this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.checkBox2.Location = new System.Drawing.Point(16, 139);
+            this.checkBox2.Location = new System.Drawing.Point(10, 110);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(15, 14);
             this.checkBox2.TabIndex = 18;
@@ -537,7 +542,7 @@
             this.checkBox3.Checked = true;
             this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.checkBox3.Location = new System.Drawing.Point(16, 182);
+            this.checkBox3.Location = new System.Drawing.Point(10, 153);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(15, 14);
             this.checkBox3.TabIndex = 19;
@@ -547,17 +552,138 @@
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.checkBox4.Location = new System.Drawing.Point(16, 225);
+            this.checkBox4.Location = new System.Drawing.Point(10, 196);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(15, 14);
             this.checkBox4.TabIndex = 20;
             this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label1.Location = new System.Drawing.Point(6, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(267, 25);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "1. Результаты экзаменов";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label15.Location = new System.Drawing.Point(6, 243);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(288, 25);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "2. Направление подготовки";
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.DisplayMember = "Русский язык";
+            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Items.AddRange(new object[] {
+            "01.03.01 - Математика",
+            "01.03.02 - Прикладная математика и информатика",
+            "01.03.03 - Механика и математическое моделирование",
+            "01.03.04 - Прикладная математика",
+            "01.03.05 - Статистика",
+            "02.03.01 - Математика и компьютерные науки",
+            "02.03.02 - Фундаментальная информатика и информационные технологии",
+            "02.03.03 - Математическое обеспечение и администрирование информационных систем",
+            "03.03.01 - Прикладные математика и физика",
+            "03.03.02 - Физика",
+            "03.03.03 - Радиофизика",
+            "04.03.01 - Химия",
+            "04.03.02 - Химия, физика и механика материалов",
+            "09.03.04 - Программная инженерия",
+            "10.03.01 - Информационная безопасность",
+            "11.03.01 - Радиотехника",
+            "11.03.02 - Инфокоммуникационные технологии и системы связи",
+            "11.03.03 - Конструирование и технология электронных средств",
+            "11.03.04 - Электроника и наноэлектроника",
+            "12.03.01 - Приборостроение",
+            "12.03.02 - Оптотехника",
+            "12.03.03 - Фотоника и оптоинформатика",
+            "12.03.04 - Биотехнические системы и технологии",
+            "12.03.05 - Лазерная техника и лазерные технологии",
+            "13.03.01 - Теплоэнергетика и теплотехника",
+            "41.03.03 - Востоковедение и африканистика"});
+            this.comboBox5.Location = new System.Drawing.Point(31, 289);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(765, 33);
+            this.comboBox5.TabIndex = 23;
+            this.comboBox5.Text = "01.03.01 - Математика";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.label16.Location = new System.Drawing.Point(6, 352);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(150, 25);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "3. Документы";
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.checkBox5.Location = new System.Drawing.Point(11, 398);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(138, 29);
+            this.checkBox5.TabIndex = 25;
+            this.checkBox5.Text = "Заявление";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.checkBox6.Location = new System.Drawing.Point(11, 433);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(278, 29);
+            this.checkBox6.TabIndex = 26;
+            this.checkBox6.Text = "Согласие на зачисление";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))));
+            this.checkBox7.Location = new System.Drawing.Point(11, 468);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(134, 29);
+            this.checkBox7.TabIndex = 27;
+            this.checkBox7.Text = "Зачислен";
+            this.checkBox7.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.label17.Location = new System.Drawing.Point(12, 7);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(81, 24);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "Дело №";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.textBox4.Location = new System.Drawing.Point(95, 5);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(93, 27);
+            this.textBox4.TabIndex = 28;
             // 
             // Applicant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(851, 650);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.label17);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Applicant";
@@ -573,6 +699,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -586,7 +713,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label6;
@@ -617,5 +743,14 @@
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
