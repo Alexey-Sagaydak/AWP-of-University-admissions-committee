@@ -21,5 +21,18 @@ namespace Курсовая_работа
         {
             Close();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void бакалавриатспециалитетToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Hide();
+            Applicant applicantForm = new Applicant();
+            applicantForm.ShowDialog();
+            //Close();
+        }
     }
 }
