@@ -34,5 +34,10 @@ namespace Курсовая_работа
             applicantForm.ShowDialog();
             //Close();
         }
+
+        private void выйтиИОткрытьОкноАвторизацииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

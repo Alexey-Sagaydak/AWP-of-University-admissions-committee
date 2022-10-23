@@ -37,8 +37,38 @@ namespace Курсовая_работа
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Registration registrationForm = new Registration();
-            registrationForm.ShowDialog();
+            authorizationPanel.Visible = false;
+            registrationPanel.Visible = true;
+            this.Text = "Регистрация";
+            this.AcceptButton = registrationButton;
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void registrationPassTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            authorizationPanel.Visible = true;
+            registrationPanel.Visible = false;
+            this.Text = "Авторизация";
+            this.AcceptButton = enterButton;
+        }
+
+        private void AuthorizationForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Курсовая_работа
 {
-    public partial class Registration : Form
+    public partial class AboutForm : Form
     {
-        public Registration()
+        public AboutForm()
         {
             InitializeComponent();
         }

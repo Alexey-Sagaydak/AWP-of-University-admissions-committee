@@ -31,9 +31,9 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.сеансToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.завершитьСеансToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьАбитуриентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.бакалавриатспециалитетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,15 +60,9 @@
             // завершитьСеансToolStripMenuItem
             // 
             this.завершитьСеансToolStripMenuItem.Name = "завершитьСеансToolStripMenuItem";
-            this.завершитьСеансToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.завершитьСеансToolStripMenuItem.Text = "Выход";
+            this.завершитьСеансToolStripMenuItem.Size = new System.Drawing.Size(270, 22);
+            this.завершитьСеансToolStripMenuItem.Text = "Выйти из программы";
             this.завершитьСеансToolStripMenuItem.Click += new System.EventHandler(this.завершитьСеансToolStripMenuItem_Click);
-            // 
-            // оПрограммеToolStripMenuItem
-            // 
-            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
-            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
-            this.оПрограммеToolStripMenuItem.Text = "О программе";
             // 
             // добавитьАбитуриентаToolStripMenuItem
             // 
@@ -84,6 +78,12 @@
             this.бакалавриатспециалитетToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
             this.бакалавриатспециалитетToolStripMenuItem.Text = "Бакалавриат/специалитет";
             this.бакалавриатспециалитетToolStripMenuItem.Click += new System.EventHandler(this.бакалавриатспециалитетToolStripMenuItem_Click);
+            // 
+            // оПрограммеToolStripMenuItem
+            // 
+            this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
+            this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
+            this.оПрограммеToolStripMenuItem.Text = "О программе";
             // 
             // MainForm
             // 
