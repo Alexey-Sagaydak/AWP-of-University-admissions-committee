@@ -55,8 +55,43 @@ namespace Курсовая_работа
 
         private void добавитьАбитуриентаToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!applicantPanel.Visible)
+            {
+                ApplicantTabControl.SelectedIndex = 0;
+                surnameTextBox.Text = "";
+                nameTextBox.Text = "";
+                middleNameTextBox.Text = "";
+                caseNumberTextBox.Text = "";
+                passportNumberMaskedTextBox.Text = "";
+                passportSeriesMaskedTextBox.Text = "";
+                diplomaNumberMaskedTextBox.Text = "";
+                diplomaSeriesMaskedTextBox.Text = "";
+                addressTextBox.Text = "";
+                additionalTextBox.Text = "";
+                organizationTextBox.Text = "";
+                dateTimePicker.Text = "01.01.2005";
+                subject1CheckBox.Checked = true;
+                subject2CheckBox.Checked = true;
+                subject3CheckBox.Checked = true;
+                subject4CheckBox.Checked = false;
+                subject1ComboBox.SelectedIndex = 0;
+                subject2ComboBox.SelectedIndex = 1;
+                subject3ComboBox.SelectedIndex = 2;
+                subject4ComboBox.SelectedIndex = 4;
+                subject1numericUpDown.Value = 0;
+                subject2numericUpDown.Value = 0;
+                subject2numericUpDown.Value = 0;
+                subject3numericUpDown.Value = 0;
+                subject4numericUpDown.Value = 0;
+                achivementsNumericUpDown.Value = 0;
+                areasComboBox.SelectedIndex = 0;
+                applicationCheckBox.Checked = false;
+                agreementCheckBox.Checked = false;
+                enrolledCheckBox.Checked = false;
+            }
             applicantPanel.Visible = true;
             dataBasePanel.Visible = false;
+            
         }
 
         private void списокАбитуриентовToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,6 +111,35 @@ namespace Курсовая_работа
         }
 
         private void addressTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void applicantPanel_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            subject1ComboBox.SelectedIndex = 0;
+            subject2ComboBox.SelectedIndex = 1;
+            subject3ComboBox.SelectedIndex = 2;
+            subject4ComboBox.SelectedIndex = 4;
+            areasComboBox.SelectedIndex = 0;
+        }
+
+        private void areasComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
         {
 
         }
