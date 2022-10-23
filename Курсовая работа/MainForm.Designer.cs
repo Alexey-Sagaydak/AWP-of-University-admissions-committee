@@ -35,6 +35,9 @@
             this.добавитьАбитуриентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.бакалавриатспециалитетToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.отчетыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.списокАбитуриентовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.mainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,7 +45,9 @@
             // 
             this.mainMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.сеансToolStripMenuItem,
+            this.списокАбитуриентовToolStripMenuItem,
             this.добавитьАбитуриентаToolStripMenuItem,
+            this.отчетыToolStripMenuItem,
             this.оПрограммеToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
@@ -87,13 +92,37 @@
             this.оПрограммеToolStripMenuItem.Text = "О программе";
             this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
+            // отчетыToolStripMenuItem
+            // 
+            this.отчетыToolStripMenuItem.Name = "отчетыToolStripMenuItem";
+            this.отчетыToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.отчетыToolStripMenuItem.Text = "Отчеты";
+            // 
+            // списокАбитуриентовToolStripMenuItem
+            // 
+            this.списокАбитуриентовToolStripMenuItem.Name = "списокАбитуриентовToolStripMenuItem";
+            this.списокАбитуриентовToolStripMenuItem.Size = new System.Drawing.Size(139, 20);
+            this.списокАбитуриентовToolStripMenuItem.Text = "Список абитуриентов";
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.AutoScroll = true;
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel1.Location = new System.Drawing.Point(12, 27);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1153, 588);
+            this.panel1.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1177, 627);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.mainMenuStrip);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenuStrip;
             this.Name = "MainForm";
@@ -114,5 +143,8 @@
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem добавитьАбитуриентаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem бакалавриатспециалитетToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem отчетыToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem списокАбитуриентовToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }

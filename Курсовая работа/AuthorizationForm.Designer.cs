@@ -70,7 +70,7 @@
             this.enterButton.Location = new System.Drawing.Point(174, 325);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(136, 41);
-            this.enterButton.TabIndex = 1;
+            this.enterButton.TabIndex = 7;
             this.enterButton.Text = "Войти";
             this.enterButton.UseVisualStyleBackColor = true;
             this.enterButton.Click += new System.EventHandler(this.button1_Click);
@@ -103,7 +103,7 @@
             this.registrationLinkLabel.Location = new System.Drawing.Point(386, 416);
             this.registrationLinkLabel.Name = "registrationLinkLabel";
             this.registrationLinkLabel.Size = new System.Drawing.Size(91, 16);
-            this.registrationLinkLabel.TabIndex = 4;
+            this.registrationLinkLabel.TabIndex = 8;
             this.registrationLinkLabel.TabStop = true;
             this.registrationLinkLabel.Text = "Регистрация";
             this.registrationLinkLabel.VisitedLinkColor = System.Drawing.Color.Blue;
@@ -115,7 +115,7 @@
             this.loginTextBox.Location = new System.Drawing.Point(66, 159);
             this.loginTextBox.Name = "loginTextBox";
             this.loginTextBox.Size = new System.Drawing.Size(349, 32);
-            this.loginTextBox.TabIndex = 5;
+            this.loginTextBox.TabIndex = 1;
             // 
             // passwordTextBox
             // 
@@ -160,7 +160,7 @@
             this.registrationButton.Location = new System.Drawing.Point(138, 362);
             this.registrationButton.Name = "registrationButton";
             this.registrationButton.Size = new System.Drawing.Size(212, 41);
-            this.registrationButton.TabIndex = 8;
+            this.registrationButton.TabIndex = 16;
             this.registrationButton.Text = "Зарегистрироваться";
             this.registrationButton.UseVisualStyleBackColor = true;
             // 
@@ -226,7 +226,6 @@
             this.registrationPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.registrationPanel.Controls.Add(this.backLinkLabel);
             this.registrationPanel.Controls.Add(this.registrationLabel);
             this.registrationPanel.Controls.Add(this.registrationButton);
             this.registrationPanel.Controls.Add(this.codeMaskedTextBox);
@@ -235,6 +234,7 @@
             this.registrationPanel.Controls.Add(this.registrationPassTextBox);
             this.registrationPanel.Controls.Add(this.loginPassTextBox);
             this.registrationPanel.Controls.Add(this.registrationPassLabel);
+            this.registrationPanel.Controls.Add(this.backLinkLabel);
             this.registrationPanel.Location = new System.Drawing.Point(11, 7);
             this.registrationPanel.Name = "registrationPanel";
             this.registrationPanel.Size = new System.Drawing.Size(479, 435);
