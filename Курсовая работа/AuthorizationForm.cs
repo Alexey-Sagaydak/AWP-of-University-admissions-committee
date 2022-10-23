@@ -70,5 +70,13 @@ namespace Курсовая_работа
         {
 
         }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            authorizationPanel.Visible = true;
+            registrationPanel.Visible = false;
+            this.Text = "Авторизация";
+            this.AcceptButton = enterButton;
+        }
     }
 }

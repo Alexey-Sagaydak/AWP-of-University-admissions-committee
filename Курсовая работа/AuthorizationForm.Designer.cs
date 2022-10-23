@@ -47,7 +47,7 @@
             this.loginPassTextBox = new System.Windows.Forms.TextBox();
             this.registrationPassLabel = new System.Windows.Forms.Label();
             this.registrationPanel = new System.Windows.Forms.Panel();
-            this.backButton = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.authorizationPanel.SuspendLayout();
             this.registrationPanel.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +68,7 @@
             this.enterButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.enterButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.enterButton.Font = new System.Drawing.Font("Arial", 17.25F);
-            this.enterButton.Location = new System.Drawing.Point(163, 324);
+            this.enterButton.Location = new System.Drawing.Point(168, 327);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(136, 41);
             this.enterButton.TabIndex = 1;
@@ -157,7 +157,7 @@
             this.registrationButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.registrationButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.registrationButton.Font = new System.Drawing.Font("Arial", 15.25F);
-            this.registrationButton.Location = new System.Drawing.Point(132, 359);
+            this.registrationButton.Location = new System.Drawing.Point(138, 362);
             this.registrationButton.Name = "registrationButton";
             this.registrationButton.Size = new System.Drawing.Size(212, 41);
             this.registrationButton.TabIndex = 8;
@@ -167,7 +167,7 @@
             // codeMaskedTextBox
             // 
             this.codeMaskedTextBox.Font = new System.Drawing.Font("Arial", 16.25F);
-            this.codeMaskedTextBox.Location = new System.Drawing.Point(61, 304);
+            this.codeMaskedTextBox.Location = new System.Drawing.Point(67, 307);
             this.codeMaskedTextBox.Mask = "0000-0000-0000-0000-0000-0000";
             this.codeMaskedTextBox.Name = "codeMaskedTextBox";
             this.codeMaskedTextBox.Size = new System.Drawing.Size(349, 32);
@@ -188,7 +188,7 @@
             // 
             this.codeLabel.AutoSize = true;
             this.codeLabel.Font = new System.Drawing.Font("Arial", 16.25F);
-            this.codeLabel.Location = new System.Drawing.Point(62, 273);
+            this.codeLabel.Location = new System.Drawing.Point(68, 276);
             this.codeLabel.Name = "codeLabel";
             this.codeLabel.Size = new System.Drawing.Size(139, 25);
             this.codeLabel.TabIndex = 14;
@@ -198,7 +198,7 @@
             // 
             this.loginPassLabel.AutoSize = true;
             this.loginPassLabel.Font = new System.Drawing.Font("Arial", 16.25F);
-            this.loginPassLabel.Location = new System.Drawing.Point(56, 131);
+            this.loginPassLabel.Location = new System.Drawing.Point(62, 134);
             this.loginPassLabel.Name = "loginPassLabel";
             this.loginPassLabel.Size = new System.Drawing.Size(70, 25);
             this.loginPassLabel.TabIndex = 9;
@@ -207,7 +207,7 @@
             // registrationPassTextBox
             // 
             this.registrationPassTextBox.Font = new System.Drawing.Font("Arial", 16.25F);
-            this.registrationPassTextBox.Location = new System.Drawing.Point(61, 230);
+            this.registrationPassTextBox.Location = new System.Drawing.Point(67, 233);
             this.registrationPassTextBox.Name = "registrationPassTextBox";
             this.registrationPassTextBox.PasswordChar = '*';
             this.registrationPassTextBox.Size = new System.Drawing.Size(349, 32);
@@ -217,7 +217,7 @@
             // loginPassTextBox
             // 
             this.loginPassTextBox.Font = new System.Drawing.Font("Arial", 16.25F);
-            this.loginPassTextBox.Location = new System.Drawing.Point(61, 159);
+            this.loginPassTextBox.Location = new System.Drawing.Point(67, 162);
             this.loginPassTextBox.Name = "loginPassTextBox";
             this.loginPassTextBox.Size = new System.Drawing.Size(349, 32);
             this.loginPassTextBox.TabIndex = 11;
@@ -226,7 +226,7 @@
             // 
             this.registrationPassLabel.AutoSize = true;
             this.registrationPassLabel.Font = new System.Drawing.Font("Arial", 16.25F);
-            this.registrationPassLabel.Location = new System.Drawing.Point(56, 202);
+            this.registrationPassLabel.Location = new System.Drawing.Point(62, 205);
             this.registrationPassLabel.Name = "registrationPassLabel";
             this.registrationPassLabel.Size = new System.Drawing.Size(90, 25);
             this.registrationPassLabel.TabIndex = 10;
@@ -237,7 +237,7 @@
             this.registrationPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.registrationPanel.Controls.Add(this.backButton);
+            this.registrationPanel.Controls.Add(this.linkLabel1);
             this.registrationPanel.Controls.Add(this.registrationLabel1);
             this.registrationPanel.Controls.Add(this.registrationButton);
             this.registrationPanel.Controls.Add(this.codeMaskedTextBox);
@@ -253,24 +253,25 @@
             this.registrationPanel.TabIndex = 16;
             this.registrationPanel.Visible = false;
             // 
-            // backButton
+            // linkLabel1
             // 
-            this.backButton.Font = new System.Drawing.Font("Arial", 10.25F);
-            this.backButton.Location = new System.Drawing.Point(0, 0);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(58, 24);
-            this.backButton.TabIndex = 16;
-            this.backButton.Text = "Назад";
-            this.backButton.UseVisualStyleBackColor = true;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Arial", 10.25F);
+            this.linkLabel1.Location = new System.Drawing.Point(1, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(46, 16);
+            this.linkLabel1.TabIndex = 17;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Назад";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 454);
-            this.Controls.Add(this.authorizationPanel);
             this.Controls.Add(this.registrationPanel);
+            this.Controls.Add(this.authorizationPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -306,7 +307,7 @@
         private System.Windows.Forms.TextBox loginPassTextBox;
         private System.Windows.Forms.Label registrationPassLabel;
         private System.Windows.Forms.Panel registrationPanel;
-        private System.Windows.Forms.Button backButton;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
