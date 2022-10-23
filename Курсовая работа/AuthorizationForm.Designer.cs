@@ -37,10 +37,9 @@
             this.loginTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.authorizationPanel = new System.Windows.Forms.Panel();
-            this.registrationLabel1 = new System.Windows.Forms.Label();
+            this.registrationLabel = new System.Windows.Forms.Label();
             this.registrationButton = new System.Windows.Forms.Button();
             this.codeMaskedTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.registrationLabel2 = new System.Windows.Forms.Label();
             this.codeLabel = new System.Windows.Forms.Label();
             this.loginPassLabel = new System.Windows.Forms.Label();
             this.registrationPassTextBox = new System.Windows.Forms.TextBox();
@@ -68,7 +67,7 @@
             this.enterButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.enterButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.enterButton.Font = new System.Drawing.Font("Arial", 17.25F);
-            this.enterButton.Location = new System.Drawing.Point(168, 327);
+            this.enterButton.Location = new System.Drawing.Point(174, 325);
             this.enterButton.Name = "enterButton";
             this.enterButton.Size = new System.Drawing.Size(136, 41);
             this.enterButton.TabIndex = 1;
@@ -120,11 +119,11 @@
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Font = new System.Drawing.Font("Arial", 16.25F);
+            this.passwordTextBox.Font = new System.Drawing.Font("Arial", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.passwordTextBox.Location = new System.Drawing.Point(66, 266);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(349, 32);
+            this.passwordTextBox.Size = new System.Drawing.Size(349, 34);
             this.passwordTextBox.TabIndex = 6;
             // 
             // authorizationPanel
@@ -141,16 +140,17 @@
             this.authorizationPanel.Size = new System.Drawing.Size(477, 432);
             this.authorizationPanel.TabIndex = 7;
             // 
-            // registrationLabel1
+            // registrationLabel
             // 
-            this.registrationLabel1.AutoSize = true;
-            this.registrationLabel1.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.registrationLabel1.Location = new System.Drawing.Point(60, 18);
-            this.registrationLabel1.Name = "registrationLabel1";
-            this.registrationLabel1.Size = new System.Drawing.Size(381, 42);
-            this.registrationLabel1.TabIndex = 7;
-            this.registrationLabel1.Text = "Регистрация сотрудника";
-            this.registrationLabel1.Click += new System.EventHandler(this.label1_Click_1);
+            this.registrationLabel.AutoSize = true;
+            this.registrationLabel.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.registrationLabel.Location = new System.Drawing.Point(60, 24);
+            this.registrationLabel.Name = "registrationLabel";
+            this.registrationLabel.Size = new System.Drawing.Size(381, 84);
+            this.registrationLabel.TabIndex = 7;
+            this.registrationLabel.Text = "Регистрация сотрудника\r\nприемной комиссии";
+            this.registrationLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.registrationLabel.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // registrationButton
             // 
@@ -172,17 +172,6 @@
             this.codeMaskedTextBox.Name = "codeMaskedTextBox";
             this.codeMaskedTextBox.Size = new System.Drawing.Size(349, 32);
             this.codeMaskedTextBox.TabIndex = 15;
-            // 
-            // registrationLabel2
-            // 
-            this.registrationLabel2.AutoSize = true;
-            this.registrationLabel2.Font = new System.Drawing.Font("Calibri", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.registrationLabel2.Location = new System.Drawing.Point(91, 60);
-            this.registrationLabel2.Name = "registrationLabel2";
-            this.registrationLabel2.Size = new System.Drawing.Size(323, 42);
-            this.registrationLabel2.TabIndex = 13;
-            this.registrationLabel2.Text = "приемной комиссии";
-            this.registrationLabel2.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // codeLabel
             // 
@@ -238,10 +227,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.registrationPanel.Controls.Add(this.linkLabel1);
-            this.registrationPanel.Controls.Add(this.registrationLabel1);
+            this.registrationPanel.Controls.Add(this.registrationLabel);
             this.registrationPanel.Controls.Add(this.registrationButton);
             this.registrationPanel.Controls.Add(this.codeMaskedTextBox);
-            this.registrationPanel.Controls.Add(this.registrationLabel2);
             this.registrationPanel.Controls.Add(this.codeLabel);
             this.registrationPanel.Controls.Add(this.loginPassLabel);
             this.registrationPanel.Controls.Add(this.registrationPassTextBox);
@@ -270,8 +258,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(502, 454);
-            this.Controls.Add(this.registrationPanel);
             this.Controls.Add(this.authorizationPanel);
+            this.Controls.Add(this.registrationPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -297,10 +285,9 @@
         private System.Windows.Forms.TextBox loginTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Panel authorizationPanel;
-        private System.Windows.Forms.Label registrationLabel1;
+        private System.Windows.Forms.Label registrationLabel;
         private System.Windows.Forms.Button registrationButton;
         private System.Windows.Forms.MaskedTextBox codeMaskedTextBox;
-        private System.Windows.Forms.Label registrationLabel2;
         private System.Windows.Forms.Label codeLabel;
         private System.Windows.Forms.Label loginPassLabel;
         private System.Windows.Forms.TextBox registrationPassTextBox;
