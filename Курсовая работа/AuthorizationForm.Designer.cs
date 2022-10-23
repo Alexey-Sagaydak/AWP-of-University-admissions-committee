@@ -46,7 +46,7 @@
             this.loginPassTextBox = new System.Windows.Forms.TextBox();
             this.registrationPassLabel = new System.Windows.Forms.Label();
             this.registrationPanel = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.backLinkLabel = new System.Windows.Forms.LinkLabel();
             this.authorizationPanel.SuspendLayout();
             this.registrationPanel.SuspendLayout();
             this.SuspendLayout();
@@ -226,7 +226,7 @@
             this.registrationPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.registrationPanel.Controls.Add(this.linkLabel1);
+            this.registrationPanel.Controls.Add(this.backLinkLabel);
             this.registrationPanel.Controls.Add(this.registrationLabel);
             this.registrationPanel.Controls.Add(this.registrationButton);
             this.registrationPanel.Controls.Add(this.codeMaskedTextBox);
@@ -241,17 +241,17 @@
             this.registrationPanel.TabIndex = 16;
             this.registrationPanel.Visible = false;
             // 
-            // linkLabel1
+            // backLinkLabel
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Arial", 10.25F);
-            this.linkLabel1.Location = new System.Drawing.Point(1, 0);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(46, 16);
-            this.linkLabel1.TabIndex = 17;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Назад";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
+            this.backLinkLabel.AutoSize = true;
+            this.backLinkLabel.Font = new System.Drawing.Font("Arial", 10.25F);
+            this.backLinkLabel.Location = new System.Drawing.Point(1, 0);
+            this.backLinkLabel.Name = "backLinkLabel";
+            this.backLinkLabel.Size = new System.Drawing.Size(46, 16);
+            this.backLinkLabel.TabIndex = 17;
+            this.backLinkLabel.TabStop = true;
+            this.backLinkLabel.Text = "Назад";
+            this.backLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
             // 
             // AuthorizationForm
             // 
@@ -294,7 +294,7 @@
         private System.Windows.Forms.TextBox loginPassTextBox;
         private System.Windows.Forms.Label registrationPassLabel;
         private System.Windows.Forms.Panel registrationPanel;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel backLinkLabel;
     }
 }
 
