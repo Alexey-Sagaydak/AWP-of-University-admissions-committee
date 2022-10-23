@@ -29,9 +29,11 @@ namespace Курсовая_работа
 
         private void бакалавриатспециалитетToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            applicantPanel.Visible = true;
+            dataBasePanel.Visible = false;
             //Hide();
-            Applicant applicantForm = new Applicant();
-            applicantForm.ShowDialog();
+            //Applicant applicantForm = new Applicant();
+            //applicantForm.ShowDialog();
             //Close();
         }
 
@@ -44,6 +46,38 @@ namespace Курсовая_работа
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void добавитьАбитуриентаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            applicantPanel.Visible = true;
+            dataBasePanel.Visible = false;
+        }
+
+        private void списокАбитуриентовToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            applicantPanel.Visible = false;
+            dataBasePanel.Visible = true;
+        }
+
+        private void subject1ComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void addressTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
