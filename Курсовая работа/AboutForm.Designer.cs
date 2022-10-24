@@ -30,10 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutForm));
             this.aboutPanel = new System.Windows.Forms.Panel();
-            this.netiPictureBox = new System.Windows.Forms.PictureBox();
-            this.infoLabel = new System.Windows.Forms.Label();
-            this.titleLabel = new System.Windows.Forms.Label();
             this.dataLabel = new System.Windows.Forms.Label();
+            this.titleLabel = new System.Windows.Forms.Label();
+            this.infoLabel = new System.Windows.Forms.Label();
+            this.netiPictureBox = new System.Windows.Forms.PictureBox();
             this.aboutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.netiPictureBox)).BeginInit();
             this.SuspendLayout();
@@ -49,17 +49,27 @@
             this.aboutPanel.Size = new System.Drawing.Size(416, 376);
             this.aboutPanel.TabIndex = 0;
             // 
-            // netiPictureBox
+            // dataLabel
             // 
-            this.netiPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("netiPictureBox.Image")));
-            this.netiPictureBox.InitialImage = null;
-            this.netiPictureBox.Location = new System.Drawing.Point(3, 3);
-            this.netiPictureBox.Name = "netiPictureBox";
-            this.netiPictureBox.Size = new System.Drawing.Size(413, 79);
-            this.netiPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.netiPictureBox.TabIndex = 0;
-            this.netiPictureBox.TabStop = false;
-            this.netiPictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.dataLabel.AutoSize = true;
+            this.dataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dataLabel.Location = new System.Drawing.Point(158, 333);
+            this.dataLabel.Name = "dataLabel";
+            this.dataLabel.Size = new System.Drawing.Size(117, 38);
+            this.dataLabel.TabIndex = 3;
+            this.dataLabel.Text = "Новосибирск\r\n2022";
+            this.dataLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // titleLabel
+            // 
+            this.titleLabel.AutoSize = true;
+            this.titleLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.titleLabel.Location = new System.Drawing.Point(55, 99);
+            this.titleLabel.Name = "titleLabel";
+            this.titleLabel.Size = new System.Drawing.Size(309, 38);
+            this.titleLabel.TabIndex = 2;
+            this.titleLabel.Text = "Курсовая работа\r\nпо дисциплине \"Программирование\"";
+            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // infoLabel
             // 
@@ -74,27 +84,17 @@
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.infoLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // titleLabel
+            // netiPictureBox
             // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.titleLabel.Location = new System.Drawing.Point(55, 99);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(309, 38);
-            this.titleLabel.TabIndex = 2;
-            this.titleLabel.Text = "Курсовая работа\r\nпо дисциплине \"Программирование\"";
-            this.titleLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // dataLabel
-            // 
-            this.dataLabel.AutoSize = true;
-            this.dataLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dataLabel.Location = new System.Drawing.Point(158, 333);
-            this.dataLabel.Name = "dataLabel";
-            this.dataLabel.Size = new System.Drawing.Size(117, 38);
-            this.dataLabel.TabIndex = 3;
-            this.dataLabel.Text = "Новосибирск\r\n2022";
-            this.dataLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.netiPictureBox.Image = global::Курсовая_работа.Properties.Resources.logo1;
+            this.netiPictureBox.InitialImage = null;
+            this.netiPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.netiPictureBox.Name = "netiPictureBox";
+            this.netiPictureBox.Size = new System.Drawing.Size(413, 79);
+            this.netiPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.netiPictureBox.TabIndex = 0;
+            this.netiPictureBox.TabStop = false;
+            this.netiPictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AboutForm
             // 

@@ -579,7 +579,7 @@
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.additionalTextBox.Size = new System.Drawing.Size(996, 200);
+            this.additionalTextBox.Size = new System.Drawing.Size(945, 200);
             this.additionalTextBox.TabIndex = 99;
             // 
             // additionalLabel
@@ -609,7 +609,7 @@
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.organizationTextBox.Location = new System.Drawing.Point(23, 326);
             this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(1000, 29);
+            this.organizationTextBox.Size = new System.Drawing.Size(949, 29);
             this.organizationTextBox.TabIndex = 98;
             // 
             // addressLabel
@@ -629,7 +629,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.addressTextBox.Location = new System.Drawing.Point(20, 149);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(1001, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(950, 29);
             this.addressTextBox.TabIndex = 95;
             this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
             // 
@@ -1024,7 +1024,7 @@
             "41.03.03 - Востоковедение и африканистика"});
             this.areasComboBox.Location = new System.Drawing.Point(31, 354);
             this.areasComboBox.Name = "areasComboBox";
-            this.areasComboBox.Size = new System.Drawing.Size(731, 30);
+            this.areasComboBox.Size = new System.Drawing.Size(680, 30);
             this.areasComboBox.TabIndex = 19;
             this.areasComboBox.SelectedIndexChanged += new System.EventHandler(this.areasComboBox_SelectedIndexChanged);
             // 
@@ -1055,8 +1055,8 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1139, 664);
             this.Controls.Add(this.mainMenuStrip);
-            this.Controls.Add(this.applicantPanel);
             this.Controls.Add(this.dataBasePanel);
+            this.Controls.Add(this.applicantPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenuStrip;
             this.MinimumSize = new System.Drawing.Size(400, 400);
