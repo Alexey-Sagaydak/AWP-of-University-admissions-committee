@@ -8,9 +8,10 @@ namespace Курсовая_работа
 {
     public abstract class Human
     {
-        private string name { get; set; }
-        private string surname { get; set; }
-        private string middleName { get; set; }
+        private string name;
+        private string surname;
+        private string middleName;
+        DateTime DateOfBirth { get; set; }
         public string Name
         {
             get { return name; }
@@ -41,7 +42,6 @@ namespace Курсовая_работа
                 middleName = value;
             }
         }
-        DateTime DateOfBirth { get; set; }
         public Human (string _name, string _surname, string _middleName, DateTime _dateOfBirth)
         {
             Name= _name;

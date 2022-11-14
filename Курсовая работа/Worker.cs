@@ -8,7 +8,6 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-// hash https://learn.microsoft.com/ru-ru/dotnet/standard/security/ensuring-data-integrity-with-hash-codes
 namespace Курсовая_работа
 {
     public enum Status : byte
@@ -20,14 +19,20 @@ namespace Курсовая_работа
     };
     public class Worker : Human
     {
-        public string login { get; set; }
-        public string password { get; set; }
+        public string login;
+        public string password;
         public Status Status { get; set; }
-        private byte[] Hash;
+        public byte[] Hash { get; private set; }
 
         private Regex hasNumber = new Regex(@"[0-9]+");
         private Regex hasUpperChar = new Regex(@"[A-Z]+");
         private Regex hasMinimum6Chars = new Regex(@".{6,}");
+
+        [Description("Сравнивает хэш паролей")]
+        public bool CompareHashes(byte[] hash2)
+        {
+            return Hash.SequenceEqual(hash2);
+        }
 
         private void HashPassword()
         {
@@ -67,8 +72,6 @@ namespace Курсовая_работа
                 HashPassword();
             }
         }
-        
-        
         public Worker(string _name, string _surname, string _middleName, DateTime _dateOfBirth, string _login, string _password, Status _status) : base (_name, _surname, _middleName, _dateOfBirth)
         {
             Login = _login;

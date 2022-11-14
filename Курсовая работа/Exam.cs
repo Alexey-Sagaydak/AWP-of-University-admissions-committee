@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Курсовая_работа;
 
 namespace Курсовая_работа
 {
@@ -40,7 +41,7 @@ namespace Курсовая_работа
             set
             {
                 if (value < 0 || value > 100)
-                    throw new ArgumentOutOfRangeException("Количество баллов должно быть в диапазоне от 1 до 100");
+                    throw new ArgumentException("Количество баллов должно быть в диапазоне от 1 до 100");
                 points = value;
             }
         }
