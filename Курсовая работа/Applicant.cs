@@ -39,15 +39,41 @@ namespace Курсовая_работа
         [Description("41.03.03 - Востоковедение и африканистика")]
         OrientalAndAfricanStudies = 9
     };
-    public class Applicant// : Human
+    public class Applicant : Human
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public Passport passport;
         public SchoolDiploma schoolDiploma;
         public List<Exam> exams;
-        public int achivements;
+        private int achivements;
         public string additionalInformation;
         public DocumentsStatus documentsStatus;
         public FieldOfStudy fieldOfStudy;
+
+        public int Achivements
+        {
+            get { return achivements; }
+            set
+            {
+                if (value < 0 || value > 10)
+                    throw new ArgumentException("Количество баллов за индивидуальные достижения должно быть в диапазоне от 1 до 10");
+                achivements = value;
+            }
+        }
+
+        public Applicant(int _ID, string _name, string _surname, string _middleName, DateTime _dateOfBirth,
+            Passport _passport, SchoolDiploma _schoolDiploma, List<Exam> _exams, int _achivements,
+            string _additionalInformation, DocumentsStatus _documentsStatus, FieldOfStudy _fieldOfStudy) :
+            base(_name, _surname, _middleName, _dateOfBirth)
+        {
+            ID = _ID;
+            passport = _passport;
+            schoolDiploma = _schoolDiploma;
+            exams = _exams;
+            Achivements = _achivements;
+            additionalInformation = _additionalInformation;
+            documentsStatus = _documentsStatus;
+            fieldOfStudy = _fieldOfStudy;
+        }
     }
 }

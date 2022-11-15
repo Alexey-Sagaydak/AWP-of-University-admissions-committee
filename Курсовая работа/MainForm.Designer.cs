@@ -35,11 +35,8 @@
             this.списокАбитуриентовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьАбитуриентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьСотрудникаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.работникToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.администраторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataBasePanel = new System.Windows.Forms.Panel();
-            this.dataBaseLabel = new System.Windows.Forms.Label();
             this.applicantPanel = new System.Windows.Forms.Panel();
             this.topTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.nameTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -97,6 +94,8 @@
             this.areasComboBox = new System.Windows.Forms.ComboBox();
             this.areasLabel = new System.Windows.Forms.Label();
             this.resultsLabel = new System.Windows.Forms.Label();
+            this.applicantsListBox = new System.Windows.Forms.ListBox();
+            this.applicantsPropertyGrid = new System.Windows.Forms.PropertyGrid();
             this.mainMenuStrip.SuspendLayout();
             this.dataBasePanel.SuspendLayout();
             this.applicantPanel.SuspendLayout();
@@ -160,24 +159,10 @@
             // 
             // добавитьСотрудникаToolStripMenuItem
             // 
-            this.добавитьСотрудникаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.работникToolStripMenuItem,
-            this.администраторToolStripMenuItem});
             this.добавитьСотрудникаToolStripMenuItem.Name = "добавитьСотрудникаToolStripMenuItem";
             this.добавитьСотрудникаToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
             this.добавитьСотрудникаToolStripMenuItem.Text = "Добавить сотрудника";
-            // 
-            // работникToolStripMenuItem
-            // 
-            this.работникToolStripMenuItem.Name = "работникToolStripMenuItem";
-            this.работникToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.работникToolStripMenuItem.Text = "Работник";
-            // 
-            // администраторToolStripMenuItem
-            // 
-            this.администраторToolStripMenuItem.Name = "администраторToolStripMenuItem";
-            this.администраторToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
-            this.администраторToolStripMenuItem.Text = "Администратор";
+            this.добавитьСотрудникаToolStripMenuItem.Click += new System.EventHandler(this.добавитьСотрудникаToolStripMenuItem_Click);
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -193,22 +178,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataBasePanel.AutoScroll = true;
             this.dataBasePanel.BackColor = System.Drawing.SystemColors.Control;
-            this.dataBasePanel.Controls.Add(this.dataBaseLabel);
+            this.dataBasePanel.Controls.Add(this.applicantsPropertyGrid);
+            this.dataBasePanel.Controls.Add(this.applicantsListBox);
             this.dataBasePanel.Location = new System.Drawing.Point(15, 27);
             this.dataBasePanel.Name = "dataBasePanel";
             this.dataBasePanel.Size = new System.Drawing.Size(1124, 625);
             this.dataBasePanel.TabIndex = 1;
-            // 
-            // dataBaseLabel
-            // 
-            this.dataBaseLabel.BackColor = System.Drawing.SystemColors.Control;
-            this.dataBaseLabel.Font = new System.Drawing.Font("Arial", 40.25F);
-            this.dataBaseLabel.Location = new System.Drawing.Point(310, 236);
-            this.dataBaseLabel.Name = "dataBaseLabel";
-            this.dataBaseLabel.Size = new System.Drawing.Size(504, 61);
-            this.dataBaseLabel.TabIndex = 0;
-            this.dataBaseLabel.Text = "База абитуриентов";
-            this.dataBaseLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // applicantPanel
             // 
@@ -1057,6 +1032,22 @@
             this.resultsLabel.TabIndex = 203;
             this.resultsLabel.Text = "1. Результаты экзаменов и индивидульные достижения";
             // 
+            // applicantsListBox
+            // 
+            this.applicantsListBox.FormattingEnabled = true;
+            this.applicantsListBox.Location = new System.Drawing.Point(3, 18);
+            this.applicantsListBox.Name = "applicantsListBox";
+            this.applicantsListBox.Size = new System.Drawing.Size(368, 498);
+            this.applicantsListBox.TabIndex = 1;
+            // 
+            // applicantsPropertyGrid
+            // 
+            this.applicantsPropertyGrid.HelpVisible = false;
+            this.applicantsPropertyGrid.Location = new System.Drawing.Point(377, 18);
+            this.applicantsPropertyGrid.Name = "applicantsPropertyGrid";
+            this.applicantsPropertyGrid.Size = new System.Drawing.Size(735, 498);
+            this.applicantsPropertyGrid.TabIndex = 2;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1110,7 +1101,6 @@
         private System.Windows.Forms.ToolStripMenuItem добавитьАбитуриентаToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem списокАбитуриентовToolStripMenuItem;
         private System.Windows.Forms.Panel dataBasePanel;
-        private System.Windows.Forms.Label dataBaseLabel;
         private System.Windows.Forms.Panel applicantPanel;
         private System.Windows.Forms.TextBox caseNumberTextBox;
         private System.Windows.Forms.Label caseNumberLabel;
@@ -1169,7 +1159,7 @@
         private System.Windows.Forms.TableLayoutPanel diplomaTableLayoutPanel;
         private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.ToolStripMenuItem добавитьСотрудникаToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem работникToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem администраторToolStripMenuItem;
+        private System.Windows.Forms.PropertyGrid applicantsPropertyGrid;
+        private System.Windows.Forms.ListBox applicantsListBox;
     }
 }

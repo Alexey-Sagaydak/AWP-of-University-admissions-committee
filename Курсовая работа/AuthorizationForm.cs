@@ -35,14 +35,6 @@ namespace Курсовая_работа
             Close();
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            authorizationPanel.Visible = false;
-            registrationPanel.Visible = true;
-            this.Text = "Регистрация";
-            this.AcceptButton = registrationButton;
-        }
-
         private void label2_Click_1(object sender, EventArgs e)
         {
 
@@ -58,25 +50,9 @@ namespace Курсовая_работа
 
         }
 
-        private void backButton_Click(object sender, EventArgs e)
-        {
-            authorizationPanel.Visible = true;
-            registrationPanel.Visible = false;
-            this.Text = "Авторизация";
-            this.AcceptButton = enterButton;
-        }
-
         private void AuthorizationForm_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            authorizationPanel.Visible = true;
-            registrationPanel.Visible = false;
-            this.Text = "Авторизация";
-            this.AcceptButton = enterButton;
         }
     }
 }

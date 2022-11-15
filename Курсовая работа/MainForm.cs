@@ -143,5 +143,11 @@ namespace Курсовая_работа
         {
 
         }
+
+        private void добавитьСотрудникаToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WorkersRegistration workersRegistration = new WorkersRegistration();
+            workersRegistration.ShowDialog();
+        }
     }
 }
