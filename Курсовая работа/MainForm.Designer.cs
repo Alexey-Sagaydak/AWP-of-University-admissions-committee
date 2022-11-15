@@ -34,6 +34,9 @@
             this.завершитьСеансToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.списокАбитуриентовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьАбитуриентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьСотрудникаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.работникToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.администраторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataBasePanel = new System.Windows.Forms.Panel();
             this.dataBaseLabel = new System.Windows.Forms.Label();
@@ -94,9 +97,6 @@
             this.areasComboBox = new System.Windows.Forms.ComboBox();
             this.areasLabel = new System.Windows.Forms.Label();
             this.resultsLabel = new System.Windows.Forms.Label();
-            this.добавитьСотрудникаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.работникToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.администраторToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mainMenuStrip.SuspendLayout();
             this.dataBasePanel.SuspendLayout();
             this.applicantPanel.SuspendLayout();
@@ -157,6 +157,27 @@
             this.добавитьАбитуриентаToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
             this.добавитьАбитуриентаToolStripMenuItem.Text = "Добавить абитуриента";
             this.добавитьАбитуриентаToolStripMenuItem.Click += new System.EventHandler(this.добавитьАбитуриентаToolStripMenuItem_Click);
+            // 
+            // добавитьСотрудникаToolStripMenuItem
+            // 
+            this.добавитьСотрудникаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.работникToolStripMenuItem,
+            this.администраторToolStripMenuItem});
+            this.добавитьСотрудникаToolStripMenuItem.Name = "добавитьСотрудникаToolStripMenuItem";
+            this.добавитьСотрудникаToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.добавитьСотрудникаToolStripMenuItem.Text = "Добавить сотрудника";
+            // 
+            // работникToolStripMenuItem
+            // 
+            this.работникToolStripMenuItem.Name = "работникToolStripMenuItem";
+            this.работникToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.работникToolStripMenuItem.Text = "Работник";
+            // 
+            // администраторToolStripMenuItem
+            // 
+            this.администраторToolStripMenuItem.Name = "администраторToolStripMenuItem";
+            this.администраторToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.администраторToolStripMenuItem.Text = "Администратор";
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -583,7 +604,7 @@
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.additionalTextBox.Size = new System.Drawing.Size(928, 200);
+            this.additionalTextBox.Size = new System.Drawing.Size(911, 200);
             this.additionalTextBox.TabIndex = 99;
             // 
             // additionalLabel
@@ -613,7 +634,7 @@
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.organizationTextBox.Location = new System.Drawing.Point(23, 326);
             this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(932, 29);
+            this.organizationTextBox.Size = new System.Drawing.Size(915, 29);
             this.organizationTextBox.TabIndex = 98;
             // 
             // addressLabel
@@ -633,7 +654,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.addressTextBox.Location = new System.Drawing.Point(20, 149);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(933, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(916, 29);
             this.addressTextBox.TabIndex = 95;
             this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
             // 
@@ -1002,33 +1023,17 @@
             this.areasComboBox.Items.AddRange(new object[] {
             "01.03.01 - Математика",
             "01.03.02 - Прикладная математика и информатика",
-            "01.03.03 - Механика и математическое моделирование",
             "01.03.04 - Прикладная математика",
-            "01.03.05 - Статистика",
-            "02.03.01 - Математика и компьютерные науки",
-            "02.03.02 - Фундаментальная информатика и информационные технологии",
-            "02.03.03 - Математическое обеспечение и администрирование информационных систем",
             "03.03.01 - Прикладные математика и физика",
             "03.03.02 - Физика",
-            "03.03.03 - Радиофизика",
             "04.03.01 - Химия",
-            "04.03.02 - Химия, физика и механика материалов",
             "09.03.04 - Программная инженерия",
             "10.03.01 - Информационная безопасность",
             "11.03.01 - Радиотехника",
-            "11.03.02 - Инфокоммуникационные технологии и системы связи",
-            "11.03.03 - Конструирование и технология электронных средств",
-            "11.03.04 - Электроника и наноэлектроника",
-            "12.03.01 - Приборостроение",
-            "12.03.02 - Оптотехника",
-            "12.03.03 - Фотоника и оптоинформатика",
-            "12.03.04 - Биотехнические системы и технологии",
-            "12.03.05 - Лазерная техника и лазерные технологии",
-            "13.03.01 - Теплоэнергетика и теплотехника",
             "41.03.03 - Востоковедение и африканистика"});
             this.areasComboBox.Location = new System.Drawing.Point(31, 354);
             this.areasComboBox.Name = "areasComboBox";
-            this.areasComboBox.Size = new System.Drawing.Size(663, 30);
+            this.areasComboBox.Size = new System.Drawing.Size(646, 30);
             this.areasComboBox.TabIndex = 19;
             this.areasComboBox.SelectedIndexChanged += new System.EventHandler(this.areasComboBox_SelectedIndexChanged);
             // 
@@ -1051,27 +1056,6 @@
             this.resultsLabel.Size = new System.Drawing.Size(548, 24);
             this.resultsLabel.TabIndex = 203;
             this.resultsLabel.Text = "1. Результаты экзаменов и индивидульные достижения";
-            // 
-            // добавитьСотрудникаToolStripMenuItem
-            // 
-            this.добавитьСотрудникаToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.работникToolStripMenuItem,
-            this.администраторToolStripMenuItem});
-            this.добавитьСотрудникаToolStripMenuItem.Name = "добавитьСотрудникаToolStripMenuItem";
-            this.добавитьСотрудникаToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
-            this.добавитьСотрудникаToolStripMenuItem.Text = "Добавить сотрудника";
-            // 
-            // работникToolStripMenuItem
-            // 
-            this.работникToolStripMenuItem.Name = "работникToolStripMenuItem";
-            this.работникToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.работникToolStripMenuItem.Text = "Работник";
-            // 
-            // администраторToolStripMenuItem
-            // 
-            this.администраторToolStripMenuItem.Name = "администраторToolStripMenuItem";
-            this.администраторToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.администраторToolStripMenuItem.Text = "Администратор";
             // 
             // MainForm
             // 

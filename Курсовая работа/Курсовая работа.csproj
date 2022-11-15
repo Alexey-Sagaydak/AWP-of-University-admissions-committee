@@ -55,12 +55,14 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applicant.cs" />
     <Compile Include="AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DocumentsStatus.cs" />
     <Compile Include="Exam.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="MainForm.cs">
@@ -72,7 +74,9 @@
     <Compile Include="Passport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolDiploma.cs" />
     <Compile Include="Worker.cs" />
+    <Compile Include="Сredentials.cs" />
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
