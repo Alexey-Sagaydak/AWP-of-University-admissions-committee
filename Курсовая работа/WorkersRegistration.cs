@@ -21,5 +21,10 @@ namespace Курсовая_работа
         {
 
         }
+
+        private void registrationButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

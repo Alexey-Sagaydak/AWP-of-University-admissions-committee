@@ -87,6 +87,7 @@
             this.registrationButton.TabIndex = 15;
             this.registrationButton.Text = "Зарегистрировать";
             this.registrationButton.UseVisualStyleBackColor = true;
+            this.registrationButton.Click += new System.EventHandler(this.registrationButton_Click);
             // 
             // loginPassLabel
             // 

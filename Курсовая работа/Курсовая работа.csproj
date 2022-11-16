@@ -121,7 +121,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="ApplicantsData.xml" />
+    <Content Include="ApplicantsData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="images\icon.ico" />
     <Content Include="images\logo1.png" />
     <Content Include="WorkersData.xml">

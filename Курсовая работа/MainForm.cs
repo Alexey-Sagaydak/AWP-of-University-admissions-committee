@@ -15,6 +15,9 @@ namespace Курсовая_работа
         public MainForm()
         {
             InitializeComponent();
+            applicantPanel.Visible = false;
+            dataBasePanel.Visible = true;
+            workersPanel.Visible = false;
         }
 
         private void завершитьСеансToolStripMenuItem_Click(object sender, EventArgs e)
@@ -31,6 +34,7 @@ namespace Курсовая_работа
         {
             applicantPanel.Visible = true;
             dataBasePanel.Visible = false;
+            workersPanel.Visible = false;
             //Hide();
             //Applicant applicantForm = new Applicant();
             //applicantForm.ShowDialog();
@@ -91,13 +95,14 @@ namespace Курсовая_работа
             }
             applicantPanel.Visible = true;
             dataBasePanel.Visible = false;
-            
+            workersPanel.Visible = false;
         }
 
         private void списокАбитуриентовToolStripMenuItem_Click(object sender, EventArgs e)
         {
             applicantPanel.Visible = false;
             dataBasePanel.Visible = true;
+            workersPanel.Visible = false;
         }
 
         private void subject1ComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,6 +153,13 @@ namespace Курсовая_работа
         {
             WorkersRegistration workersRegistration = new WorkersRegistration();
             workersRegistration.ShowDialog();
+        }
+
+        private void списокСотрудниковToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            applicantPanel.Visible = false;
+            dataBasePanel.Visible = false;
+            workersPanel.Visible = true;
         }
     }
 }

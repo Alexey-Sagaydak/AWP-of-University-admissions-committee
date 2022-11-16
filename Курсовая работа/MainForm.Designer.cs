@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.сеансToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +38,8 @@
             this.добавитьСотрудникаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataBasePanel = new System.Windows.Forms.Panel();
+            this.applicantsPropertyGrid = new System.Windows.Forms.PropertyGrid();
+            this.applicantsListBox = new System.Windows.Forms.ListBox();
             this.applicantPanel = new System.Windows.Forms.Panel();
             this.topTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.nameTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -94,8 +97,14 @@
             this.areasComboBox = new System.Windows.Forms.ComboBox();
             this.areasLabel = new System.Windows.Forms.Label();
             this.resultsLabel = new System.Windows.Forms.Label();
-            this.applicantsListBox = new System.Windows.Forms.ListBox();
-            this.applicantsPropertyGrid = new System.Windows.Forms.PropertyGrid();
+            this.списокСотрудниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.workersPanel = new System.Windows.Forms.Panel();
+            this.workersListBox = new System.Windows.Forms.ListBox();
+            this.workersPropertyGrid = new System.Windows.Forms.PropertyGrid();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.mainMenuStrip.SuspendLayout();
             this.dataBasePanel.SuspendLayout();
             this.applicantPanel.SuspendLayout();
@@ -112,6 +121,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.subject4numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subject3numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.achivementsNumericUpDown)).BeginInit();
+            this.workersPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -120,6 +132,7 @@
             this.сеансToolStripMenuItem,
             this.списокАбитуриентовToolStripMenuItem,
             this.добавитьАбитуриентаToolStripMenuItem,
+            this.списокСотрудниковToolStripMenuItem,
             this.добавитьСотрудникаToolStripMenuItem,
             this.оПрограммеToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
@@ -180,10 +193,26 @@
             this.dataBasePanel.BackColor = System.Drawing.SystemColors.Control;
             this.dataBasePanel.Controls.Add(this.applicantsPropertyGrid);
             this.dataBasePanel.Controls.Add(this.applicantsListBox);
-            this.dataBasePanel.Location = new System.Drawing.Point(15, 27);
+            this.dataBasePanel.Location = new System.Drawing.Point(15, 29);
             this.dataBasePanel.Name = "dataBasePanel";
             this.dataBasePanel.Size = new System.Drawing.Size(1124, 625);
             this.dataBasePanel.TabIndex = 1;
+            // 
+            // applicantsPropertyGrid
+            // 
+            this.applicantsPropertyGrid.HelpVisible = false;
+            this.applicantsPropertyGrid.Location = new System.Drawing.Point(377, 18);
+            this.applicantsPropertyGrid.Name = "applicantsPropertyGrid";
+            this.applicantsPropertyGrid.Size = new System.Drawing.Size(735, 498);
+            this.applicantsPropertyGrid.TabIndex = 2;
+            // 
+            // applicantsListBox
+            // 
+            this.applicantsListBox.FormattingEnabled = true;
+            this.applicantsListBox.Location = new System.Drawing.Point(3, 18);
+            this.applicantsListBox.Name = "applicantsListBox";
+            this.applicantsListBox.Size = new System.Drawing.Size(368, 498);
+            this.applicantsListBox.TabIndex = 1;
             // 
             // applicantPanel
             // 
@@ -579,7 +608,7 @@
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.additionalTextBox.Size = new System.Drawing.Size(911, 200);
+            this.additionalTextBox.Size = new System.Drawing.Size(894, 200);
             this.additionalTextBox.TabIndex = 99;
             // 
             // additionalLabel
@@ -609,7 +638,7 @@
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.organizationTextBox.Location = new System.Drawing.Point(23, 326);
             this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(915, 29);
+            this.organizationTextBox.Size = new System.Drawing.Size(898, 29);
             this.organizationTextBox.TabIndex = 98;
             // 
             // addressLabel
@@ -629,7 +658,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.addressTextBox.Location = new System.Drawing.Point(20, 149);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(916, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(899, 29);
             this.addressTextBox.TabIndex = 95;
             this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
             // 
@@ -1008,7 +1037,7 @@
             "41.03.03 - Востоковедение и африканистика"});
             this.areasComboBox.Location = new System.Drawing.Point(31, 354);
             this.areasComboBox.Name = "areasComboBox";
-            this.areasComboBox.Size = new System.Drawing.Size(646, 30);
+            this.areasComboBox.Size = new System.Drawing.Size(629, 30);
             this.areasComboBox.TabIndex = 19;
             this.areasComboBox.SelectedIndexChanged += new System.EventHandler(this.areasComboBox_SelectedIndexChanged);
             // 
@@ -1032,21 +1061,91 @@
             this.resultsLabel.TabIndex = 203;
             this.resultsLabel.Text = "1. Результаты экзаменов и индивидульные достижения";
             // 
-            // applicantsListBox
+            // списокСотрудниковToolStripMenuItem
             // 
-            this.applicantsListBox.FormattingEnabled = true;
-            this.applicantsListBox.Location = new System.Drawing.Point(3, 18);
-            this.applicantsListBox.Name = "applicantsListBox";
-            this.applicantsListBox.Size = new System.Drawing.Size(368, 498);
-            this.applicantsListBox.TabIndex = 1;
+            this.списокСотрудниковToolStripMenuItem.Name = "списокСотрудниковToolStripMenuItem";
+            this.списокСотрудниковToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
+            this.списокСотрудниковToolStripMenuItem.Text = "Список сотрудников";
+            this.списокСотрудниковToolStripMenuItem.Click += new System.EventHandler(this.списокСотрудниковToolStripMenuItem_Click);
             // 
-            // applicantsPropertyGrid
+            // workersPanel
             // 
-            this.applicantsPropertyGrid.HelpVisible = false;
-            this.applicantsPropertyGrid.Location = new System.Drawing.Point(377, 18);
-            this.applicantsPropertyGrid.Name = "applicantsPropertyGrid";
-            this.applicantsPropertyGrid.Size = new System.Drawing.Size(735, 498);
-            this.applicantsPropertyGrid.TabIndex = 2;
+            this.workersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.workersPanel.Controls.Add(this.tableLayoutPanel1);
+            this.workersPanel.Controls.Add(this.dataGridView1);
+            this.workersPanel.Location = new System.Drawing.Point(6, 26);
+            this.workersPanel.Name = "workersPanel";
+            this.workersPanel.Size = new System.Drawing.Size(1118, 625);
+            this.workersPanel.TabIndex = 3;
+            // 
+            // workersListBox
+            // 
+            this.workersListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.workersListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.workersListBox.FormattingEnabled = true;
+            this.workersListBox.HorizontalScrollbar = true;
+            this.workersListBox.ItemHeight = 25;
+            this.workersListBox.Location = new System.Drawing.Point(3, 3);
+            this.workersListBox.Name = "workersListBox";
+            this.workersListBox.Size = new System.Drawing.Size(543, 529);
+            this.workersListBox.TabIndex = 0;
+            // 
+            // workersPropertyGrid
+            // 
+            this.workersPropertyGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.workersPropertyGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.workersPropertyGrid.HelpVisible = false;
+            this.workersPropertyGrid.Location = new System.Drawing.Point(552, 3);
+            this.workersPropertyGrid.Name = "workersPropertyGrid";
+            this.workersPropertyGrid.Size = new System.Drawing.Size(544, 546);
+            this.workersPropertyGrid.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 555);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(319, 41);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(79, 6);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(8, 8);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.workersPropertyGrid, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.workersListBox, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1099, 614);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -1054,6 +1153,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1139, 664);
+            this.Controls.Add(this.workersPanel);
             this.Controls.Add(this.mainMenuStrip);
             this.Controls.Add(this.dataBasePanel);
             this.Controls.Add(this.applicantPanel);
@@ -1087,6 +1187,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.subject4numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subject3numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.achivementsNumericUpDown)).EndInit();
+            this.workersPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1161,5 +1264,13 @@
         private System.Windows.Forms.ToolStripMenuItem добавитьСотрудникаToolStripMenuItem;
         private System.Windows.Forms.PropertyGrid applicantsPropertyGrid;
         private System.Windows.Forms.ListBox applicantsListBox;
+        private System.Windows.Forms.ToolStripMenuItem списокСотрудниковToolStripMenuItem;
+        private System.Windows.Forms.Panel workersPanel;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PropertyGrid workersPropertyGrid;
+        private System.Windows.Forms.ListBox workersListBox;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }
