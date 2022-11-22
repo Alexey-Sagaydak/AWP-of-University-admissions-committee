@@ -7,13 +7,7 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public interface ISchoolDiploma
-    {
-        string Series { get; set; }
-        string Number { get; set; }
-        string EducationalInstitution { get; set; }
-    }
-    public class SchoolDiploma : ISchoolDiploma
+    public class SchoolDiploma
     {
         private string series;
         private string number;
@@ -47,7 +41,7 @@ namespace Курсовая_работа
             set
             {
                 if (value == "")
-                    throw new ArgumentException("Название образовательной организации не должно являться пустой строкой");
+                    throw new ArgumentException("Название образовательной организации не должно являться пустой строкой.");
                 educationalInstitution = value;
             }
         }

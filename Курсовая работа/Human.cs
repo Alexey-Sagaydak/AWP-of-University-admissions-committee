@@ -6,14 +6,7 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public interface IHuman
-    {
-        string Name { get; set; }
-        string Surname { get; set; }
-        string MiddleName { get; set; }
-        DateTime DateOfBirth { get; set; }
-    }
-    public abstract class Human : IHuman
+    public abstract class Human
     {
         private string name;
         private string surname;
@@ -25,7 +18,7 @@ namespace Курсовая_работа
             set
             {
                 if (value == "")
-                    throw new ArgumentException("Имя не должно являться пустой строкой");
+                    throw new ArgumentException("Имя не должно являться пустой строкой.");
                 name = value;
             }
         }
@@ -35,7 +28,7 @@ namespace Курсовая_работа
             set
             {
                 if (value == "")
-                    throw new ArgumentException("Фамилия не должна являться пустой строкой");
+                    throw new ArgumentException("Фамилия не должна являться пустой строкой.");
                 surname = value;
             }
         }
@@ -45,7 +38,7 @@ namespace Курсовая_работа
             set
             {
                 if (value == "")
-                    throw new ArgumentException("Отчество не должно являться пустой строкой");
+                    throw new ArgumentException("Отчество не должно являться пустой строкой.");
                 middleName = value;
             }
         }

@@ -9,13 +9,7 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public interface ICredentials
-    {
-        string Login { get; set; }
-        string Password { get; set; }
-        byte[] Hash { get; }
-    }
-    public class Credentials : ICredentials
+    public class Credentials
     {
         private string login;
         private string password;
@@ -53,7 +47,7 @@ namespace Курсовая_работа
             set
             {
                 if (value.Length < 6)
-                    throw new ArgumentException("Длина логина должна быть не менее 6 символов");
+                    throw new ArgumentException("Длина логина должна быть не менее 6 символов.");
                 login = value;
             }
         }
@@ -63,7 +57,7 @@ namespace Курсовая_работа
             set
             {
                 if (!ValidatePassword(value))
-                    throw new ArgumentException("Пароль должен быть длиной не менее 6 символов, обязательно содержать хотя бы одну цифру и заглавную латинскую букву");
+                    throw new ArgumentException("Пароль должен быть длиной не менее 6 символов, обязательно содержать хотя бы одну цифру и заглавную латинскую букву.");
                 password = value;
                 HashPassword();
             }

@@ -8,13 +8,7 @@ using System.Xml.Linq;
 
 namespace Курсовая_работа
 {
-    public interface IPassport
-    {
-        string Series { get; set; }
-        string Number { get; set; }
-        string Address { get; set; }
-    }
-    public class Passport : IPassport
+    public class Passport
     {
         private string series;
         private string number;
@@ -48,7 +42,7 @@ namespace Курсовая_работа
             set
             {
                 if (value == "")
-                    throw new ArgumentException("Адрес не должен являться пустой строкой");
+                    throw new ArgumentException("Адрес не должен являться пустой строкой.");
                 address = value;
             }
         }

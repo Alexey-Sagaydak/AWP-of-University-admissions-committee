@@ -62,9 +62,11 @@
     <Compile Include="AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CurrentSession.cs" />
     <Compile Include="DocumentsStatus.cs" />
     <Compile Include="Exam.cs" />
     <Compile Include="Human.cs" />
+    <Compile Include="ICurrentSession.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

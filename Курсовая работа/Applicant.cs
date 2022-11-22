@@ -56,7 +56,7 @@ namespace Курсовая_работа
             set
             {
                 if (value < 0 || value > 10)
-                    throw new ArgumentException("Количество баллов за индивидуальные достижения должно быть в диапазоне от 1 до 10");
+                    throw new ArgumentException("Количество баллов за индивидуальные достижения должно быть в диапазоне от 1 до 10.");
                 achivements = value;
             }
         }

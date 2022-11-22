@@ -19,12 +19,14 @@ namespace Курсовая_работа
     };
     public class Worker : Human
     {
+        public int ID { get; set; }
         public Status Status { get; set; }
         public Credentials credentials;
-        public Worker(string _name, string _surname, string _middleName,
+        public Worker(int _ID, string _name, string _surname, string _middleName,
             DateTime _dateOfBirth, Credentials _credentials, Status _status) :
             base (_name, _surname, _middleName, _dateOfBirth)
         {
+            ID = _ID;
             credentials = _credentials;
             Status = _status;
         }

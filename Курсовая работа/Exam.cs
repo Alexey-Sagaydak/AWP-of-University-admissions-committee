@@ -32,12 +32,7 @@ namespace Курсовая_работа
         Chemistry = 9
     };
 
-    public interface IExam
-    {
-        Subject Subject { get; set; }
-        int Points { get; set; }
-    }
-    public class Exam : IExam
+    public class Exam
     {
         public Subject Subject { get; set; }
         private int points;
@@ -47,7 +42,7 @@ namespace Курсовая_работа
             set
             {
                 if (value < 0 || value > 100)
-                    throw new ArgumentException("Количество баллов должно быть в диапазоне от 1 до 100");
+                    throw new ArgumentException("Количество баллов должно быть в диапазоне от 1 до 100.");
                 points = value;
             }
         }
