@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public abstract class Human
+    public interface IHuman
+    {
+        string Name { get; set; }
+        string Surname { get; set; }
+        string MiddleName { get; set; }
+        DateTime DateOfBirth { get; set; }
+    }
+    public abstract class Human : IHuman
     {
         private string name;
         private string surname;
         private string middleName;
-        DateTime DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string Name
         {
             get { return name; }

@@ -1077,7 +1077,7 @@
             this.workersPanel.Controls.Add(this.dataGridView1);
             this.workersPanel.Location = new System.Drawing.Point(6, 26);
             this.workersPanel.Name = "workersPanel";
-            this.workersPanel.Size = new System.Drawing.Size(1118, 625);
+            this.workersPanel.Size = new System.Drawing.Size(1130, 625);
             this.workersPanel.TabIndex = 3;
             // 
             // workersListBox
@@ -1091,8 +1091,9 @@
             this.workersListBox.ItemHeight = 25;
             this.workersListBox.Location = new System.Drawing.Point(3, 3);
             this.workersListBox.Name = "workersListBox";
-            this.workersListBox.Size = new System.Drawing.Size(543, 529);
+            this.workersListBox.Size = new System.Drawing.Size(549, 529);
             this.workersListBox.TabIndex = 0;
+            this.workersListBox.SelectedIndexChanged += new System.EventHandler(this.workersListBox_SelectedIndexChanged);
             // 
             // workersPropertyGrid
             // 
@@ -1101,9 +1102,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.workersPropertyGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
             this.workersPropertyGrid.HelpVisible = false;
-            this.workersPropertyGrid.Location = new System.Drawing.Point(552, 3);
+            this.workersPropertyGrid.Location = new System.Drawing.Point(558, 3);
             this.workersPropertyGrid.Name = "workersPropertyGrid";
-            this.workersPropertyGrid.Size = new System.Drawing.Size(544, 546);
+            this.workersPropertyGrid.Size = new System.Drawing.Size(550, 546);
             this.workersPropertyGrid.TabIndex = 1;
             // 
             // button1
@@ -1144,7 +1145,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1099, 614);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1111, 614);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // MainForm

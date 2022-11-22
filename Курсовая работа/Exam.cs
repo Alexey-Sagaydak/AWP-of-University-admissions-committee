@@ -31,10 +31,16 @@ namespace Курсовая_работа
         [Description("Chemistry")]
         Chemistry = 9
     };
-    public class Exam
+
+    public interface IExam
+    {
+        Subject Subject { get; set; }
+        int Points { get; set; }
+    }
+    public class Exam : IExam
     {
         public Subject Subject { get; set; }
-        public int points;
+        private int points;
         public int Points
         {
             get { return points; }

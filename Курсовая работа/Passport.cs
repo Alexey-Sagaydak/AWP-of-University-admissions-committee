@@ -8,11 +8,17 @@ using System.Xml.Linq;
 
 namespace Курсовая_работа
 {
-    public class Passport
+    public interface IPassport
     {
-        public string series;
-        public string number;
-        public string address;
+        string Series { get; set; }
+        string Number { get; set; }
+        string Address { get; set; }
+    }
+    public class Passport : IPassport
+    {
+        private string series;
+        private string number;
+        private string address;
 
         private Regex fourNumbers = new Regex(@"[0-9]{4}");
         private Regex sixNumbers = new Regex(@"[0-9]{6}");

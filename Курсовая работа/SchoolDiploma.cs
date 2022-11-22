@@ -7,11 +7,17 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public class SchoolDiploma
+    public interface ISchoolDiploma
     {
-        public string series;
-        public string number;
-        public string educationalInstitution;
+        string Series { get; set; }
+        string Number { get; set; }
+        string EducationalInstitution { get; set; }
+    }
+    public class SchoolDiploma : ISchoolDiploma
+    {
+        private string series;
+        private string number;
+        private string educationalInstitution;
 
         private Regex fiveNumbers = new Regex(@"[0-9]{5}");
         private Regex nineNumbers = new Regex(@"[0-9]{9}");

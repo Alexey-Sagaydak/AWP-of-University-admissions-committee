@@ -6,11 +6,17 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public class DocumentsStatus
+    public interface IDocumentStatus
     {
-        public bool isStatementSigned {get; set;}
-        public bool isEnrollmentSigned { get; set;}
-        public bool isEnrolled { get; set;}
+        bool isStatementSigned { get; set; }
+        bool isEnrollmentSigned { get; set; }
+        bool isEnrolled { get; set; }
+    }
+    public class DocumentsStatus : IDocumentStatus
+    {
+        public bool isStatementSigned { get; set; }
+        public bool isEnrollmentSigned { get; set; }
+        public bool isEnrolled { get; set; }
         public DocumentsStatus(bool _isStatementSigned, bool _isEnrollmentSigned, bool _isEnrolled)
         {
             isStatementSigned = _isStatementSigned;

@@ -9,7 +9,13 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public class Credentials
+    public interface ICredentials
+    {
+        string Login { get; set; }
+        string Password { get; set; }
+        byte[] Hash { get; }
+    }
+    public class Credentials : ICredentials
     {
         private string login;
         private string password;

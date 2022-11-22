@@ -20,6 +20,7 @@ namespace Курсовая_работа
             workersPanel.Visible = false;
         }
 
+
         private void завершитьСеансToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
@@ -160,6 +161,11 @@ namespace Курсовая_работа
             applicantPanel.Visible = false;
             dataBasePanel.Visible = false;
             workersPanel.Visible = true;
+        }
+
+        private void workersListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
