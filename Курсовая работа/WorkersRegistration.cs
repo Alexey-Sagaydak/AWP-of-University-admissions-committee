@@ -12,6 +12,8 @@ namespace Курсовая_работа
 {
     public partial class WorkersRegistration : Form
     {
+        public WorkerRegisrtationViewModel ViewModel { get; }
+
         public WorkersRegistration()
         {
             InitializeComponent();

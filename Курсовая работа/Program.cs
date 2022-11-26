@@ -19,9 +19,9 @@ namespace Курсовая_работа
         // Не забыть убрать консоль
         static void Main()
         {
-            //Application.EnableVisualStyles();
-            //Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new AuthorizationForm());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new AuthorizationForm());
 
             Exam e1 = new Exam(Subject.Chemistry, 100);
 
@@ -32,7 +32,7 @@ namespace Курсовая_работа
 
             //obj = default(T);
 
-            Worker worker1 = new Worker(1, "Иванов", "Иван", "Иванович", new DateTime(2000, 3, 6), new Credentials("abcdee", "C1dddddd"), Status.Admin);
+            Worker worker1 = new Worker(1, "Admin", "Admin", "Admin", new DateTime(2003, 7, 23), new Credentials("Admin123", "Admin123"), Status.Admin);
 
             Worker worker2 = new Worker(2, "Петров", "Петр", "Петрович", new DateTime(1999, 2, 5), new Credentials("rrrrrr", "D1aaaa"), Status.Worker);
 
@@ -62,26 +62,26 @@ namespace Курсовая_работа
             //applicants.Add(applicant1);
             //applicants.Add(applicant2);
 
-            CurrentSession currentSession = new CurrentSession(worker1);
-            currentSession.Load();
+            //CurrentSession currentSession = new CurrentSession(worker1);
+            //currentSession.Load();
 
-            /*currentSession.AddWorker(worker1);
-            currentSession.AddApplicant(applicant1);
+            //currentSession.AddWorker(worker1);
+            /*currentSession.AddApplicant(applicant1);
             currentSession.AddWorker(worker2);
             currentSession.AddApplicant(applicant2);*/
 
             //currentSession.DeleteApplicant(10);
             //currentSession.DeleteWorker(2);
 
-            foreach (Worker worker in currentSession.Workers)
-            {
-                Console.WriteLine($"{worker.credentials.Hash[0]}");
-            }
+            //foreach (Worker worker in currentSession.Workers)
+            //{
+            //    Console.WriteLine($"{worker.credentials.Hash[0]}");
+            //}
 
-            foreach (Applicant applicant in currentSession.Applicants)
-            {
-                Console.WriteLine($"{applicant.exams[0].Points}");
-            }
+            //foreach (Applicant applicant in currentSession.Applicants)
+            //{
+            //    Console.WriteLine($"{applicant.exams[0].Points}");
+            //}
             //DocumentsStatus docs = new DocumentsStatus(true, false, false);
             //SchoolDiploma schoolDiploma = new SchoolDiploma("12345", "123456789", "uygf");
             //Console.WriteLine($"{e1.Points} {e1.Subject}");

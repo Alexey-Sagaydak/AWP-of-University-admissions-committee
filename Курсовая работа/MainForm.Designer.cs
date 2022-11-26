@@ -35,6 +35,7 @@
             this.завершитьСеансToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.списокАбитуриентовToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьАбитуриентаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.списокСотрудниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.добавитьСотрудникаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataBasePanel = new System.Windows.Forms.Panel();
@@ -97,14 +98,13 @@
             this.areasComboBox = new System.Windows.Forms.ComboBox();
             this.areasLabel = new System.Windows.Forms.Label();
             this.resultsLabel = new System.Windows.Forms.Label();
-            this.списокСотрудниковToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.workersPanel = new System.Windows.Forms.Panel();
-            this.workersListBox = new System.Windows.Forms.ListBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.workersPropertyGrid = new System.Windows.Forms.PropertyGrid();
             this.button1 = new System.Windows.Forms.Button();
+            this.workersListBox = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.mainMenuStrip.SuspendLayout();
             this.dataBasePanel.SuspendLayout();
             this.applicantPanel.SuspendLayout();
@@ -122,8 +122,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.subject3numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.achivementsNumericUpDown)).BeginInit();
             this.workersPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -169,6 +169,13 @@
             this.добавитьАбитуриентаToolStripMenuItem.Size = new System.Drawing.Size(143, 20);
             this.добавитьАбитуриентаToolStripMenuItem.Text = "Добавить абитуриента";
             this.добавитьАбитуриентаToolStripMenuItem.Click += new System.EventHandler(this.добавитьАбитуриентаToolStripMenuItem_Click);
+            // 
+            // списокСотрудниковToolStripMenuItem
+            // 
+            this.списокСотрудниковToolStripMenuItem.Name = "списокСотрудниковToolStripMenuItem";
+            this.списокСотрудниковToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
+            this.списокСотрудниковToolStripMenuItem.Text = "Список сотрудников";
+            this.списокСотрудниковToolStripMenuItem.Click += new System.EventHandler(this.списокСотрудниковToolStripMenuItem_Click);
             // 
             // добавитьСотрудникаToolStripMenuItem
             // 
@@ -608,7 +615,7 @@
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.additionalTextBox.Size = new System.Drawing.Size(894, 200);
+            this.additionalTextBox.Size = new System.Drawing.Size(877, 200);
             this.additionalTextBox.TabIndex = 99;
             // 
             // additionalLabel
@@ -638,7 +645,7 @@
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.organizationTextBox.Location = new System.Drawing.Point(23, 326);
             this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(898, 29);
+            this.organizationTextBox.Size = new System.Drawing.Size(881, 29);
             this.organizationTextBox.TabIndex = 98;
             // 
             // addressLabel
@@ -658,7 +665,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.addressTextBox.Location = new System.Drawing.Point(20, 149);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(899, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(882, 29);
             this.addressTextBox.TabIndex = 95;
             this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
             // 
@@ -1037,7 +1044,7 @@
             "41.03.03 - Востоковедение и африканистика"});
             this.areasComboBox.Location = new System.Drawing.Point(31, 354);
             this.areasComboBox.Name = "areasComboBox";
-            this.areasComboBox.Size = new System.Drawing.Size(629, 30);
+            this.areasComboBox.Size = new System.Drawing.Size(612, 30);
             this.areasComboBox.TabIndex = 19;
             this.areasComboBox.SelectedIndexChanged += new System.EventHandler(this.areasComboBox_SelectedIndexChanged);
             // 
@@ -1061,13 +1068,6 @@
             this.resultsLabel.TabIndex = 203;
             this.resultsLabel.Text = "1. Результаты экзаменов и индивидульные достижения";
             // 
-            // списокСотрудниковToolStripMenuItem
-            // 
-            this.списокСотрудниковToolStripMenuItem.Name = "списокСотрудниковToolStripMenuItem";
-            this.списокСотрудниковToolStripMenuItem.Size = new System.Drawing.Size(133, 20);
-            this.списокСотрудниковToolStripMenuItem.Text = "Список сотрудников";
-            this.списокСотрудниковToolStripMenuItem.Click += new System.EventHandler(this.списокСотрудниковToolStripMenuItem_Click);
-            // 
             // workersPanel
             // 
             this.workersPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1080,20 +1080,24 @@
             this.workersPanel.Size = new System.Drawing.Size(1130, 625);
             this.workersPanel.TabIndex = 3;
             // 
-            // workersListBox
+            // tableLayoutPanel1
             // 
-            this.workersListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.workersListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.workersListBox.FormattingEnabled = true;
-            this.workersListBox.HorizontalScrollbar = true;
-            this.workersListBox.ItemHeight = 25;
-            this.workersListBox.Location = new System.Drawing.Point(3, 3);
-            this.workersListBox.Name = "workersListBox";
-            this.workersListBox.Size = new System.Drawing.Size(549, 529);
-            this.workersListBox.TabIndex = 0;
-            this.workersListBox.SelectedIndexChanged += new System.EventHandler(this.workersListBox_SelectedIndexChanged);
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.workersPropertyGrid, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.workersListBox, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1111, 614);
+            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // workersPropertyGrid
             // 
@@ -1116,6 +1120,21 @@
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // workersListBox
+            // 
+            this.workersListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.workersListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.workersListBox.FormattingEnabled = true;
+            this.workersListBox.HorizontalScrollbar = true;
+            this.workersListBox.ItemHeight = 25;
+            this.workersListBox.Location = new System.Drawing.Point(3, 3);
+            this.workersListBox.Name = "workersListBox";
+            this.workersListBox.Size = new System.Drawing.Size(549, 529);
+            this.workersListBox.TabIndex = 0;
+            this.workersListBox.SelectedIndexChanged += new System.EventHandler(this.workersListBox_SelectedIndexChanged);
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1128,25 +1147,6 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.workersPropertyGrid, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.workersListBox, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1111, 614);
-            this.tableLayoutPanel1.TabIndex = 4;
             // 
             // MainForm
             // 
@@ -1189,8 +1189,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.subject3numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.achivementsNumericUpDown)).EndInit();
             this.workersPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

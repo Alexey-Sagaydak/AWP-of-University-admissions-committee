@@ -12,47 +12,28 @@ namespace Курсовая_работа
 {
     public partial class AuthorizationForm : Form
     {
+        public AuthorizationFormViewModel ViewModel = new AuthorizationFormViewModel();
+
         public AuthorizationForm()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            Hide();
-            MainForm mainForm = new MainForm();
-            mainForm.ShowDialog();
-            Close();
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void registrationPassTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void AuthorizationForm_Load(object sender, EventArgs e)
-        {
-
+            if (ViewModel.CheckWorker(loginTextBox.Text, passwordTextBox.Text))
+            {
+                Hide();
+                MainForm mainForm = new MainForm();
+                mainForm.ShowDialog();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Не удалось найти работника с такими учетными данными.",
+                    "Ошибка авторизации!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            
         }
     }
 }

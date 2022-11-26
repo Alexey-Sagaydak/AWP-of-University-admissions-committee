@@ -48,7 +48,6 @@
             this.admissionCampaignLabel.Size = new System.Drawing.Size(325, 42);
             this.admissionCampaignLabel.TabIndex = 0;
             this.admissionCampaignLabel.Text = "Приемная кампания";
-            this.admissionCampaignLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // enterButton
             // 
@@ -72,7 +71,6 @@
             this.loginLabel.Size = new System.Drawing.Size(70, 25);
             this.loginLabel.TabIndex = 2;
             this.loginLabel.Text = "Логин";
-            this.loginLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // passwordLabel
             // 
@@ -126,7 +124,6 @@
             this.Name = "AuthorizationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
-            this.Load += new System.EventHandler(this.AuthorizationForm_Load);
             this.authorizationPanel.ResumeLayout(false);
             this.authorizationPanel.PerformLayout();
             this.ResumeLayout(false);

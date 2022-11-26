@@ -19,7 +19,7 @@ namespace Курсовая_работа
         {
             var textJson = JsonConvert.SerializeObject(obj);
 			File.WriteAllText(filename, textJson);
-			Console.WriteLine(textJson);
+			//Console.WriteLine(textJson);
         }
 
 		private void LoadChanges<T>(out T obj, string filename)
@@ -150,12 +150,5 @@ namespace Курсовая_работа
         {
             CurrentWorker = _currentWorker;
         }
-
-        //public CurrentSession(List<Worker> _workers, List<Applicant> _applicants, Worker _currentWorker)
-		//{
-		//	Workers = _workers;
-		//	Applicants = _applicants;
-		//	CurrentWorker = _currentWorker;
-		//}
 	}
 }

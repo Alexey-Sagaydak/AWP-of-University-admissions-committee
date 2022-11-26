@@ -22,12 +22,6 @@ namespace Курсовая_работа
         private Regex hasUpperChar = new Regex(@"[A-Z]+");
         private Regex hasMinimum6Chars = new Regex(@".{6,}");
 
-        [Description("Сравнивает хэш паролей")]
-        internal static bool CompareHashes(byte[] hash1, byte[] hash2)
-        {
-            return hash1.SequenceEqual(hash2);
-        }
-
         private void HashPassword()
         {
             UnicodeEncoding ue = new UnicodeEncoding();

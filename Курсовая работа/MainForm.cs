@@ -12,6 +12,8 @@ namespace Курсовая_работа
 {
     public partial class MainForm : Form
     {
+        public MainFormViewModel ViewModel { get; }
+
         public MainForm()
         {
             InitializeComponent();
