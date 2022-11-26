@@ -3,20 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 
 namespace Курсовая_работа
 {
 	public class CurrentSession : ICurrentSession
 	{
-		public List<Applicant> Applicants;
-		public List<Worker> Workers;
+		public List<Applicant> Applicants = new List<Applicant>();
+		public List<Worker> Workers = new List<Worker>();
 		public Worker CurrentWorker;
 
-		private void SaveChanges()
-		{
+        private void SaveChanges<T>(T obj, string filename)
+        {
+            var textJson = JsonConvert.SerializeObject(obj);
+			File.WriteAllText(filename, textJson);
+			Console.WriteLine(textJson);
+        }
 
+		private void LoadChanges<T>(out T obj, string filename)
+		{
+			if (File.Exists(filename))
+			{
+				obj = JsonConvert.DeserializeObject<T>(File.ReadAllText(filename));
+			}
+			else
+			{
+				throw new FileNotFoundException($"'{ filename }' не существует.");
+			}
 		}
-		public void AddApplicant(Applicant applicant)
+
+		public void Load()
+		{
+			LoadChanges(out Applicants, "ApplicantsData.json");
+			LoadChanges(out Workers, "WorkersData.json");
+		}
+
+        public void AddApplicant(Applicant applicant)
 		{
 			bool flag = true;
 			foreach (Applicant i in Applicants)
@@ -31,7 +55,7 @@ namespace Курсовая_работа
 			if (flag)
 			{
 				Applicants.Add(applicant);
-				SaveChanges();
+				SaveChanges(Applicants, "ApplicantsData.json");
 			}  
 			else
 				throw new ArgumentException("Не удалось добавить абитуриента, так как данное ID уже используется.");
@@ -52,7 +76,7 @@ namespace Курсовая_работа
 			if (flag)
 			{
 				Workers.Add(worker);
-				SaveChanges();
+				SaveChanges(Workers, "WorkersData.json");
 			}
 			else
 				throw new ArgumentException("Не удалось добавить работника, так как данное ID уже используется.");
@@ -75,7 +99,7 @@ namespace Курсовая_работа
 			{
 				throw new ArgumentException("У вас недостаточно прав для выполнения данного действия.");
 			}
-			if (flag) SaveChanges();
+			if (flag) SaveChanges(Applicants, "ApplicantsData.json");
 			return flag;
 		}
 
@@ -103,7 +127,7 @@ namespace Курсовая_работа
 			{
 				throw new ArgumentException("У вас недостаточно прав для выполнения данного действия.");
 			}
-			if (flag) SaveChanges();
+			if (flag) SaveChanges(Workers, "WorkersData.json");
 			return flag;
 		}
 
@@ -122,11 +146,16 @@ namespace Курсовая_работа
 			throw new NotImplementedException();
 		}
 
-		public CurrentSession(List<Worker> _workers, List<Applicant> _applicants, Worker _currentWorker)
-		{
-			Workers = _workers;
-			Applicants = _applicants;
-			CurrentWorker = _currentWorker;
-		}
+        public CurrentSession(Worker _currentWorker)
+        {
+            CurrentWorker = _currentWorker;
+        }
+
+        //public CurrentSession(List<Worker> _workers, List<Applicant> _applicants, Worker _currentWorker)
+		//{
+		//	Workers = _workers;
+		//	Applicants = _applicants;
+		//	CurrentWorker = _currentWorker;
+		//}
 	}
 }

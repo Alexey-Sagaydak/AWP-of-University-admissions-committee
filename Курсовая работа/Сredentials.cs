@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -13,7 +14,9 @@ namespace Курсовая_работа
     {
         private string login;
         private string password;
-        public byte[] Hash { get; private set; }
+
+        [JsonProperty("password_hash")]
+        public byte[] Hash { get; set; }
 
         private Regex hasNumber = new Regex(@"[0-9]+");
         private Regex hasUpperChar = new Regex(@"[A-Z]+");
@@ -24,6 +27,7 @@ namespace Курсовая_работа
         {
             return hash1.SequenceEqual(hash2);
         }
+
         private void HashPassword()
         {
             UnicodeEncoding ue = new UnicodeEncoding();
@@ -31,7 +35,9 @@ namespace Курсовая_работа
             SHA256 shHash = SHA256.Create();
             Hash = shHash.ComputeHash(messageBytes);
             //foreach (byte b in Hash) Console.Write("{0} ", b);
+            //Console.WriteLine("\n");
         }
+
         private bool ValidatePassword(string password)
         {
             bool flag = false;
@@ -41,27 +47,32 @@ namespace Курсовая_работа
             return flag;
         }
 
+        [JsonProperty("login")]
         public string Login
         {
             get { return login; }
             set
             {
-                if (value.Length < 6)
+                if (value != null && value.Length < 6)
                     throw new ArgumentException("Длина логина должна быть не менее 6 символов.");
                 login = value;
             }
         }
+
+        [JsonProperty("password")]
         public string Password
         {
             get { return password; }
             set
             {
-                if (!ValidatePassword(value))
+                if (value != null && !ValidatePassword(value))
                     throw new ArgumentException("Пароль должен быть длиной не менее 6 символов, обязательно содержать хотя бы одну цифру и заглавную латинскую букву.");
                 password = value;
-                HashPassword();
+                if (value != null) HashPassword();
+                password = null;
             }
         }
+
         public Credentials(string _login, string _password)
         {
             Login = _login;

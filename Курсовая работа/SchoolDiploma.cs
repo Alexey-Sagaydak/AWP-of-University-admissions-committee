@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,26 +16,32 @@ namespace Курсовая_работа
 
         private Regex fiveNumbers = new Regex(@"[0-9]{5}");
         private Regex nineNumbers = new Regex(@"[0-9]{9}");
+
+        [JsonProperty("series")]
         public string Series
         {
             get { return series; }
             set
             {
-                if (!fiveNumbers.IsMatch(value))
+                if (value != null && !fiveNumbers.IsMatch(value))
                     throw new ArgumentException("Серия аттестата должна состоять из 5-и цифр.");
                 series = value;
             }
         }
+
+        [JsonProperty("number")]
         public string Number
         {
             get { return number; }
             set
             {
-                if (!nineNumbers.IsMatch(value))
+                if (value != null && !nineNumbers.IsMatch(value))
                     throw new ArgumentException("Номер аттестата должен состоять из 9-и цифр.");
                 number = value;
             }
         }
+
+        [JsonProperty("educational_institution")]
         public string EducationalInstitution
         {
             get { return educationalInstitution; }
@@ -45,6 +52,7 @@ namespace Курсовая_работа
                 educationalInstitution = value;
             }
         }
+
         public SchoolDiploma(string _series, string _number, string _educationalInstitution)
         {
             Series = _series;

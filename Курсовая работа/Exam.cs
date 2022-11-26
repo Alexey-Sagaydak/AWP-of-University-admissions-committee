@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -34,8 +35,12 @@ namespace Курсовая_работа
 
     public class Exam
     {
+        [JsonProperty("subject")]
         public Subject Subject { get; set; }
+
         private int points;
+
+        [JsonProperty("points")]
         public int Points
         {
             get { return points; }
@@ -46,6 +51,7 @@ namespace Курсовая_работа
                 points = value;
             }
         }
+
         public Exam(Subject _subject, int _points)
         {
             Subject = _subject;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,26 +17,32 @@ namespace Курсовая_работа
 
         private Regex fourNumbers = new Regex(@"[0-9]{4}");
         private Regex sixNumbers = new Regex(@"[0-9]{6}");
+
+        [JsonProperty("series")]
         public string Series
         {
             get { return series; }
             set
             {
-                if (!fourNumbers.IsMatch(value))
+                if (value != null && !fourNumbers.IsMatch(value))
                     throw new ArgumentException("Серия паспорта должна состоять из 4-х цифр.");
                 series = value;
             }
         }
+
+        [JsonProperty("number")]
         public string Number
         {
             get { return number; }
             set
             {
-                if (!sixNumbers.IsMatch(value))
+                if (value != null && !sixNumbers.IsMatch(value))
                     throw new ArgumentException("Номер паспорта должен состоять из 6-и цифр.");
                 number = value;
             }
         }
+
+        [JsonProperty("address")]
         public string Address
         {
             get { return address; }
@@ -46,6 +53,7 @@ namespace Курсовая_работа
                 address = value;
             }
         }
+
         public Passport(string _series, string _number, string _address)
         {
             Series = _series;

@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace Курсовая_работа
 {
@@ -11,7 +14,11 @@ namespace Курсовая_работа
         private string name;
         private string surname;
         private string middleName;
+        
+        [JsonProperty("date_of_birth")]
         public DateTime DateOfBirth { get; set; }
+
+        [JsonProperty("name")]
         public string Name
         {
             get { return name; }
@@ -22,6 +29,8 @@ namespace Курсовая_работа
                 name = value;
             }
         }
+
+        [JsonProperty("surname")]
         public string Surname
         {
             get { return surname; }
@@ -32,6 +41,8 @@ namespace Курсовая_работа
                 surname = value;
             }
         }
+
+        [JsonProperty("middle_name")]
         public string MiddleName
         {
             get { return middleName; }
@@ -42,12 +53,13 @@ namespace Курсовая_работа
                 middleName = value;
             }
         }
+
         public Human (string _name, string _surname, string _middleName, DateTime _dateOfBirth)
         {
             Name= _name;
             Surname= _surname;
             MiddleName= _middleName;
-            DateOfBirth= _dateOfBirth;
+            DateOfBirth = _dateOfBirth;
         }
     }
 }
