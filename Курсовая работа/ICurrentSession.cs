@@ -9,7 +9,7 @@ namespace Курсовая_работа
     public interface ICurrentSession
     {
         void AddWorker(Worker worker);
-        bool DeleteWorker(int ID);
+        bool DeleteWorker(Worker worker);
         void AddApplicant(Applicant applicant);
         bool DeleteApplicant(int ID);
         List<Applicant> FindApplicants(int ID);

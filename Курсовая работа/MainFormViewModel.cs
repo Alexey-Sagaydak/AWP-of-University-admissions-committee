@@ -8,6 +8,10 @@ namespace Курсовая_работа
 {
     public class MainFormViewModel
     {
+        CurrentSession currentSession { get; set; }
+        public MainFormViewModel()
+        {
 
+        }
     }
 }

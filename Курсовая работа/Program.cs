@@ -32,9 +32,9 @@ namespace Курсовая_работа
 
             //obj = default(T);
 
-            Worker worker1 = new Worker(1, "Admin", "Admin", "Admin", new DateTime(2003, 7, 23), new Credentials("Admin123", "Admin123"), Status.Admin);
+            Worker worker1 = new Worker("Admin", "Admin", "Admin", new DateTime(2003, 7, 23), new Credentials("Admin123", "Admin123"), Status.Admin);
 
-            Worker worker2 = new Worker(2, "Петров", "Петр", "Петрович", new DateTime(1999, 2, 5), new Credentials("rrrrrr", "D1aaaa"), Status.Worker);
+            Worker worker2 = new Worker("Петров", "Петр", "Петрович", new DateTime(1999, 2, 5), new Credentials("rrrrrr", "D1aaaa"), Status.Worker);
 
             //workers.Add(worker1);
             //workers.Add(worker2);
@@ -66,12 +66,13 @@ namespace Курсовая_работа
             //currentSession.Load();
 
             //currentSession.AddWorker(worker1);
-            /*currentSession.AddApplicant(applicant1);
-            currentSession.AddWorker(worker2);
-            currentSession.AddApplicant(applicant2);*/
+            //currentSession.AddApplicant(applicant1);
+            //currentSession.AddWorker(worker2);
+            //currentSession.AddApplicant(applicant2);
 
+            //Console.WriteLine(worker1.Equals(worker1));
             //currentSession.DeleteApplicant(10);
-            //currentSession.DeleteWorker(2);
+            //currentSession.DeleteWorker(worker2);
 
             //foreach (Worker worker in currentSession.Workers)
             //{

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using System.Security.Policy;
 
 namespace Курсовая_работа
 {
@@ -66,7 +67,8 @@ namespace Курсовая_работа
 			bool flag = true;
 			foreach (Worker i in Workers)
 			{
-				if (i.ID == worker.ID)
+				if (worker.credentials.Login == i.credentials.Login &&
+					worker.credentials.Hash.SequenceEqual(i.credentials.Hash))
 				{
 					flag = false;
 					break;
@@ -103,16 +105,16 @@ namespace Курсовая_работа
 			return flag;
 		}
 
-		public bool DeleteWorker(int ID)
+		public bool DeleteWorker(Worker worker)
 		{
 			bool flag = false;
 			if (CurrentWorker.Status == Status.Admin)
 			{
-				if (ID != CurrentWorker.ID)
+				if (!worker.Equals(CurrentWorker))
 				{
 					for (int i = 0; i < Workers.Count; i++)
 					{
-						if (Workers[i].ID == ID)
+						if (Workers[i].Equals(worker))
 						{
 							flag = Workers.Remove(Workers[i]);
 						}
