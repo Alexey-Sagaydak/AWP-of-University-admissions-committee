@@ -268,5 +268,10 @@ namespace Курсовая_работа
                     worker.Surname, worker.MiddleName, worker.credentials.Login, (worker.Status == Status.Admin) ? true : false));
             }
         }
+
+        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

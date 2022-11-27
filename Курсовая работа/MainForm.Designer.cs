@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.сеансToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -119,7 +120,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.workerForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -239,7 +239,7 @@
             // applicantsPropertyGrid
             // 
             this.applicantsPropertyGrid.HelpVisible = false;
-            this.applicantsPropertyGrid.Location = new System.Drawing.Point(194725, 18);
+            this.applicantsPropertyGrid.Location = new System.Drawing.Point(453997, 18);
             this.applicantsPropertyGrid.Name = "applicantsPropertyGrid";
             this.applicantsPropertyGrid.Size = new System.Drawing.Size(735, 498);
             this.applicantsPropertyGrid.TabIndex = 2;
@@ -247,7 +247,7 @@
             // applicantsListBox
             // 
             this.applicantsListBox.FormattingEnabled = true;
-            this.applicantsListBox.Location = new System.Drawing.Point(194702, 18);
+            this.applicantsListBox.Location = new System.Drawing.Point(453974, 18);
             this.applicantsListBox.Name = "applicantsListBox";
             this.applicantsListBox.Size = new System.Drawing.Size(368, 498);
             this.applicantsListBox.TabIndex = 1;
@@ -503,7 +503,7 @@
             this.diplomaTableLayoutPanel.Controls.Add(this.diplomaNumberMaskedTextBox, 1, 1);
             this.diplomaTableLayoutPanel.Controls.Add(this.diplomaNumberLabel, 1, 0);
             this.diplomaTableLayoutPanel.Controls.Add(this.diplomaSeriesLabel, 0, 0);
-            this.diplomaTableLayoutPanel.Location = new System.Drawing.Point(27, 309);
+            this.diplomaTableLayoutPanel.Location = new System.Drawing.Point(27, 639);
             this.diplomaTableLayoutPanel.MaximumSize = new System.Drawing.Size(500, 76);
             this.diplomaTableLayoutPanel.MinimumSize = new System.Drawing.Size(234, 76);
             this.diplomaTableLayoutPanel.Name = "diplomaTableLayoutPanel";
@@ -576,7 +576,7 @@
             this.passportTableLayoutPanel.Controls.Add(this.passportNumberLabel, 1, 0);
             this.passportTableLayoutPanel.Controls.Add(this.passportNumberMaskedTextBox, 1, 1);
             this.passportTableLayoutPanel.Controls.Add(this.passportSeriesLabel, 0, 0);
-            this.passportTableLayoutPanel.Location = new System.Drawing.Point(20, 131);
+            this.passportTableLayoutPanel.Location = new System.Drawing.Point(20, 461);
             this.passportTableLayoutPanel.MaximumSize = new System.Drawing.Size(500, 76);
             this.passportTableLayoutPanel.MinimumSize = new System.Drawing.Size(200, 76);
             this.passportTableLayoutPanel.Name = "passportTableLayoutPanel";
@@ -642,7 +642,7 @@
             this.additionalTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.additionalTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.additionalTextBox.Location = new System.Drawing.Point(20, 497);
+            this.additionalTextBox.Location = new System.Drawing.Point(20, 827);
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -653,7 +653,7 @@
             // 
             this.additionalLabel.AutoSize = true;
             this.additionalLabel.Font = new System.Drawing.Font("Arial", 15.25F);
-            this.additionalLabel.Location = new System.Drawing.Point(15, 456);
+            this.additionalLabel.Location = new System.Drawing.Point(15, 786);
             this.additionalLabel.Name = "additionalLabel";
             this.additionalLabel.Size = new System.Drawing.Size(293, 24);
             this.additionalLabel.TabIndex = 209;
@@ -663,7 +663,7 @@
             // 
             this.organizationLabel.AutoSize = true;
             this.organizationLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.organizationLabel.Location = new System.Drawing.Point(19, 387);
+            this.organizationLabel.Location = new System.Drawing.Point(19, 717);
             this.organizationLabel.Name = "organizationLabel";
             this.organizationLabel.Size = new System.Drawing.Size(297, 24);
             this.organizationLabel.TabIndex = 208;
@@ -674,7 +674,7 @@
             this.organizationTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.organizationTextBox.Location = new System.Drawing.Point(23, 414);
+            this.organizationTextBox.Location = new System.Drawing.Point(23, 744);
             this.organizationTextBox.Name = "organizationTextBox";
             this.organizationTextBox.Size = new System.Drawing.Size(834, 29);
             this.organizationTextBox.TabIndex = 98;
@@ -683,7 +683,7 @@
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.addressLabel.Location = new System.Drawing.Point(16, 210);
+            this.addressLabel.Location = new System.Drawing.Point(16, 540);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(189, 24);
             this.addressLabel.TabIndex = 206;
@@ -694,7 +694,7 @@
             this.addressTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.addressTextBox.Location = new System.Drawing.Point(20, 237);
+            this.addressTextBox.Location = new System.Drawing.Point(20, 567);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(835, 29);
             this.addressTextBox.TabIndex = 95;
@@ -704,7 +704,7 @@
             // 
             this.diplomaLabel.AutoSize = true;
             this.diplomaLabel.Font = new System.Drawing.Font("Arial", 15.25F);
-            this.diplomaLabel.Location = new System.Drawing.Point(11, 282);
+            this.diplomaLabel.Location = new System.Drawing.Point(11, 612);
             this.diplomaLabel.Name = "diplomaLabel";
             this.diplomaLabel.Size = new System.Drawing.Size(364, 24);
             this.diplomaLabel.TabIndex = 207;
@@ -714,7 +714,7 @@
             // 
             this.passportLabel.AutoSize = true;
             this.passportLabel.Font = new System.Drawing.Font("Arial", 15.25F);
-            this.passportLabel.Location = new System.Drawing.Point(6, 97);
+            this.passportLabel.Location = new System.Drawing.Point(6, 427);
             this.passportLabel.Name = "passportLabel";
             this.passportLabel.Size = new System.Drawing.Size(231, 24);
             this.passportLabel.TabIndex = 205;
@@ -1107,7 +1107,7 @@
             this.workersPanel.Controls.Add(this.tableLayoutPanel1);
             this.workersPanel.Location = new System.Drawing.Point(12, 29);
             this.workersPanel.Name = "workersPanel";
-            this.workersPanel.Size = new System.Drawing.Size(1102, 600);
+            this.workersPanel.Size = new System.Drawing.Size(1104, 600);
             this.workersPanel.TabIndex = 3;
             // 
             // tableLayoutPanel1
@@ -1126,8 +1126,9 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88.88889F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1110, 586);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1096, 586);
             this.tableLayoutPanel1.TabIndex = 1;
+            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
             // tableLayoutPanel2
             // 
@@ -1144,7 +1145,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1104, 51);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1090, 51);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // workerLoginLabel
@@ -1152,7 +1153,7 @@
             this.workerLoginLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.workerLoginLabel.AutoSize = true;
             this.workerLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.workerLoginLabel.Location = new System.Drawing.Point(365, 13);
+            this.workerLoginLabel.Location = new System.Drawing.Point(360, 13);
             this.workerLoginLabel.Name = "workerLoginLabel";
             this.workerLoginLabel.Size = new System.Drawing.Size(64, 24);
             this.workerLoginLabel.TabIndex = 0;
@@ -1164,10 +1165,10 @@
             this.loginToDeleteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workerForBindingBindingSource, "Логин", true));
             this.loginToDeleteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.loginToDeleteTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.loginToDeleteTextBox.Location = new System.Drawing.Point(435, 11);
+            this.loginToDeleteTextBox.Location = new System.Drawing.Point(430, 11);
             this.loginToDeleteTextBox.Name = "loginToDeleteTextBox";
             this.loginToDeleteTextBox.ReadOnly = true;
-            this.loginToDeleteTextBox.Size = new System.Drawing.Size(216, 29);
+            this.loginToDeleteTextBox.Size = new System.Drawing.Size(213, 29);
             this.loginToDeleteTextBox.TabIndex = 1;
             this.loginToDeleteTextBox.TextChanged += new System.EventHandler(this.loginToDeleteTextBox_TextChanged);
             // 
@@ -1175,7 +1176,7 @@
             // 
             this.deleteWorkerButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.deleteWorkerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.deleteWorkerButton.Location = new System.Drawing.Point(657, 8);
+            this.deleteWorkerButton.Location = new System.Drawing.Point(649, 8);
             this.deleteWorkerButton.Name = "deleteWorkerButton";
             this.deleteWorkerButton.Size = new System.Drawing.Size(102, 35);
             this.deleteWorkerButton.TabIndex = 2;
@@ -1199,11 +1200,11 @@
             this.workersDataGridView.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
             this.workersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.workersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.workersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1215,19 +1216,21 @@
             this.администраторDataGridViewCheckBoxColumn});
             this.workersDataGridView.DataSource = this.workerForBindingBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.workersDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.workersDataGridView.GridColor = System.Drawing.SystemColors.Control;
+            this.workersDataGridView.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.workersDataGridView.Location = new System.Drawing.Point(3, 28);
             this.workersDataGridView.Name = "workersDataGridView";
             this.workersDataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.workersDataGridView.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            this.workersDataGridView.Size = new System.Drawing.Size(1104, 492);
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Transparent;
+            this.workersDataGridView.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.workersDataGridView.Size = new System.Drawing.Size(1090, 492);
             this.workersDataGridView.TabIndex = 3;
             this.workersDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
@@ -1239,6 +1242,7 @@
             this.bindingNavigator1.CountItem = this.bindingNavigatorCountItem;
             this.bindingNavigator1.CountItemFormat = "из {0}";
             this.bindingNavigator1.DeleteItem = null;
+            this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -1249,8 +1253,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.toolStripButton1,
-            this.toolStripSeparator1});
+            this.toolStripButton1});
             this.bindingNavigator1.Location = new System.Drawing.Point(0, 0);
             this.bindingNavigator1.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.bindingNavigator1.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -1258,7 +1261,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(1110, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(275, 25);
             this.bindingNavigator1.TabIndex = 4;
             this.bindingNavigator1.Text = "bindingNavigator1";
             this.bindingNavigator1.RefreshItems += new System.EventHandler(this.bindingNavigator1_RefreshItems);
@@ -1345,11 +1348,6 @@
             this.toolStripButton1.Size = new System.Drawing.Size(65, 22);
             this.toolStripButton1.Text = "Обновить";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
             // workerForBindingBindingSource
             // 
@@ -1558,6 +1556,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn логинDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn администраторDataGridViewCheckBoxColumn;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
     }
 }
