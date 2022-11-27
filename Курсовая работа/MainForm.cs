@@ -147,7 +147,53 @@ namespace Курсовая_работа
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-            
+            int ID;
+            try
+            {
+                List<Exam> Exams = new List<Exam>();
+                if (subject1CheckBox.Checked) Exams.Add(new Exam((Subject)Enum.ToObject(typeof(Subject),
+                    subject1ComboBox.SelectedIndex), Convert.ToInt32(subject1numericUpDown.Value)));
+                if (subject2CheckBox.Checked) Exams.Add(new Exam((Subject)Enum.ToObject(typeof(Subject),
+                    subject2ComboBox.SelectedIndex), Convert.ToInt32(subject2numericUpDown.Value)));
+                if (subject3CheckBox.Checked) Exams.Add(new Exam((Subject)Enum.ToObject(typeof(Subject),
+                    subject3ComboBox.SelectedIndex), Convert.ToInt32(subject3numericUpDown.Value)));
+                if (subject4CheckBox.Checked) Exams.Add(new Exam((Subject)Enum.ToObject(typeof(Subject),
+                    subject4ComboBox.SelectedIndex), Convert.ToInt32(subject4numericUpDown.Value)));
+
+                if (caseNumberTextBox.Text.All(char.IsDigit))
+                {
+                    ID = Convert.ToInt32(caseNumberTextBox.Text);
+                } 
+                else
+                {
+                    throw new ArgumentException("Номер дела должен быть целым числом.");
+                }
+
+                foreach (Applicant applicant in ViewModel.currentSession.Applicants)
+                {
+                    if (applicant.ID == ID)
+                    {
+                        throw new ArgumentException("Данный номер дела занят.");
+                    }
+                }
+
+                ViewModel.currentSession.AddApplicant(new Applicant(ID, nameTextBox.Text, surnameTextBox.Text,
+                    middleNameTextBox.Text, dateTimePicker.Value, new Passport(passportSeriesMaskedTextBox.Text,
+                    passportNumberMaskedTextBox.Text, addressTextBox.Text), new SchoolDiploma(diplomaSeriesMaskedTextBox.Text,
+                    diplomaNumberMaskedTextBox.Text, organizationTextBox.Text), Exams, Convert.ToInt32(achivementsNumericUpDown.Value),
+                    additionalTextBox.Text, new DocumentsStatus(applicationCheckBox.Checked, agreementCheckBox.Checked,
+                    enrolledCheckBox.Checked), (FieldOfStudy)Enum.ToObject(typeof(FieldOfStudy), areasComboBox.SelectedIndex)));
+
+                MessageBox.Show("Абитуриент успешно добавлен.", "Регистрация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                applicantPanel.Visible = false;
+                dataBasePanel.Visible = true;
+                workersPanel.Visible = false;
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void MainForm_Load(object sender, EventArgs e)
@@ -195,13 +241,6 @@ namespace Курсовая_работа
         private void deleteWorkerButton_Click(object sender, EventArgs e)
         {
             ViewModel.DeleteWorker(loginToDeleteTextBox.Text);
-            workerForBindingBindingSource.Clear();
-            foreach (Worker worker in ViewModel.currentSession.Workers)
-            {
-                workerForBindingBindingSource.Add(new WorkerForBinding(worker.Name,
-                    worker.Surname, worker.MiddleName, worker.credentials.Login, (worker.Status == Status.Admin) ? true : false));
-            }
-
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -217,6 +256,17 @@ namespace Курсовая_работа
         private void loginToDeleteTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            ViewModel.currentSession.Load();
+            workerForBindingBindingSource.Clear();
+            foreach (Worker worker in ViewModel.currentSession.Workers)
+            {
+                workerForBindingBindingSource.Add(new WorkerForBinding(worker.Name,
+                    worker.Surname, worker.MiddleName, worker.credentials.Login, (worker.Status == Status.Admin) ? true : false));
+            }
         }
     }
 }
