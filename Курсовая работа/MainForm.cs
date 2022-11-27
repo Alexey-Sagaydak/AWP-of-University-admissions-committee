@@ -31,7 +31,7 @@ namespace Курсовая_работа
                 workerForBindingBindingSource.Add(new WorkerForBinding(worker.Name,
                     worker.Surname, worker.MiddleName, worker.credentials.Login, (worker.Status == Status.Admin) ? true : false ));
             }
-            workersDataGridView.Update();
+            //workersDataGridView.Update();
              
             applicantPanel.Visible = false;
             dataBasePanel.Visible = true;
