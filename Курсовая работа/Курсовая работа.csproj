@@ -85,6 +85,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolDiploma.cs" />
     <Compile Include="Worker.cs" />
+    <Compile Include="WorkerForBinding.cs" />
     <Compile Include="WorkerRegisrtationFormViewModel.cs" />
     <Compile Include="WorkersRegistrationForm.cs">
       <SubType>Form</SubType>

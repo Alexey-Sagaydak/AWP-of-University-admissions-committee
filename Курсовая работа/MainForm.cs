@@ -23,8 +23,10 @@ namespace Курсовая_работа
                 списокСотрудниковToolStripMenuItem.Enabled = false;
             }
 
-            workersDataGridView.DataSource = ViewModel.currentSession.Workers;
-            //workersDataGridView.ColumnCount = 
+            this.Text = $"Приемная кампания (сотрудник: {ViewModel.currentSession.CurrentWorker.Surname} {ViewModel.currentSession.CurrentWorker.Name} {ViewModel.currentSession.CurrentWorker.MiddleName})";
+
+            workersDataGridView.DataBindings.Add()
+             
             applicantPanel.Visible = false;
             dataBasePanel.Visible = true;
             workersPanel.Visible = false;
