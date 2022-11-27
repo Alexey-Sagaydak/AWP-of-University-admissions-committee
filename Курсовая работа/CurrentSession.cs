@@ -67,7 +67,7 @@ namespace Курсовая_работа
 			bool flag = true;
 			foreach (Worker i in Workers)
 			{
-				if (worker.credentials.Login == i.credentials.Login &&
+				if (worker.credentials.Login == i.credentials.Login ||
 					worker.credentials.Hash.SequenceEqual(i.credentials.Hash))
 				{
 					flag = false;

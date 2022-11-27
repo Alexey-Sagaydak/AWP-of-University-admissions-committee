@@ -25,13 +25,20 @@ namespace Курсовая_работа
 
             this.Text = $"Приемная кампания (сотрудник: {ViewModel.currentSession.CurrentWorker.Surname} {ViewModel.currentSession.CurrentWorker.Name} {ViewModel.currentSession.CurrentWorker.MiddleName})";
 
-            workersDataGridView.DataBindings.Add()
+            //workersDataGridView.DataSource = bindingNavigator1;
+            foreach (Worker worker in ViewModel.currentSession.Workers)
+            {
+                workerForBindingBindingSource.Add(new WorkerForBinding(worker.Name,
+                    worker.Surname, worker.MiddleName, worker.credentials.Login, (worker.Status == Status.Admin) ? true : false ));
+            }
+            workersDataGridView.Update();
              
             applicantPanel.Visible = false;
             dataBasePanel.Visible = true;
             workersPanel.Visible = false;
         }
 
+        //private void MainForm_Load
 
         private void завершитьСеансToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -186,6 +193,28 @@ namespace Курсовая_работа
         }
 
         private void deleteWorkerButton_Click(object sender, EventArgs e)
+        {
+            ViewModel.DeleteWorker(loginToDeleteTextBox.Text);
+            workerForBindingBindingSource.Clear();
+            foreach (Worker worker in ViewModel.currentSession.Workers)
+            {
+                workerForBindingBindingSource.Add(new WorkerForBinding(worker.Name,
+                    worker.Surname, worker.MiddleName, worker.credentials.Login, (worker.Status == Status.Admin) ? true : false));
+            }
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginToDeleteTextBox_TextChanged(object sender, EventArgs e)
         {
 
         }
