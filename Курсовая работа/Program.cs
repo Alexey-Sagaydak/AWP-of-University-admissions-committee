@@ -34,7 +34,7 @@ namespace Курсовая_работа
 
             Worker worker1 = new Worker("Admin", "Admin", "Admin", new DateTime(2003, 7, 23), new Credentials("Admin123", "Admin123"), Status.Admin);
 
-            Worker worker2 = new Worker("Петров", "Петр", "Петрович", new DateTime(1999, 2, 5), new Credentials("rrrrrr", "D1aaaa"), Status.Worker);
+            Worker worker2 = new Worker("Worker", "Worker", "Worker", new DateTime(1999, 2, 5), new Credentials("Worker123", "Worker123"), Status.Worker);
 
             //workers.Add(worker1);
             //workers.Add(worker2);

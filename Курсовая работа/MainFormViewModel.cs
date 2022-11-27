@@ -8,10 +8,11 @@ namespace Курсовая_работа
 {
     public class MainFormViewModel
     {
-        CurrentSession currentSession { get; set; }
+        public CurrentSession currentSession = new CurrentSession(ControlID.worker);
+
         public MainFormViewModel()
         {
-
+            currentSession.Load();
         }
     }
 }

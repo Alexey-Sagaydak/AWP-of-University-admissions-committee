@@ -29,6 +29,7 @@ namespace Курсовая_работа
                 if (worker.credentials.Login == login && worker.credentials.Hash.SequenceEqual(Hash))
                 {
                     flag = true;
+                    ControlID.worker = worker;
                     break;
                 }
             }

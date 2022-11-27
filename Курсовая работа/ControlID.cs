@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public class WorkerRegisrtationViewModel
+    public static class ControlID
     {
-
+        public static Worker worker { get; set; }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.сеансToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -99,12 +101,14 @@
             this.areasLabel = new System.Windows.Forms.Label();
             this.resultsLabel = new System.Windows.Forms.Label();
             this.workersPanel = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.workersPropertyGrid = new System.Windows.Forms.PropertyGrid();
-            this.button1 = new System.Windows.Forms.Button();
-            this.workersListBox = new System.Windows.Forms.ListBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.workersDataGridView = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.workerLoginLabel = new System.Windows.Forms.Label();
+            this.loginToDeleteTextBox = new System.Windows.Forms.TextBox();
+            this.deleteWorkerButton = new System.Windows.Forms.Button();
+            this.workerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainMenuStrip.SuspendLayout();
             this.dataBasePanel.SuspendLayout();
             this.applicantPanel.SuspendLayout();
@@ -122,8 +126,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.subject3numericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.achivementsNumericUpDown)).BeginInit();
             this.workersPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workersDataGridView)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -137,7 +143,7 @@
             this.оПрограммеToolStripMenuItem});
             this.mainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.mainMenuStrip.Name = "mainMenuStrip";
-            this.mainMenuStrip.Size = new System.Drawing.Size(1139, 24);
+            this.mainMenuStrip.Size = new System.Drawing.Size(1044, 24);
             this.mainMenuStrip.TabIndex = 0;
             this.mainMenuStrip.Text = "menuStrip1";
             // 
@@ -202,13 +208,13 @@
             this.dataBasePanel.Controls.Add(this.applicantsListBox);
             this.dataBasePanel.Location = new System.Drawing.Point(15, 29);
             this.dataBasePanel.Name = "dataBasePanel";
-            this.dataBasePanel.Size = new System.Drawing.Size(1124, 625);
+            this.dataBasePanel.Size = new System.Drawing.Size(1012, 629);
             this.dataBasePanel.TabIndex = 1;
             // 
             // applicantsPropertyGrid
             // 
             this.applicantsPropertyGrid.HelpVisible = false;
-            this.applicantsPropertyGrid.Location = new System.Drawing.Point(377, 18);
+            this.applicantsPropertyGrid.Location = new System.Drawing.Point(560, 18);
             this.applicantsPropertyGrid.Name = "applicantsPropertyGrid";
             this.applicantsPropertyGrid.Size = new System.Drawing.Size(735, 498);
             this.applicantsPropertyGrid.TabIndex = 2;
@@ -216,7 +222,7 @@
             // applicantsListBox
             // 
             this.applicantsListBox.FormattingEnabled = true;
-            this.applicantsListBox.Location = new System.Drawing.Point(3, 18);
+            this.applicantsListBox.Location = new System.Drawing.Point(186, 18);
             this.applicantsListBox.Name = "applicantsListBox";
             this.applicantsListBox.Size = new System.Drawing.Size(368, 498);
             this.applicantsListBox.TabIndex = 1;
@@ -231,7 +237,7 @@
             this.applicantPanel.Controls.Add(this.ApplicantTabControl);
             this.applicantPanel.Location = new System.Drawing.Point(15, 27);
             this.applicantPanel.Name = "applicantPanel";
-            this.applicantPanel.Size = new System.Drawing.Size(1112, 622);
+            this.applicantPanel.Size = new System.Drawing.Size(1000, 626);
             this.applicantPanel.TabIndex = 1;
             this.applicantPanel.Visible = false;
             this.applicantPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.applicantPanel_Paint);
@@ -435,7 +441,7 @@
             this.ApplicantTabControl.Location = new System.Drawing.Point(15, 72);
             this.ApplicantTabControl.Name = "ApplicantTabControl";
             this.ApplicantTabControl.SelectedIndex = 0;
-            this.ApplicantTabControl.Size = new System.Drawing.Size(1094, 547);
+            this.ApplicantTabControl.Size = new System.Drawing.Size(999, 542);
             this.ApplicantTabControl.TabIndex = 204;
             this.ApplicantTabControl.TabStop = false;
             // 
@@ -456,7 +462,7 @@
             this.mainDataTabPage.Location = new System.Drawing.Point(4, 31);
             this.mainDataTabPage.Name = "mainDataTabPage";
             this.mainDataTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.mainDataTabPage.Size = new System.Drawing.Size(1086, 512);
+            this.mainDataTabPage.Size = new System.Drawing.Size(991, 507);
             this.mainDataTabPage.TabIndex = 0;
             this.mainDataTabPage.Text = "Основные данные";
             this.mainDataTabPage.UseVisualStyleBackColor = true;
@@ -615,7 +621,7 @@
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.additionalTextBox.Size = new System.Drawing.Size(877, 200);
+            this.additionalTextBox.Size = new System.Drawing.Size(765, 200);
             this.additionalTextBox.TabIndex = 99;
             // 
             // additionalLabel
@@ -645,7 +651,7 @@
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.organizationTextBox.Location = new System.Drawing.Point(23, 326);
             this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(881, 29);
+            this.organizationTextBox.Size = new System.Drawing.Size(769, 29);
             this.organizationTextBox.TabIndex = 98;
             // 
             // addressLabel
@@ -665,7 +671,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.addressTextBox.Location = new System.Drawing.Point(20, 149);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(882, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(770, 29);
             this.addressTextBox.TabIndex = 95;
             this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
             // 
@@ -707,7 +713,7 @@
             this.examsTabPage.Location = new System.Drawing.Point(4, 31);
             this.examsTabPage.Name = "examsTabPage";
             this.examsTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.examsTabPage.Size = new System.Drawing.Size(1086, 512);
+            this.examsTabPage.Size = new System.Drawing.Size(991, 507);
             this.examsTabPage.TabIndex = 1;
             this.examsTabPage.Text = "Направления, экзамены";
             // 
@@ -1044,7 +1050,7 @@
             "41.03.03 - Востоковедение и африканистика"});
             this.areasComboBox.Location = new System.Drawing.Point(31, 354);
             this.areasComboBox.Name = "areasComboBox";
-            this.areasComboBox.Size = new System.Drawing.Size(612, 30);
+            this.areasComboBox.Size = new System.Drawing.Size(500, 30);
             this.areasComboBox.TabIndex = 19;
             this.areasComboBox.SelectedIndexChanged += new System.EventHandler(this.areasComboBox_SelectedIndexChanged);
             // 
@@ -1074,93 +1080,131 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.workersPanel.Controls.Add(this.tableLayoutPanel1);
-            this.workersPanel.Controls.Add(this.dataGridView1);
-            this.workersPanel.Location = new System.Drawing.Point(6, 26);
+            this.workersPanel.Location = new System.Drawing.Point(6, 27);
             this.workersPanel.Name = "workersPanel";
-            this.workersPanel.Size = new System.Drawing.Size(1130, 625);
+            this.workersPanel.Size = new System.Drawing.Size(1018, 631);
             this.workersPanel.TabIndex = 3;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.workersPropertyGrid, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.workersListBox, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1111, 614);
-            this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // workersPropertyGrid
-            // 
-            this.workersPropertyGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.workersPropertyGrid.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.workersPropertyGrid.HelpVisible = false;
-            this.workersPropertyGrid.Location = new System.Drawing.Point(558, 3);
-            this.workersPropertyGrid.Name = "workersPropertyGrid";
-            this.workersPropertyGrid.Size = new System.Drawing.Size(550, 546);
-            this.workersPropertyGrid.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 555);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(319, 41);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // workersListBox
-            // 
-            this.workersListBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.workersListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.workersListBox.FormattingEnabled = true;
-            this.workersListBox.HorizontalScrollbar = true;
-            this.workersListBox.ItemHeight = 25;
-            this.workersListBox.Location = new System.Drawing.Point(3, 3);
-            this.workersListBox.Name = "workersListBox";
-            this.workersListBox.Size = new System.Drawing.Size(549, 529);
-            this.workersListBox.TabIndex = 0;
-            this.workersListBox.SelectedIndexChanged += new System.EventHandler(this.workersListBox_SelectedIndexChanged);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(79, 6);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(8, 8);
-            this.dataGridView1.TabIndex = 3;
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // workersDataGridView
+            // 
+            this.workersDataGridView.AllowUserToAddRows = false;
+            this.workersDataGridView.AllowUserToDeleteRows = false;
+            this.workersDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.workersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.workersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.workersDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            this.workersDataGridView.Location = new System.Drawing.Point(3, 3);
+            this.workersDataGridView.Name = "workersDataGridView";
+            this.workersDataGridView.ReadOnly = true;
+            this.workersDataGridView.Size = new System.Drawing.Size(1020, 545);
+            this.workersDataGridView.TabIndex = 0;
+            this.workersDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.workersDataGridView, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 0, 1);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 6);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1026, 613);
+            this.tableLayoutPanel1.TabIndex = 1;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel2.ColumnCount = 3;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 7.156863F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.84314F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.workerLoginLabel, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.loginToDeleteTextBox, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.deleteWorkerButton, 2, 0);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 554);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1020, 56);
+            this.tableLayoutPanel2.TabIndex = 1;
+            // 
+            // workerLoginLabel
+            // 
+            this.workerLoginLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.workerLoginLabel.AutoSize = true;
+            this.workerLoginLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.workerLoginLabel.Location = new System.Drawing.Point(3, 16);
+            this.workerLoginLabel.Name = "workerLoginLabel";
+            this.workerLoginLabel.Size = new System.Drawing.Size(64, 24);
+            this.workerLoginLabel.TabIndex = 0;
+            this.workerLoginLabel.Text = "Логин";
+            // 
+            // loginToDeleteTextBox
+            // 
+            this.loginToDeleteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.loginToDeleteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.loginToDeleteTextBox.Location = new System.Drawing.Point(76, 13);
+            this.loginToDeleteTextBox.Name = "loginToDeleteTextBox";
+            this.loginToDeleteTextBox.Size = new System.Drawing.Size(737, 29);
+            this.loginToDeleteTextBox.TabIndex = 1;
+            // 
+            // deleteWorkerButton
+            // 
+            this.deleteWorkerButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.deleteWorkerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.deleteWorkerButton.Location = new System.Drawing.Point(819, 10);
+            this.deleteWorkerButton.Name = "deleteWorkerButton";
+            this.deleteWorkerButton.Size = new System.Drawing.Size(102, 35);
+            this.deleteWorkerButton.TabIndex = 2;
+            this.deleteWorkerButton.Text = "Удалить";
+            this.deleteWorkerButton.UseVisualStyleBackColor = true;
+            this.deleteWorkerButton.Click += new System.EventHandler(this.deleteWorkerButton_Click);
+            // 
+            // workerBindingSource
+            // 
+            this.workerBindingSource.DataSource = typeof(Курсовая_работа.Worker);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1139, 664);
+            this.ClientSize = new System.Drawing.Size(1044, 659);
             this.Controls.Add(this.workersPanel);
-            this.Controls.Add(this.mainMenuStrip);
             this.Controls.Add(this.dataBasePanel);
+            this.Controls.Add(this.mainMenuStrip);
             this.Controls.Add(this.applicantPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenuStrip;
-            this.MinimumSize = new System.Drawing.Size(400, 400);
+            this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Приемная кампания";
@@ -1189,8 +1233,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.subject3numericUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.achivementsNumericUpDown)).EndInit();
             this.workersPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.workersDataGridView)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1267,11 +1314,13 @@
         private System.Windows.Forms.ListBox applicantsListBox;
         private System.Windows.Forms.ToolStripMenuItem списокСотрудниковToolStripMenuItem;
         private System.Windows.Forms.Panel workersPanel;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PropertyGrid workersPropertyGrid;
-        private System.Windows.Forms.ListBox workersListBox;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.DataGridView workersDataGridView;
+        private System.Windows.Forms.BindingSource workerBindingSource;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label workerLoginLabel;
+        private System.Windows.Forms.TextBox loginToDeleteTextBox;
+        private System.Windows.Forms.Button deleteWorkerButton;
     }
 }

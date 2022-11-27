@@ -12,11 +12,19 @@ namespace Курсовая_работа
 {
     public partial class MainForm : Form
     {
-        public MainFormViewModel ViewModel { get; }
+        public MainFormViewModel ViewModel = new MainFormViewModel();
 
         public MainForm()
         {
             InitializeComponent();
+            if (ViewModel.currentSession.CurrentWorker.Status == Status.Worker)
+            {
+                добавитьСотрудникаToolStripMenuItem.Enabled = false;
+                списокСотрудниковToolStripMenuItem.Enabled = false;
+            }
+
+            workersDataGridView.DataSource = ViewModel.currentSession.Workers;
+            //workersDataGridView.ColumnCount = 
             applicantPanel.Visible = false;
             dataBasePanel.Visible = true;
             workersPanel.Visible = false;
@@ -154,7 +162,7 @@ namespace Курсовая_работа
 
         private void добавитьСотрудникаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WorkersRegistration workersRegistration = new WorkersRegistration();
+            WorkersRegistrationForm workersRegistration = new WorkersRegistrationForm();
             workersRegistration.ShowDialog();
         }
 
@@ -166,6 +174,16 @@ namespace Курсовая_работа
         }
 
         private void workersListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void deleteWorkerButton_Click(object sender, EventArgs e)
         {
 
         }
