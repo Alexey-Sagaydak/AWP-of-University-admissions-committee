@@ -36,7 +36,7 @@ namespace Курсовая_работа
             }
             
             applicantsDataGridView.DataSource = applicantForBindingBindingSource;
-            ViewModel.currentSession.Applicants.Sort(new CompareApplicants());
+            ViewModel.currentSession.Applicants.Sort(new CompareApplicantsByID());
             foreach (Applicant applicant in ViewModel.currentSession.Applicants)
             {
                 applicantForBindingBindingSource.Add(new ApplicantForBinding(applicant.ID, applicant.Surname,
@@ -303,7 +303,23 @@ namespace Курсовая_работа
         {
             ViewModel.currentSession.Load();
             applicantForBindingBindingSource.Clear();
-            ViewModel.currentSession.Applicants.Sort(new CompareApplicants());
+
+            switch (sortOptionToolStripComboBox.SelectedIndex)
+            {
+                case 0:
+                    ViewModel.currentSession.Applicants.Sort(new CompareApplicantsByID());
+                    break;
+                case 1:
+                    ViewModel.currentSession.Applicants.Sort((x, y) => String.Compare(x.Surname, y.Surname));
+                    break;
+                case 2:
+                    ViewModel.currentSession.Applicants.Sort((x, y) => String.Compare(ControlID.fields[(int)x.fieldOfStudy],
+                        ControlID.fields[(int)y.fieldOfStudy]));
+                    break;
+                default:
+                    break;
+            }
+
             foreach (Applicant applicant in ViewModel.currentSession.Applicants)
             {
                 applicantForBindingBindingSource.Add(new ApplicantForBinding(applicant.ID, applicant.Surname,

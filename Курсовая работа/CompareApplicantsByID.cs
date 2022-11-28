@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public class CompareApplicants : IComparer<Applicant>
+    public class CompareApplicantsByID : IComparer<Applicant>
     {
         public int Compare(Applicant a, Applicant b)
         {

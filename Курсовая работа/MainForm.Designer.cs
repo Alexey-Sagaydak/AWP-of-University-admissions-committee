@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.mainMenuStrip = new System.Windows.Forms.MenuStrip();
             this.сеансToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1204,6 +1204,7 @@
             this.bindingNavigator1.CountItemFormat = "из {0}";
             this.bindingNavigator1.DeleteItem = null;
             this.bindingNavigator1.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingNavigator1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.bindingNavigator1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -1222,7 +1223,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(275, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(293, 26);
             this.bindingNavigator1.TabIndex = 4;
             this.bindingNavigator1.Text = "bindingNavigator1";
             this.bindingNavigator1.RefreshItems += new System.EventHandler(this.bindingNavigator1_RefreshItems);
@@ -1230,7 +1231,7 @@
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(36, 22);
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(43, 23);
             this.bindingNavigatorCountItem.Text = "из {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Общее число элементов";
             // 
@@ -1240,7 +1241,7 @@
             this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
             this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 23);
             this.bindingNavigatorMoveFirstItem.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem
@@ -1249,28 +1250,28 @@
             this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
             this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 23);
             this.bindingNavigatorMovePreviousItem.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator
             // 
             this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 26);
             // 
             // bindingNavigatorPositionItem
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 25);
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Текущее положение";
             // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 26);
             // 
             // bindingNavigatorMoveNextItem
             // 
@@ -1278,7 +1279,7 @@
             this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
             this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 23);
             this.bindingNavigatorMoveNextItem.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem
@@ -1287,13 +1288,13 @@
             this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
             this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 23);
             this.bindingNavigatorMoveLastItem.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator2
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 26);
             // 
             // toolStripButton1
             // 
@@ -1301,7 +1302,7 @@
             this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
             this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(65, 22);
+            this.toolStripButton1.Size = new System.Drawing.Size(76, 23);
             this.toolStripButton1.Text = "Обновить";
             this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
@@ -1314,14 +1315,14 @@
             this.workersDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.workersDataGridView.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.workersDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.workersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.workersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.workersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.workersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.фамилияDataGridViewTextBoxColumn,
@@ -1330,17 +1331,17 @@
             this.логинDataGridViewTextBoxColumn,
             this.администраторDataGridViewCheckBoxColumn});
             this.workersDataGridView.DataSource = this.workerForBindingBindingSource;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.workersDataGridView.DefaultCellStyle = dataGridViewCellStyle8;
-            this.workersDataGridView.Location = new System.Drawing.Point(3, 28);
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.workersDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
+            this.workersDataGridView.Location = new System.Drawing.Point(3, 29);
             this.workersDataGridView.Name = "workersDataGridView";
-            this.workersDataGridView.Size = new System.Drawing.Size(1104, 500);
+            this.workersDataGridView.Size = new System.Drawing.Size(1104, 499);
             this.workersDataGridView.TabIndex = 5;
             // 
             // contextMenuStrip1
@@ -1358,14 +1359,14 @@
             this.applicantsDataGridView.AutoGenerateColumns = false;
             this.applicantsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.applicantsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.applicantsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.applicantsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.applicantsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.applicantsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.номерDataGridViewTextBoxColumn,
@@ -1376,19 +1377,19 @@
             this.предметыDataGridViewTextBoxColumn,
             this.баллыDataGridViewTextBoxColumn});
             this.applicantsDataGridView.DataSource = this.applicantForBindingBindingSource;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.applicantsDataGridView.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.applicantsDataGridView.DefaultCellStyle = dataGridViewCellStyle2;
             this.applicantsDataGridView.GridColor = System.Drawing.SystemColors.WindowText;
-            this.applicantsDataGridView.Location = new System.Drawing.Point(3, 28);
+            this.applicantsDataGridView.Location = new System.Drawing.Point(3, 30);
             this.applicantsDataGridView.Name = "applicantsDataGridView";
             this.applicantsDataGridView.ReadOnly = true;
-            this.applicantsDataGridView.Size = new System.Drawing.Size(1112, 506);
+            this.applicantsDataGridView.Size = new System.Drawing.Size(1112, 504);
             this.applicantsDataGridView.TabIndex = 0;
             this.applicantsDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -1419,6 +1420,7 @@
             this.bindingNavigator2.CountItem = this.bindingNavigatorCountItem1;
             this.bindingNavigator2.DeleteItem = null;
             this.bindingNavigator2.Dock = System.Windows.Forms.DockStyle.None;
+            this.bindingNavigator2.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.bindingNavigator2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem1,
             this.bindingNavigatorMovePreviousItem1,
@@ -1439,7 +1441,7 @@
             this.bindingNavigator2.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.bindingNavigator2.Name = "bindingNavigator2";
             this.bindingNavigator2.PositionItem = this.bindingNavigatorPositionItem1;
-            this.bindingNavigator2.Size = new System.Drawing.Size(501, 25);
+            this.bindingNavigator2.Size = new System.Drawing.Size(529, 27);
             this.bindingNavigator2.TabIndex = 0;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
@@ -1449,7 +1451,7 @@
             this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
             this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem";
             this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 24);
             this.bindingNavigatorMoveFirstItem1.Text = "Переместить в начало";
             // 
             // bindingNavigatorMovePreviousItem1
@@ -1458,35 +1460,36 @@
             this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
             this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 24);
             this.bindingNavigatorMovePreviousItem1.Text = "Переместить назад";
             // 
             // bindingNavigatorSeparator3
             // 
             this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorPositionItem1
             // 
             this.bindingNavigatorPositionItem1.AccessibleName = "Положение";
             this.bindingNavigatorPositionItem1.AutoSize = false;
-            this.bindingNavigatorPositionItem1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bindingNavigatorPositionItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 25);
             this.bindingNavigatorPositionItem1.Text = "0";
             this.bindingNavigatorPositionItem1.ToolTipText = "Текущее положение";
             // 
             // bindingNavigatorCountItem1
             // 
+            this.bindingNavigatorCountItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(43, 22);
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(51, 24);
             this.bindingNavigatorCountItem1.Text = "для {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Общее число элементов";
             // 
             // bindingNavigatorSeparator4
             // 
             this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem1
             // 
@@ -1494,7 +1497,7 @@
             this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
             this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 24);
             this.bindingNavigatorMoveNextItem1.Text = "Переместить вперед";
             // 
             // bindingNavigatorMoveLastItem1
@@ -1503,21 +1506,22 @@
             this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
             this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem";
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 22);
+            this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 24);
             this.bindingNavigatorMoveLastItem1.Text = "Переместить в конец";
             // 
             // bindingNavigatorSeparator5
             // 
             this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 25);
+            this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 27);
             // 
             // toolStripButton2
             // 
             this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripButton2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(65, 22);
+            this.toolStripButton2.Size = new System.Drawing.Size(76, 24);
             this.toolStripButton2.Text = "Обновить";
             this.toolStripButton2.Click += new System.EventHandler(this.toolStripButton2_Click);
             // 
@@ -1582,17 +1586,19 @@
             // 
             this.sortOptionToolStripComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sortOptionToolStripComboBox.DropDownWidth = 150;
+            this.sortOptionToolStripComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.sortOptionToolStripComboBox.Items.AddRange(new object[] {
             "Сортировать по номеру",
-            "Сортировать по фамилии"});
+            "Сортировать по фамилии",
+            "Сортировать по направлению"});
             this.sortOptionToolStripComboBox.Name = "sortOptionToolStripComboBox";
-            this.sortOptionToolStripComboBox.Size = new System.Drawing.Size(180, 25);
+            this.sortOptionToolStripComboBox.Size = new System.Drawing.Size(220, 27);
             this.sortOptionToolStripComboBox.Click += new System.EventHandler(this.toolStripComboBox1_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // applicantForBindingBindingSource
             // 
