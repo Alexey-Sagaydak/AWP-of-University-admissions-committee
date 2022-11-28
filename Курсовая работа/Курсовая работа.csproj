@@ -59,6 +59,7 @@
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Applicant.cs" />
+    <Compile Include="ApplicantForBinding.cs" />
     <Compile Include="Authorization.cs" />
     <Compile Include="AuthorizationForm.cs">
       <SubType>Form</SubType>
@@ -67,6 +68,7 @@
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AuthorizationFormViewModel.cs" />
+    <Compile Include="CompareApplicants.cs" />
     <Compile Include="ControlID.cs" />
     <Compile Include="CurrentSession.cs" />
     <Compile Include="DocumentsStatus.cs" />
@@ -118,6 +120,8 @@
     </EmbeddedResource>
     <None Include="dataFiles\Users.bin" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Applicant.datasource" />
+    <None Include="Properties\DataSources\ApplicantForBinding.datasource" />
     <None Include="Properties\DataSources\Worker.datasource" />
     <None Include="Properties\DataSources\WorkerForBinding.datasource" />
     <None Include="Properties\Settings.settings">

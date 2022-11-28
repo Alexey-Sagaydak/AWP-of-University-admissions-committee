@@ -2,9 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace Курсовая_работа
 {
@@ -40,6 +42,7 @@ namespace Курсовая_работа
         [Description("41.03.03 - Востоковедение и африканистика")]
         OrientalAndAfricanStudies = 9
     };
+
     public class Applicant : Human
     {
         [JsonProperty("id")]

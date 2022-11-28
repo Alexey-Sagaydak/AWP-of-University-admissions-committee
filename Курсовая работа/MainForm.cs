@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,18 +22,27 @@ namespace Курсовая_работа
             {
                 добавитьСотрудникаToolStripMenuItem.Enabled = false;
                 списокСотрудниковToolStripMenuItem.Enabled = false;
+                сформироватьПриказОЗачисленииToolStripMenuItem.Enabled = false;
             }
 
             this.Text = $"Приемная кампания (сотрудник: {ViewModel.currentSession.CurrentWorker.Surname} {ViewModel.currentSession.CurrentWorker.Name} {ViewModel.currentSession.CurrentWorker.MiddleName})";
 
-            //workersDataGridView.DataSource = bindingNavigator1;
+            workersDataGridView.DataSource = workerForBindingBindingSource;
             foreach (Worker worker in ViewModel.currentSession.Workers)
             {
                 workerForBindingBindingSource.Add(new WorkerForBinding(worker.Name,
-                    worker.Surname, worker.MiddleName, worker.credentials.Login, (worker.Status == Status.Admin) ? true : false ));
+                    worker.Surname, worker.MiddleName, worker.credentials.Login,
+                    (worker.Status == Status.Admin) ? true : false ));
             }
-            //workersDataGridView.Update();
-             
+            
+            applicantsDataGridView.DataSource = applicantForBindingBindingSource;
+            ViewModel.currentSession.Applicants.Sort(new CompareApplicants());
+            foreach (Applicant applicant in ViewModel.currentSession.Applicants)
+            {
+                applicantForBindingBindingSource.Add(new ApplicantForBinding(applicant.ID, applicant.Surname,
+                    applicant.Name, applicant.MiddleName, applicant.fieldOfStudy, applicant.exams));
+            }
+            sortOptionToolStripComboBox.SelectedIndex = 0;
             applicantPanel.Visible = false;
             dataBasePanel.Visible = true;
             workersPanel.Visible = false;
@@ -270,6 +280,38 @@ namespace Курсовая_работа
         }
 
         private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void applicantsPropertyGrid_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bindingNavigator2_RefreshItems(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripButton2_Click(object sender, EventArgs e)
+        {
+            ViewModel.currentSession.Load();
+            applicantForBindingBindingSource.Clear();
+            ViewModel.currentSession.Applicants.Sort(new CompareApplicants());
+            foreach (Applicant applicant in ViewModel.currentSession.Applicants)
+            {
+                applicantForBindingBindingSource.Add(new ApplicantForBinding(applicant.ID, applicant.Surname,
+                    applicant.Name, applicant.MiddleName, applicant.fieldOfStudy, applicant.exams));
+            }
+        }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
         {
 
         }
