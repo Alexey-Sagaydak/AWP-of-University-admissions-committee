@@ -26,7 +26,7 @@ namespace Курсовая_работа
             catch (FileNotFoundException ex) {
 
                 MessageBox.Show(ex.Message, "Критическая ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Application.Exit();
+                Environment.Exit(1);
             }
         }
     }

@@ -44,7 +44,7 @@ namespace Курсовая_работа
             }
             else
             {
-                throw new FileNotFoundException("Не удалось прочитать базу работников.");
+                throw new FileNotFoundException("'WorkersData.json' не существует.");
             }
         }
     }

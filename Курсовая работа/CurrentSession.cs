@@ -7,6 +7,7 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using System.Security.Policy;
+using System.Windows.Forms;
 
 namespace Курсовая_работа
 {
@@ -31,7 +32,9 @@ namespace Курсовая_работа
 			}
 			else
 			{
-				throw new FileNotFoundException($"'{ filename }' не существует.");
+				MessageBox.Show($"Не удалось найти '{filename }'!", "Критическая ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Environment.Exit(1);
+                throw new FileNotFoundException($"'{ filename }' не существует.");
 			}
 		}
 
