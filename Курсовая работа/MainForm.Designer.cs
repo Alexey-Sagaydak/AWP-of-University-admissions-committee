@@ -1548,6 +1548,8 @@
             // 
             // workersDataGridView
             // 
+            this.workersDataGridView.AllowUserToAddRows = false;
+            this.workersDataGridView.AllowUserToDeleteRows = false;
             this.workersDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -1581,6 +1583,7 @@
             this.workersDataGridView.DefaultCellStyle = dataGridViewCellStyle4;
             this.workersDataGridView.Location = new System.Drawing.Point(3, 29);
             this.workersDataGridView.Name = "workersDataGridView";
+            this.workersDataGridView.ReadOnly = true;
             this.workersDataGridView.Size = new System.Drawing.Size(1104, 499);
             this.workersDataGridView.TabIndex = 5;
             // 
@@ -1659,30 +1662,35 @@
             this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
             this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
             this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
+            this.фамилияDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // имяDataGridViewTextBoxColumn
             // 
             this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
             this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
             this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
+            this.имяDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // отчествоDataGridViewTextBoxColumn
             // 
             this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
             this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
             this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
+            this.отчествоDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // логинDataGridViewTextBoxColumn
             // 
             this.логинDataGridViewTextBoxColumn.DataPropertyName = "Логин";
             this.логинDataGridViewTextBoxColumn.HeaderText = "Логин";
             this.логинDataGridViewTextBoxColumn.Name = "логинDataGridViewTextBoxColumn";
+            this.логинDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // администраторDataGridViewCheckBoxColumn
             // 
             this.администраторDataGridViewCheckBoxColumn.DataPropertyName = "Администратор";
             this.администраторDataGridViewCheckBoxColumn.HeaderText = "Администратор";
             this.администраторDataGridViewCheckBoxColumn.Name = "администраторDataGridViewCheckBoxColumn";
+            this.администраторDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // MainForm
             // 
