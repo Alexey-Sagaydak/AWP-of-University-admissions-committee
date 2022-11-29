@@ -12,8 +12,6 @@ namespace Курсовая_работа
         bool DeleteWorker(Worker worker);
         void AddApplicant(Applicant applicant);
         bool DeleteApplicant(int ID);
-        List<Applicant> FindApplicants(int ID);
-        List<Applicant> FindApplicants(string name, string surname);
-        List<Applicant> FindApplicants(FieldOfStudy fieldOfStudy);
+        Applicant GetApplicant(int ID);
     }
 }

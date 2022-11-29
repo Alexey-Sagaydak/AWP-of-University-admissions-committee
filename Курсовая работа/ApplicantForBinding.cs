@@ -16,8 +16,10 @@ namespace Курсовая_работа
         public string Предметы { get; set; }
         public int Баллы { get; set; }
 
+        public string Дополнительно { get; set; }
+
         public ApplicantForBinding(int ID, string surname, string name, string middleName,
-            FieldOfStudy fieldOfStudy, List<Exam> exams)
+            FieldOfStudy fieldOfStudy, List<Exam> exams, string add)
         {
             int minPoints = 100;
 
@@ -41,6 +43,8 @@ namespace Курсовая_работа
                 Баллы -= minPoints;
             }
             Предметы = Предметы.Remove(0, 2);
+
+            Дополнительно = add;
         }
     }
 }

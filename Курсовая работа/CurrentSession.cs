@@ -43,23 +43,17 @@ namespace Курсовая_работа
 
         public void AddApplicant(Applicant applicant)
 		{
-			bool flag = true;
 			foreach (Applicant i in Applicants)
 			{
 				if (i.ID == applicant.ID)
 				{
-					flag = false;
+                    DeleteApplicant(i.ID);
 					break;
 				}
 			}
 
-			if (flag)
-			{
-				Applicants.Add(applicant);
-				SaveChanges(Applicants, "ApplicantsData.json");
-			}  
-			else
-				throw new ArgumentException("Не удалось добавить абитуриента, так как данное ID уже используется.");
+			Applicants.Add(applicant);
+			SaveChanges(Applicants, "ApplicantsData.json");
 		}
 
 		public void AddWorker(Worker worker)
@@ -133,20 +127,19 @@ namespace Курсовая_работа
 			return flag;
 		}
 
-		public List<Applicant> FindApplicants(int ID)
+		public Applicant GetApplicant(int ID)
 		{
-			throw new NotImplementedException();
-		}
-
-		public List<Applicant> FindApplicants(string name, string surname)
-		{
-			throw new NotImplementedException();
-		}
-
-		public List<Applicant> FindApplicants(FieldOfStudy fieldOfStudy)
-		{
-			throw new NotImplementedException();
-		}
+			Applicant applicant = null;
+            foreach (Applicant i in Applicants)
+            {
+                if (i.ID == ID)
+                {
+                    applicant = i;
+                    break;
+                }
+            }
+			return applicant;
+        }
 
         public CurrentSession(Worker _currentWorker)
         {

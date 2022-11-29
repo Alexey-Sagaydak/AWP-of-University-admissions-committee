@@ -39,8 +39,8 @@ namespace Курсовая_работа
             ViewModel.currentSession.Applicants.Sort(new CompareApplicantsByID());
             foreach (Applicant applicant in ViewModel.currentSession.Applicants)
             {
-                applicantForBindingBindingSource.Add(new ApplicantForBinding(applicant.ID, applicant.Surname,
-                    applicant.Name, applicant.MiddleName, applicant.fieldOfStudy, applicant.exams));
+                applicantForBindingBindingSource.Add(new ApplicantForBinding(applicant.ID, applicant.Surname, applicant.Name,
+                    applicant.MiddleName, applicant.fieldOfStudy, applicant.exams, applicant.additionalInformation));
             }
             sortOptionToolStripComboBox.SelectedIndex = 0;
             applicantPanel.Visible = false;
@@ -48,16 +48,9 @@ namespace Курсовая_работа
             workersPanel.Visible = false;
         }
 
-        //private void MainForm_Load
-
         private void завершитьСеансToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Close();
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
 
         private void бакалавриатспециалитетToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,26 +58,12 @@ namespace Курсовая_работа
             applicantPanel.Visible = true;
             dataBasePanel.Visible = false;
             workersPanel.Visible = false;
-            //Hide();
-            //Applicant applicantForm = new Applicant();
-            //applicantForm.ShowDialog();
-            //Close();
-        }
-
-        private void выйтиИОткрытьОкноАвторизацииToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void добавитьАбитуриентаToolStripMenuItem_Click(object sender, EventArgs e)
@@ -135,26 +114,6 @@ namespace Курсовая_работа
             workersPanel.Visible = false;
         }
 
-        private void subject1ComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void addressTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void applicantPanel_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
         private void saveButton_Click(object sender, EventArgs e)
         {
             int ID;
@@ -170,20 +129,24 @@ namespace Курсовая_работа
                 if (subject4CheckBox.Checked) Exams.Add(new Exam((Subject)Enum.ToObject(typeof(Subject),
                     subject4ComboBox.SelectedIndex), Convert.ToInt32(subject4numericUpDown.Value)));
 
-                if (caseNumberTextBox.Text.All(char.IsDigit))
+                if (caseNumberTextBox.Text != "" && caseNumberTextBox.Text.All(char.IsDigit) &&
+                        Convert.ToInt32(caseNumberTextBox.Text) > 0)
                 {
                     ID = Convert.ToInt32(caseNumberTextBox.Text);
                 } 
                 else
                 {
-                    throw new ArgumentException("Номер дела должен быть целым числом.");
+                    throw new ArgumentException("Номер дела должен быть целым положительным числом.");
                 }
 
                 foreach (Applicant applicant in ViewModel.currentSession.Applicants)
                 {
                     if (applicant.ID == ID)
                     {
-                        throw new ArgumentException("Данный номер дела занят.");
+                        if (MessageBox.Show("Данный номер уже используется. Вы уверены, что хотите перезаписать данные абитуриента?", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+                        {
+                            throw new ArgumentException("Введите другой номер дела.");
+                        }
                     }
                 }
 
@@ -194,7 +157,7 @@ namespace Курсовая_работа
                     additionalTextBox.Text, new DocumentsStatus(applicationCheckBox.Checked, agreementCheckBox.Checked,
                     enrolledCheckBox.Checked), (FieldOfStudy)Enum.ToObject(typeof(FieldOfStudy), areasComboBox.SelectedIndex)));
 
-                MessageBox.Show("Абитуриент успешно добавлен.", "Регистрация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Успешно сохранено.", "Регистрация", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 applicantPanel.Visible = false;
                 dataBasePanel.Visible = true;
@@ -215,16 +178,6 @@ namespace Курсовая_работа
             areasComboBox.SelectedIndex = 0;
         }
 
-        private void areasComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void добавитьСотрудникаToolStripMenuItem_Click(object sender, EventArgs e)
         {
             WorkersRegistrationForm workersRegistration = new WorkersRegistrationForm();
@@ -238,34 +191,9 @@ namespace Курсовая_работа
             workersPanel.Visible = true;
         }
 
-        private void workersListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void deleteWorkerButton_Click(object sender, EventArgs e)
         {
             ViewModel.DeleteWorker(loginToDeleteTextBox.Text);
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void bindingNavigator1_RefreshItems(object sender, EventArgs e)
-        {
-
-        }
-
-        private void loginToDeleteTextBox_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -277,26 +205,6 @@ namespace Курсовая_работа
                 workerForBindingBindingSource.Add(new WorkerForBinding(worker.Name,
                     worker.Surname, worker.MiddleName, worker.credentials.Login, (worker.Status == Status.Admin) ? true : false));
             }
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void applicantsPropertyGrid_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void bindingNavigator2_RefreshItems(object sender, EventArgs e)
-        {
-
         }
 
         private void toolStripButton2_Click(object sender, EventArgs e)
@@ -322,14 +230,87 @@ namespace Курсовая_работа
 
             foreach (Applicant applicant in ViewModel.currentSession.Applicants)
             {
-                applicantForBindingBindingSource.Add(new ApplicantForBinding(applicant.ID, applicant.Surname,
-                    applicant.Name, applicant.MiddleName, applicant.fieldOfStudy, applicant.exams));
+                applicantForBindingBindingSource.Add(new ApplicantForBinding(applicant.ID, applicant.Surname, applicant.Name,
+                    applicant.MiddleName, applicant.fieldOfStudy, applicant.exams, applicant.additionalInformation));
             }
         }
 
-        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        private void EditApplicantInfoButton_Click(object sender, EventArgs e)
         {
+            Applicant a = null;
+            if (editApplicantInfoTextBox.Text != "" && editApplicantInfoTextBox.Text.All(char.IsDigit) && (a = ViewModel.currentSession.GetApplicant(Convert.ToInt32(editApplicantInfoTextBox.Text))) != null)
+            {
+                ApplicantTabControl.SelectedIndex = 0;
+                surnameTextBox.Text = a.Surname;
+                nameTextBox.Text = a.Name;
+                middleNameTextBox.Text = a.MiddleName;
+                caseNumberTextBox.Text = a.ID.ToString();
+                passportNumberMaskedTextBox.Text = a.passport.Number;
+                passportSeriesMaskedTextBox.Text = a.passport.Series;
+                diplomaNumberMaskedTextBox.Text = a.schoolDiploma.Number;
+                diplomaSeriesMaskedTextBox.Text = a.schoolDiploma.Series;
+                addressTextBox.Text = a.passport.Address;
+                additionalTextBox.Text = a.additionalInformation;
+                organizationTextBox.Text = a.schoolDiploma.EducationalInstitution;
+                dateTimePicker.Text = a.DateOfBirth.ToString();
 
+                subject1CheckBox.Checked = false;
+                subject2CheckBox.Checked = false;
+                subject3CheckBox.Checked = false;
+                subject4CheckBox.Checked = false;
+                subject1numericUpDown.Value = 0;
+                subject2numericUpDown.Value = 0;
+                subject3numericUpDown.Value = 0;
+                subject4numericUpDown.Value = 0;
+
+                if (a.exams.Count >= 1)
+                {
+                    subject1CheckBox.Checked = true;
+                    subject1ComboBox.SelectedIndex = Convert.ToInt32(a.exams[0].Subject);
+                    subject1numericUpDown.Value = a.exams[0].Points;
+                }
+                if (a.exams.Count >= 2)
+                {
+                    subject2CheckBox.Checked = true;
+                    subject2ComboBox.SelectedIndex = Convert.ToInt32(a.exams[1].Subject);
+                    subject2numericUpDown.Value = a.exams[1].Points;
+                }
+                if (a.exams.Count >= 3)
+                {
+                    subject3CheckBox.Checked = true;
+                    subject3ComboBox.SelectedIndex = Convert.ToInt32(a.exams[2].Subject);
+                    subject3numericUpDown.Value = a.exams[2].Points;
+                }
+                if (a.exams.Count >= 4)
+                {
+                    subject4CheckBox.Checked = true;
+                    subject4ComboBox.SelectedIndex = Convert.ToInt32(a.exams[3].Subject);
+                    subject4numericUpDown.Value = a.exams[3].Points;
+                }
+
+                achivementsNumericUpDown.Value = a.Achivements;
+                areasComboBox.SelectedIndex = Convert.ToInt32(a.fieldOfStudy);
+                applicationCheckBox.Checked = a.documentsStatus.isStatementSigned;
+                agreementCheckBox.Checked = a.documentsStatus.isEnrollmentSigned;
+                enrolledCheckBox.Checked = a.documentsStatus.isEnrolled;
+
+                applicantPanel.Visible = true;
+                dataBasePanel.Visible = false;
+                workersPanel.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Номер дела не найден.", "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+        }
+
+        private void editApplicantInfoTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
