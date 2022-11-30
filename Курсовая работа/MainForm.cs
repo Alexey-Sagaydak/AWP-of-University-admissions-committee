@@ -193,7 +193,10 @@ namespace Курсовая_работа
 
         private void deleteWorkerButton_Click(object sender, EventArgs e)
         {
-            ViewModel.DeleteWorker(loginToDeleteTextBox.Text);
+            if (MessageBox.Show("Вы уверены, что хотите удалить данного работника?", "Внимание!", MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                ViewModel.DeleteWorker(loginToDeleteTextBox.Text);
+            }
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -310,6 +313,15 @@ namespace Курсовая_работа
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (editApplicantInfoTextBox.Text != "" && MessageBox.Show("Вы уверены, что хотите удалить данного абитуриента? Это действие невозможно будет отменить.", "Внимание!",
+                MessageBoxButtons.YesNo, MessageBoxIcon.Stop, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                ViewModel.currentSession.DeleteApplicant(Convert.ToInt32(editApplicantInfoTextBox.Text));
             }
         }
     }
