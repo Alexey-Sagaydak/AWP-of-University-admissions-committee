@@ -46,9 +46,11 @@ namespace Курсовая_работа
                     applicant.MiddleName, applicant.fieldOfStudy, applicant.exams, applicant.Achivements, applicant.additionalInformation));
             }
             sortOptionToolStripComboBox.SelectedIndex = 0;
+            fieldsComboBox.SelectedIndex = 0;
             applicantPanel.Visible = false;
             dataBasePanel.Visible = true;
             workersPanel.Visible = false;
+            OrderOfEnrollmentPanel.Visible = false;
         }
 
         private void завершитьСеансToolStripMenuItem_Click(object sender, EventArgs e)
@@ -61,6 +63,7 @@ namespace Курсовая_работа
             applicantPanel.Visible = true;
             dataBasePanel.Visible = false;
             workersPanel.Visible = false;
+            OrderOfEnrollmentPanel.Visible = false;
         }
 
         private void оПрограммеToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,6 +111,7 @@ namespace Курсовая_работа
             applicantPanel.Visible = true;
             dataBasePanel.Visible = false;
             workersPanel.Visible = false;
+            OrderOfEnrollmentPanel.Visible = false;
         }
 
         private void списокАбитуриентовToolStripMenuItem_Click(object sender, EventArgs e)
@@ -115,6 +119,7 @@ namespace Курсовая_работа
             applicantPanel.Visible = false;
             dataBasePanel.Visible = true;
             workersPanel.Visible = false;
+            OrderOfEnrollmentPanel.Visible = false;
         }
 
         private void saveButton_Click(object sender, EventArgs e)
@@ -192,6 +197,7 @@ namespace Курсовая_работа
             applicantPanel.Visible = false;
             dataBasePanel.Visible = false;
             workersPanel.Visible = true;
+            OrderOfEnrollmentPanel.Visible = false;
         }
 
         private void deleteWorkerButton_Click(object sender, EventArgs e)
@@ -303,6 +309,7 @@ namespace Курсовая_работа
                 applicantPanel.Visible = true;
                 dataBasePanel.Visible = false;
                 workersPanel.Visible = false;
+                OrderOfEnrollmentPanel.Visible = false;
             }
             else
             {
@@ -326,6 +333,27 @@ namespace Курсовая_работа
             {
                 ViewModel.currentSession.DeleteApplicant(Convert.ToInt32(editApplicantInfoTextBox.Text));
             }
+        }
+
+        private void сформироватьПриказОЗачисленииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            applicantPanel.Visible = false;
+            dataBasePanel.Visible = false;
+            workersPanel.Visible = false;
+            OrderOfEnrollmentPanel.Visible = true;
+        }
+
+        private void orderButton_Click(object sender, EventArgs e)
+        {
+            orderTextBox.Text = ViewModel.FormOrder((FieldOfStudy)Enum.ToObject(typeof(FieldOfStudy), fieldsComboBox.SelectedIndex),
+                Convert.ToInt32(budgetNumericUpDown.Value), Convert.ToInt32(contractNumericUpDown.Value),
+                Convert.ToInt32(minSumNumericUpDown.Value));
+        }
+
+        private void copeButton_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetText(orderTextBox.Text);
+            MessageBox.Show("Текст приказа успешно скопирован.", "Буфер обмена", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

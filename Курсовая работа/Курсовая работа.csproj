@@ -68,6 +68,7 @@
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="AuthorizationFormViewModel.cs" />
+    <Compile Include="CompareApplicantsByPoints.cs" />
     <Compile Include="CompareApplicantsByID.cs" />
     <Compile Include="ControlID.cs" />
     <Compile Include="CurrentSession.cs" />
