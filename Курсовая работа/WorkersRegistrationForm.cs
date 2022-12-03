@@ -12,11 +12,12 @@ namespace Курсовая_работа
 {
     public partial class WorkersRegistrationForm : Form
     {
-        public WorkerRegisrtationFormViewModel ViewModel = new WorkerRegisrtationFormViewModel();
+        public WorkerRegisrtationFormViewModel ViewModel;
 
-        public WorkersRegistrationForm()
+        public WorkersRegistrationForm(Worker CurrentWorker)
         {
             InitializeComponent();
+            ViewModel = new WorkerRegisrtationFormViewModel(CurrentWorker);
             DialogResult = DialogResult.None;
         }
 

@@ -13,11 +13,14 @@ namespace Курсовая_работа
 {
     public partial class MainForm : Form
     {
-        public MainFormViewModel ViewModel = new MainFormViewModel();
+        public MainFormViewModel ViewModel;
+        public Worker CurrentWorker;
 
-        public MainForm()
+        public MainForm(Worker currentWorker)
         {
             InitializeComponent();
+            ViewModel = new MainFormViewModel(currentWorker);
+            CurrentWorker = currentWorker;
             if (ViewModel.currentSession.CurrentWorker.Status == Status.Worker)
             {
                 добавитьСотрудникаToolStripMenuItem.Enabled = false;
@@ -40,7 +43,7 @@ namespace Курсовая_работа
             foreach (Applicant applicant in ViewModel.currentSession.Applicants)
             {
                 applicantForBindingBindingSource.Add(new ApplicantForBinding(applicant.ID, applicant.Surname, applicant.Name,
-                    applicant.MiddleName, applicant.fieldOfStudy, applicant.exams, applicant.additionalInformation));
+                    applicant.MiddleName, applicant.fieldOfStudy, applicant.exams, applicant.Achivements, applicant.additionalInformation));
             }
             sortOptionToolStripComboBox.SelectedIndex = 0;
             applicantPanel.Visible = false;
@@ -180,7 +183,7 @@ namespace Курсовая_работа
 
         private void добавитьСотрудникаToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            WorkersRegistrationForm workersRegistration = new WorkersRegistrationForm();
+            WorkersRegistrationForm workersRegistration = new WorkersRegistrationForm(CurrentWorker);
             workersRegistration.ShowDialog();
         }
 
@@ -234,7 +237,7 @@ namespace Курсовая_работа
             foreach (Applicant applicant in ViewModel.currentSession.Applicants)
             {
                 applicantForBindingBindingSource.Add(new ApplicantForBinding(applicant.ID, applicant.Surname, applicant.Name,
-                    applicant.MiddleName, applicant.fieldOfStudy, applicant.exams, applicant.additionalInformation));
+                    applicant.MiddleName, applicant.fieldOfStudy, applicant.exams, applicant.Achivements, applicant.additionalInformation));
             }
         }
 

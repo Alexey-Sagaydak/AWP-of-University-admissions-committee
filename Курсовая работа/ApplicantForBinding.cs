@@ -19,7 +19,7 @@ namespace Курсовая_работа
         public string Дополнительно { get; set; }
 
         public ApplicantForBinding(int ID, string surname, string name, string middleName,
-            FieldOfStudy fieldOfStudy, List<Exam> exams, string add)
+            FieldOfStudy fieldOfStudy, List<Exam> exams, int addPoints, string add)
         {
             int minPoints = 100;
 
@@ -42,6 +42,8 @@ namespace Курсовая_работа
             {
                 Баллы -= minPoints;
             }
+
+            Баллы += addPoints;
             Предметы = Предметы.Remove(0, 2);
 
             Дополнительно = add;

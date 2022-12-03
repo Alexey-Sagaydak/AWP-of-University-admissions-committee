@@ -14,22 +14,23 @@ namespace Курсовая_работа
     {
         private List<Worker> Workers = new List<Worker>();
 
-        public bool CheckWorker(string login, string password)
+        public bool CheckWorker(string login, string password, out Worker a)
         {
             bool flag = false;
-            
+            a = null;
+
             byte[] Hash;
             UnicodeEncoding ue = new UnicodeEncoding();
             byte[] bytes = ue.GetBytes(password);
             SHA256 shHash = SHA256.Create();
             Hash = shHash.ComputeHash(bytes);
-
+            
             foreach (Worker worker in Workers)
             {
                 if (worker.credentials.Login == login && worker.credentials.Hash.SequenceEqual(Hash))
                 {
                     flag = true;
-                    ControlID.worker = worker;
+                    a = worker;
                     break;
                 }
             }

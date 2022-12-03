@@ -8,7 +8,7 @@ namespace Курсовая_работа
 {
     public class WorkerRegisrtationFormViewModel
     {
-        CurrentSession currentSession = new CurrentSession(ControlID.worker);
+        CurrentSession currentSession;
 
         public void AddWorker(Worker worker)
         {
@@ -16,9 +16,9 @@ namespace Курсовая_работа
             currentSession.AddWorker(worker);
         }
 
-        public WorkerRegisrtationFormViewModel()
+        public WorkerRegisrtationFormViewModel(Worker CurrentWorker)
         {
-            
+            currentSession = new CurrentSession(CurrentWorker);
         }
     }
 }

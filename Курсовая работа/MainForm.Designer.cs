@@ -46,6 +46,7 @@
             this.dataBasePanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.applicantForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
@@ -70,6 +71,7 @@
             this.editApplicantInfoTextBox = new System.Windows.Forms.TextBox();
             this.applicantIDLabel = new System.Windows.Forms.Label();
             this.EditApplicantInfoButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.applicantPanel = new System.Windows.Forms.Panel();
             this.topTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.nameTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
@@ -132,6 +134,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.workerLoginLabel = new System.Windows.Forms.Label();
             this.loginToDeleteTextBox = new System.Windows.Forms.TextBox();
+            this.workerForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deleteWorkerButton = new System.Windows.Forms.Button();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -145,20 +148,18 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.workersDataGridView = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.workerForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.отчествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.логинDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.администраторDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.applicantForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mainMenuStrip.SuspendLayout();
             this.dataBasePanel.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicantsDataGridView)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.applicantPanel.SuspendLayout();
@@ -178,11 +179,10 @@
             this.workersPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workersDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -321,6 +321,11 @@
             this.bindingNavigator2.Size = new System.Drawing.Size(529, 27);
             this.bindingNavigator2.TabIndex = 0;
             this.bindingNavigator2.Text = "bindingNavigator2";
+            // 
+            // applicantForBindingBindingSource
+            // 
+            this.applicantForBindingBindingSource.DataSource = typeof(Курсовая_работа.ApplicantForBinding);
+            this.applicantForBindingBindingSource.Sort = "";
             // 
             // bindingNavigatorCountItem1
             // 
@@ -542,7 +547,7 @@
             this.editApplicantInfoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.editApplicantInfoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.applicantForBindingBindingSource, "Номер", true));
             this.editApplicantInfoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.editApplicantInfoTextBox.Location = new System.Drawing.Point(382, 11);
+            this.editApplicantInfoTextBox.Location = new System.Drawing.Point(381, 11);
             this.editApplicantInfoTextBox.Name = "editApplicantInfoTextBox";
             this.editApplicantInfoTextBox.Size = new System.Drawing.Size(259, 29);
             this.editApplicantInfoTextBox.TabIndex = 0;
@@ -553,7 +558,7 @@
             this.applicantIDLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.applicantIDLabel.AutoSize = true;
             this.applicantIDLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.applicantIDLabel.Location = new System.Drawing.Point(307, 13);
+            this.applicantIDLabel.Location = new System.Drawing.Point(306, 13);
             this.applicantIDLabel.Name = "applicantIDLabel";
             this.applicantIDLabel.Size = new System.Drawing.Size(69, 24);
             this.applicantIDLabel.TabIndex = 1;
@@ -563,13 +568,25 @@
             // 
             this.EditApplicantInfoButton.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.EditApplicantInfoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.EditApplicantInfoButton.Location = new System.Drawing.Point(647, 9);
+            this.EditApplicantInfoButton.Location = new System.Drawing.Point(646, 9);
             this.EditApplicantInfoButton.Name = "EditApplicantInfoButton";
             this.EditApplicantInfoButton.Size = new System.Drawing.Size(108, 32);
             this.EditApplicantInfoButton.TabIndex = 2;
             this.EditApplicantInfoButton.Text = "Изменить";
             this.EditApplicantInfoButton.UseVisualStyleBackColor = true;
             this.EditApplicantInfoButton.Click += new System.EventHandler(this.EditApplicantInfoButton_Click);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.button1.Location = new System.Drawing.Point(760, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(108, 32);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Удалить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // applicantPanel
             // 
@@ -963,7 +980,7 @@
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.additionalTextBox.Size = new System.Drawing.Size(742, 198);
+            this.additionalTextBox.Size = new System.Drawing.Size(725, 198);
             this.additionalTextBox.TabIndex = 99;
             // 
             // additionalLabel
@@ -993,7 +1010,7 @@
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.organizationTextBox.Location = new System.Drawing.Point(23, 332);
             this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(746, 29);
+            this.organizationTextBox.Size = new System.Drawing.Size(729, 29);
             this.organizationTextBox.TabIndex = 98;
             // 
             // addressLabel
@@ -1013,7 +1030,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.addressTextBox.Location = new System.Drawing.Point(20, 155);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(747, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(730, 29);
             this.addressTextBox.TabIndex = 95;
             // 
             // diplomaLabel
@@ -1389,7 +1406,7 @@
             "41.03.03 - Востоковедение и африканистика"});
             this.areasComboBox.Location = new System.Drawing.Point(32, 363);
             this.areasComboBox.Name = "areasComboBox";
-            this.areasComboBox.Size = new System.Drawing.Size(477, 30);
+            this.areasComboBox.Size = new System.Drawing.Size(460, 30);
             this.areasComboBox.TabIndex = 19;
             // 
             // areasLabel
@@ -1482,6 +1499,10 @@
             this.loginToDeleteTextBox.ReadOnly = true;
             this.loginToDeleteTextBox.Size = new System.Drawing.Size(216, 29);
             this.loginToDeleteTextBox.TabIndex = 1;
+            // 
+            // workerForBindingBindingSource
+            // 
+            this.workerForBindingBindingSource.DataSource = typeof(Курсовая_работа.WorkerForBinding);
             // 
             // deleteWorkerButton
             // 
@@ -1646,27 +1667,6 @@
             this.workersDataGridView.Size = new System.Drawing.Size(1104, 499);
             this.workersDataGridView.TabIndex = 5;
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.button1.Location = new System.Drawing.Point(761, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 32);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "Удалить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // workerForBindingBindingSource
-            // 
-            this.workerForBindingBindingSource.DataSource = typeof(Курсовая_работа.WorkerForBinding);
-            // 
             // фамилияDataGridViewTextBoxColumn
             // 
             this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
@@ -1702,10 +1702,10 @@
             this.администраторDataGridViewCheckBoxColumn.Name = "администраторDataGridViewCheckBoxColumn";
             this.администраторDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
-            // applicantForBindingBindingSource
+            // contextMenuStrip1
             // 
-            this.applicantForBindingBindingSource.DataSource = typeof(Курсовая_работа.ApplicantForBinding);
-            this.applicantForBindingBindingSource.Sort = "";
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // MainForm
             // 
@@ -1732,6 +1732,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicantsDataGridView)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -1760,12 +1761,11 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workersDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

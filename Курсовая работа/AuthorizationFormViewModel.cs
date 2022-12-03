@@ -12,9 +12,9 @@ namespace Курсовая_работа
     {
         public Authorization authorization;
 
-        public bool CheckWorker(string login, string password)
+        public bool CheckWorker(string login, string password, out Worker worker)
         {
-            return authorization.CheckWorker(login, password);
+            return authorization.CheckWorker(login, password, out worker);
         }
 
         public AuthorizationFormViewModel()

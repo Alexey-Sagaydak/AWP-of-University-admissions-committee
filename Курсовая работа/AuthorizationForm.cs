@@ -13,18 +13,24 @@ namespace Курсовая_работа
     public partial class AuthorizationForm : Form
     {
         public AuthorizationFormViewModel ViewModel = new AuthorizationFormViewModel();
+        public Worker CurrentWorker;
 
         public AuthorizationForm()
         {
             InitializeComponent();
         }
 
+        public Worker GetCurrentWorker
+        {
+            get { return CurrentWorker; }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
-            if (ViewModel.CheckWorker(loginTextBox.Text, passwordTextBox.Text))
+            if (ViewModel.CheckWorker(loginTextBox.Text, passwordTextBox.Text, out CurrentWorker))
             {
                 Hide();
-                MainForm mainForm = new MainForm();
+                MainForm mainForm = new MainForm(CurrentWorker);
                 mainForm.ShowDialog();
                 Close();
             }

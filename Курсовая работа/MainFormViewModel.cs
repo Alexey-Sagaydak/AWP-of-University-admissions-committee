@@ -9,7 +9,7 @@ namespace Курсовая_работа
 {
     public class MainFormViewModel
     {
-        public CurrentSession currentSession = new CurrentSession(ControlID.worker);
+        public CurrentSession currentSession;
         
         public void DeleteWorker(string Login)
         {
@@ -31,8 +31,9 @@ namespace Курсовая_работа
             }
         }
 
-        public MainFormViewModel()
+        public MainFormViewModel(Worker CurrentWorker)
         {
+            currentSession = new CurrentSession(CurrentWorker);
             currentSession.Load();
         }
     }
