@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace Курсовая_работа
         public string Дополнительно { get; set; }
 
         public ApplicantForBinding(int ID, string surname, string name, string middleName,
-            FieldOfStudy fieldOfStudy, List<Exam> exams, int addPoints, string add)
+            int fieldOfStudy, List<Exam> exams, int addPoints, string add)
         {
             int minPoints = 100;
 
@@ -27,13 +28,13 @@ namespace Курсовая_работа
             Фамилия = surname;
             Имя = name;
             Отчество = middleName;
-            Направление = ControlID.fields[(int)fieldOfStudy];
+            Направление = Applicant.FieldsOfStudy[fieldOfStudy];
 
             Предметы = "";
             Баллы = 0;
             foreach (Exam exam in exams)
             {
-                Предметы += ", " + ControlID.subjects[(int)exam.Subject];
+                Предметы += ", " + Exam.Subjects[exam.Subject];
                 Баллы += exam.Points;
                 minPoints = (exam.Points < minPoints) ? exam.Points : minPoints;
             }

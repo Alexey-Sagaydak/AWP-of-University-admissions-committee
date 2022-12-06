@@ -21,7 +21,6 @@ namespace Курсовая_работа
         {
             var textJson = JsonConvert.SerializeObject(obj);
 			File.WriteAllText(filename, textJson);
-			//Console.WriteLine(textJson);
         }
 
 		private void LoadChanges<T>(out T obj, string filename)

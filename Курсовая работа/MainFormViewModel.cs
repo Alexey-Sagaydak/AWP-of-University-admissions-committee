@@ -31,7 +31,7 @@ namespace Курсовая_работа
             }
         }
 
-        public string FormOrder(FieldOfStudy fieldOfStudy, int budget, int contract, int minPoints)
+        public string FormOrder(int fieldOfStudy, int budget, int contract, int minPoints)
         {
             List<Applicant> ResultList = new List<Applicant>();
             string ResultString;
@@ -53,9 +53,16 @@ namespace Курсовая_работа
                 if (i == budget + contract) break;
                 if (i == budget) 
                     ResultString += "\r\nЗачислить на контрактной основе:\r\n";
-                ResultString += $"{i + 1}. {ResultList[i].Surname} {ResultList[i].Name} {ResultList[i].Surname} — {CountPoints(ResultList[i])}\r\n";
+                ResultString += $"{i + 1}. {ResultList[i].Surname} {ResultList[i].Name} {ResultList[i].MiddleName} — {CountPoints(ResultList[i])}\r\n";
             }
             return ResultString;
+        }
+
+        public int MaxID()
+        {
+            int maxID = 0;
+            foreach (Applicant a in currentSession.Applicants) maxID = (maxID > a.ID) ? maxID : a.ID;
+            return maxID;
         }
 
         private int CountPoints(Applicant a)

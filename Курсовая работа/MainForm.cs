@@ -80,7 +80,7 @@ namespace Курсовая_работа
                 surnameTextBox.Text = "";
                 nameTextBox.Text = "";
                 middleNameTextBox.Text = "";
-                caseNumberTextBox.Text = "";
+                caseNumberTextBox.Text = Convert.ToString(ViewModel.MaxID() + 1);
                 passportNumberMaskedTextBox.Text = "";
                 passportSeriesMaskedTextBox.Text = "";
                 diplomaNumberMaskedTextBox.Text = "";
@@ -128,14 +128,14 @@ namespace Курсовая_работа
             try
             {
                 List<Exam> Exams = new List<Exam>();
-                if (subject1CheckBox.Checked) Exams.Add(new Exam((Subject)Enum.ToObject(typeof(Subject),
-                    subject1ComboBox.SelectedIndex), Convert.ToInt32(subject1numericUpDown.Value)));
-                if (subject2CheckBox.Checked) Exams.Add(new Exam((Subject)Enum.ToObject(typeof(Subject),
-                    subject2ComboBox.SelectedIndex), Convert.ToInt32(subject2numericUpDown.Value)));
-                if (subject3CheckBox.Checked) Exams.Add(new Exam((Subject)Enum.ToObject(typeof(Subject),
-                    subject3ComboBox.SelectedIndex), Convert.ToInt32(subject3numericUpDown.Value)));
-                if (subject4CheckBox.Checked) Exams.Add(new Exam((Subject)Enum.ToObject(typeof(Subject),
-                    subject4ComboBox.SelectedIndex), Convert.ToInt32(subject4numericUpDown.Value)));
+                if (subject1CheckBox.Checked) Exams.Add(new Exam(subject1ComboBox.SelectedIndex,
+                    Convert.ToInt32(subject1numericUpDown.Value)));
+                if (subject2CheckBox.Checked) Exams.Add(new Exam(subject2ComboBox.SelectedIndex,
+                    Convert.ToInt32(subject2numericUpDown.Value)));
+                if (subject3CheckBox.Checked) Exams.Add(new Exam(subject3ComboBox.SelectedIndex,
+                    Convert.ToInt32(subject3numericUpDown.Value)));
+                if (subject4CheckBox.Checked) Exams.Add(new Exam(subject4ComboBox.SelectedIndex,
+                    Convert.ToInt32(subject4numericUpDown.Value)));
 
                 if (caseNumberTextBox.Text != "" && caseNumberTextBox.Text.All(char.IsDigit) &&
                         Convert.ToInt32(caseNumberTextBox.Text) > 0)
@@ -163,7 +163,7 @@ namespace Курсовая_работа
                     passportNumberMaskedTextBox.Text, addressTextBox.Text), new SchoolDiploma(diplomaSeriesMaskedTextBox.Text,
                     diplomaNumberMaskedTextBox.Text, organizationTextBox.Text), Exams, Convert.ToInt32(achivementsNumericUpDown.Value),
                     additionalTextBox.Text, new DocumentsStatus(applicationCheckBox.Checked, agreementCheckBox.Checked,
-                    enrolledCheckBox.Checked), (FieldOfStudy)Enum.ToObject(typeof(FieldOfStudy), areasComboBox.SelectedIndex)));
+                    enrolledCheckBox.Checked), areasComboBox.SelectedIndex));
 
                 MessageBox.Show("Успешно сохранено.", "Регистрация", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -233,8 +233,8 @@ namespace Курсовая_работа
                     ViewModel.currentSession.Applicants.Sort((x, y) => String.Compare(x.Surname, y.Surname));
                     break;
                 case 2:
-                    ViewModel.currentSession.Applicants.Sort((x, y) => String.Compare(ControlID.fields[(int)x.fieldOfStudy],
-                        ControlID.fields[(int)y.fieldOfStudy]));
+                    ViewModel.currentSession.Applicants.Sort((x, y) => String.Compare(Applicant.FieldsOfStudy[x.fieldOfStudy],
+                        Applicant.FieldsOfStudy[y.fieldOfStudy]));
                     break;
                 default:
                     break;
@@ -345,9 +345,8 @@ namespace Курсовая_работа
 
         private void orderButton_Click(object sender, EventArgs e)
         {
-            orderTextBox.Text = ViewModel.FormOrder((FieldOfStudy)Enum.ToObject(typeof(FieldOfStudy), fieldsComboBox.SelectedIndex),
-                Convert.ToInt32(budgetNumericUpDown.Value), Convert.ToInt32(contractNumericUpDown.Value),
-                Convert.ToInt32(minSumNumericUpDown.Value));
+            orderTextBox.Text = ViewModel.FormOrder(fieldsComboBox.SelectedIndex, Convert.ToInt32(budgetNumericUpDown.Value),
+                Convert.ToInt32(contractNumericUpDown.Value), Convert.ToInt32(minSumNumericUpDown.Value));
         }
 
         private void copeButton_Click(object sender, EventArgs e)

@@ -169,13 +169,13 @@
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.copeButton = new System.Windows.Forms.Button();
             this.orderButton = new System.Windows.Forms.Button();
-            this.applicantForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.workerForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.отчествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.логинDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.администраторDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.applicantForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mainMenuStrip.SuspendLayout();
             this.dataBasePanel.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
@@ -214,8 +214,8 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -874,7 +874,7 @@
             this.diplomaTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.diplomaTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.diplomaTableLayoutPanel.Size = new System.Drawing.Size(234, 76);
-            this.diplomaTableLayoutPanel.TabIndex = 29;
+            this.diplomaTableLayoutPanel.TabIndex = 300;
             // 
             // diplomaSeriesMaskedTextBox
             // 
@@ -947,7 +947,7 @@
             this.passportTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.passportTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.passportTableLayoutPanel.Size = new System.Drawing.Size(200, 76);
-            this.passportTableLayoutPanel.TabIndex = 28;
+            this.passportTableLayoutPanel.TabIndex = 301;
             // 
             // passportSeriesMaskedTextBox
             // 
@@ -1009,7 +1009,7 @@
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.additionalTextBox.Size = new System.Drawing.Size(691, 198);
+            this.additionalTextBox.Size = new System.Drawing.Size(657, 198);
             this.additionalTextBox.TabIndex = 99;
             // 
             // additionalLabel
@@ -1039,7 +1039,7 @@
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.organizationTextBox.Location = new System.Drawing.Point(23, 332);
             this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(695, 29);
+            this.organizationTextBox.Size = new System.Drawing.Size(654, 29);
             this.organizationTextBox.TabIndex = 98;
             // 
             // addressLabel
@@ -1059,7 +1059,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.addressTextBox.Location = new System.Drawing.Point(20, 155);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(696, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(662, 29);
             this.addressTextBox.TabIndex = 95;
             // 
             // diplomaLabel
@@ -1135,7 +1135,7 @@
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.examsTableLayoutPanel.Size = new System.Drawing.Size(738, 183);
+            this.examsTableLayoutPanel.Size = new System.Drawing.Size(704, 183);
             this.examsTableLayoutPanel.TabIndex = 30;
             // 
             // subject1CheckBox
@@ -1146,7 +1146,7 @@
             this.subject1CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.subject1CheckBox.Enabled = false;
             this.subject1CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject1CheckBox.Location = new System.Drawing.Point(149, 15);
+            this.subject1CheckBox.Location = new System.Drawing.Point(147, 15);
             this.subject1CheckBox.Name = "subject1CheckBox";
             this.subject1CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject1CheckBox.TabIndex = 6;
@@ -1161,7 +1161,7 @@
             this.subject2CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.subject2CheckBox.Enabled = false;
             this.subject2CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject2CheckBox.Location = new System.Drawing.Point(149, 60);
+            this.subject2CheckBox.Location = new System.Drawing.Point(147, 60);
             this.subject2CheckBox.Name = "subject2CheckBox";
             this.subject2CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject2CheckBox.TabIndex = 9;
@@ -1176,7 +1176,7 @@
             this.subject3CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.subject3CheckBox.Enabled = false;
             this.subject3CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject3CheckBox.Location = new System.Drawing.Point(149, 105);
+            this.subject3CheckBox.Location = new System.Drawing.Point(147, 105);
             this.subject3CheckBox.Name = "subject3CheckBox";
             this.subject3CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject3CheckBox.TabIndex = 12;
@@ -1188,7 +1188,7 @@
             this.subject4CheckBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.subject4CheckBox.AutoSize = true;
             this.subject4CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject4CheckBox.Location = new System.Drawing.Point(149, 152);
+            this.subject4CheckBox.Location = new System.Drawing.Point(147, 152);
             this.subject4CheckBox.Name = "subject4CheckBox";
             this.subject4CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject4CheckBox.TabIndex = 15;
@@ -1213,9 +1213,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject1ComboBox.Location = new System.Drawing.Point(170, 7);
+            this.subject1ComboBox.Location = new System.Drawing.Point(168, 7);
             this.subject1ComboBox.Name = "subject1ComboBox";
-            this.subject1ComboBox.Size = new System.Drawing.Size(474, 30);
+            this.subject1ComboBox.Size = new System.Drawing.Size(447, 30);
             this.subject1ComboBox.TabIndex = 7;
             // 
             // subject2ComboBox
@@ -1236,9 +1236,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject2ComboBox.Location = new System.Drawing.Point(170, 52);
+            this.subject2ComboBox.Location = new System.Drawing.Point(168, 52);
             this.subject2ComboBox.Name = "subject2ComboBox";
-            this.subject2ComboBox.Size = new System.Drawing.Size(474, 30);
+            this.subject2ComboBox.Size = new System.Drawing.Size(447, 30);
             this.subject2ComboBox.TabIndex = 10;
             // 
             // subject3ComboBox
@@ -1259,9 +1259,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject3ComboBox.Location = new System.Drawing.Point(170, 97);
+            this.subject3ComboBox.Location = new System.Drawing.Point(168, 97);
             this.subject3ComboBox.Name = "subject3ComboBox";
-            this.subject3ComboBox.Size = new System.Drawing.Size(474, 30);
+            this.subject3ComboBox.Size = new System.Drawing.Size(447, 30);
             this.subject3ComboBox.TabIndex = 13;
             // 
             // subject4ComboBox
@@ -1282,9 +1282,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject4ComboBox.Location = new System.Drawing.Point(170, 144);
+            this.subject4ComboBox.Location = new System.Drawing.Point(168, 144);
             this.subject4ComboBox.Name = "subject4ComboBox";
-            this.subject4ComboBox.Size = new System.Drawing.Size(474, 30);
+            this.subject4ComboBox.Size = new System.Drawing.Size(447, 30);
             this.subject4ComboBox.TabIndex = 16;
             // 
             // subject1numericUpDown
@@ -1293,9 +1293,9 @@
             this.subject1numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject1numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
             this.subject1numericUpDown.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.subject1numericUpDown.Location = new System.Drawing.Point(650, 8);
+            this.subject1numericUpDown.Location = new System.Drawing.Point(621, 8);
             this.subject1numericUpDown.Name = "subject1numericUpDown";
-            this.subject1numericUpDown.Size = new System.Drawing.Size(85, 29);
+            this.subject1numericUpDown.Size = new System.Drawing.Size(80, 29);
             this.subject1numericUpDown.TabIndex = 8;
             // 
             // subject2numericUpDown
@@ -1303,9 +1303,9 @@
             this.subject2numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject2numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject2numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.subject2numericUpDown.Location = new System.Drawing.Point(650, 53);
+            this.subject2numericUpDown.Location = new System.Drawing.Point(621, 53);
             this.subject2numericUpDown.Name = "subject2numericUpDown";
-            this.subject2numericUpDown.Size = new System.Drawing.Size(85, 29);
+            this.subject2numericUpDown.Size = new System.Drawing.Size(80, 29);
             this.subject2numericUpDown.TabIndex = 11;
             // 
             // subject4numericUpDown
@@ -1313,9 +1313,9 @@
             this.subject4numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject4numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject4numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.subject4numericUpDown.Location = new System.Drawing.Point(650, 144);
+            this.subject4numericUpDown.Location = new System.Drawing.Point(621, 144);
             this.subject4numericUpDown.Name = "subject4numericUpDown";
-            this.subject4numericUpDown.Size = new System.Drawing.Size(85, 29);
+            this.subject4numericUpDown.Size = new System.Drawing.Size(80, 29);
             this.subject4numericUpDown.TabIndex = 17;
             // 
             // subject3numericUpDown
@@ -1323,9 +1323,9 @@
             this.subject3numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject3numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject3numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.subject3numericUpDown.Location = new System.Drawing.Point(650, 98);
+            this.subject3numericUpDown.Location = new System.Drawing.Point(621, 98);
             this.subject3numericUpDown.Name = "subject3numericUpDown";
-            this.subject3numericUpDown.Size = new System.Drawing.Size(85, 29);
+            this.subject3numericUpDown.Size = new System.Drawing.Size(80, 29);
             this.subject3numericUpDown.TabIndex = 14;
             // 
             // label1
@@ -1439,7 +1439,7 @@
             "41.03.03 - Востоковедение и африканистика"});
             this.areasComboBox.Location = new System.Drawing.Point(32, 363);
             this.areasComboBox.Name = "areasComboBox";
-            this.areasComboBox.Size = new System.Drawing.Size(426, 30);
+            this.areasComboBox.Size = new System.Drawing.Size(487, 30);
             this.areasComboBox.TabIndex = 19;
             // 
             // areasLabel
@@ -1723,9 +1723,9 @@
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel9, 0, 4);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel8, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel7, 0, 2);
-            this.tableLayoutPanel5.Controls.Add(this.orderLabel, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel6, 0, 1);
             this.tableLayoutPanel5.Controls.Add(this.tableLayoutPanel10, 0, 5);
+            this.tableLayoutPanel5.Controls.Add(this.orderLabel, 0, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(6, 2);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 6;
@@ -2004,11 +2004,6 @@
             this.orderButton.UseVisualStyleBackColor = true;
             this.orderButton.Click += new System.EventHandler(this.orderButton_Click);
             // 
-            // applicantForBindingBindingSource
-            // 
-            this.applicantForBindingBindingSource.DataSource = typeof(Курсовая_работа.ApplicantForBinding);
-            this.applicantForBindingBindingSource.Sort = "";
-            // 
             // workerForBindingBindingSource
             // 
             this.workerForBindingBindingSource.DataSource = typeof(Курсовая_работа.WorkerForBinding);
@@ -2048,6 +2043,11 @@
             this.администраторDataGridViewCheckBoxColumn.Name = "администраторDataGridViewCheckBoxColumn";
             this.администраторDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
+            // applicantForBindingBindingSource
+            // 
+            this.applicantForBindingBindingSource.DataSource = typeof(Курсовая_работа.ApplicantForBinding);
+            this.applicantForBindingBindingSource.Sort = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2055,10 +2055,10 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1139, 630);
             this.Controls.Add(this.mainMenuStrip);
-            this.Controls.Add(this.OrderOfEnrollmentPanel);
-            this.Controls.Add(this.dataBasePanel);
             this.Controls.Add(this.applicantPanel);
             this.Controls.Add(this.workersPanel);
+            this.Controls.Add(this.OrderOfEnrollmentPanel);
+            this.Controls.Add(this.dataBasePanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenuStrip;
             this.MinimumSize = new System.Drawing.Size(1000, 600);
@@ -2123,8 +2123,8 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
             this.tableLayoutPanel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

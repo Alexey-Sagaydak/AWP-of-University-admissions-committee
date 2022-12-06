@@ -82,7 +82,6 @@
             this.infoLabel.Text = "Выполнил:\r\nСтудент 2 курса\r\nГруппы АВТ-113\r\nСагайдак А.Е.\r\n\r\nПроверил:\r\nСтарший п" +
     "реподаватель\r\nКафедры АСУ\r\nПопов Е.А.";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.infoLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // netiPictureBox
             // 
@@ -94,7 +93,6 @@
             this.netiPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.netiPictureBox.TabIndex = 0;
             this.netiPictureBox.TabStop = false;
-            this.netiPictureBox.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // AboutForm
             // 

@@ -70,7 +70,6 @@
     <Compile Include="AuthorizationFormViewModel.cs" />
     <Compile Include="CompareApplicantsByPoints.cs" />
     <Compile Include="CompareApplicantsByID.cs" />
-    <Compile Include="ControlID.cs" />
     <Compile Include="CurrentSession.cs" />
     <Compile Include="DocumentsStatus.cs" />
     <Compile Include="Exam.cs" />
@@ -119,7 +118,10 @@
     <EmbeddedResource Include="WorkersRegistrationForm.resx">
       <DependentUpon>WorkersRegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="dataFiles\Users.bin" />
+    <None Include="dataFiles\ApplicantsData.json" />
+    <None Include="dataFiles\FieldsOfStudyData.json" />
+    <None Include="dataFiles\SubjectsData.json" />
+    <None Include="dataFiles\WorkersData.json" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Applicant.datasource" />
     <None Include="Properties\DataSources\ApplicantForBinding.datasource" />
