@@ -46,6 +46,7 @@
             this.dataBasePanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
+            this.applicantForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
@@ -59,13 +60,14 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.applicantsDataGridView = new System.Windows.Forms.DataGridView();
-            this.номерDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фамилияDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.имяDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.отчествоDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.направлениеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.предметыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.баллыDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middleNameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fieldOfStudyDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pointsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.editApplicantInfoTextBox = new System.Windows.Forms.TextBox();
             this.applicantIDLabel = new System.Windows.Forms.Label();
@@ -135,6 +137,7 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.workerLoginLabel = new System.Windows.Forms.Label();
             this.loginToDeleteTextBox = new System.Windows.Forms.TextBox();
+            this.workerForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deleteWorkerButton = new System.Windows.Forms.Button();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -148,6 +151,11 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.workersDataGridView = new System.Windows.Forms.DataGridView();
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.OrderOfEnrollmentPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -169,18 +177,12 @@
             this.copeButton = new System.Windows.Forms.Button();
             this.orderButton = new System.Windows.Forms.Button();
             this.orderLabel = new System.Windows.Forms.Label();
-            this.workerForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.applicantForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.adminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.mainMenuStrip.SuspendLayout();
             this.dataBasePanel.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicantsDataGridView)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.applicantPanel.SuspendLayout();
@@ -200,6 +202,7 @@
             this.workersPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workersDataGridView)).BeginInit();
@@ -214,8 +217,6 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -356,6 +357,10 @@
             this.bindingNavigator2.TabIndex = 0;
             this.bindingNavigator2.Text = "bindingNavigator2";
             // 
+            // applicantForBindingBindingSource
+            // 
+            this.applicantForBindingBindingSource.DataSource = typeof(Курсовая_работа.ApplicantForBinding);
+            // 
             // bindingNavigatorCountItem1
             // 
             this.bindingNavigatorCountItem1.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -460,6 +465,7 @@
             this.applicantsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.applicantsDataGridView.AutoGenerateColumns = false;
             this.applicantsDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.applicantsDataGridView.BackgroundColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -472,13 +478,15 @@
             this.applicantsDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.applicantsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.applicantsDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.номерDataGridViewTextBoxColumn,
-            this.фамилияDataGridViewTextBoxColumn1,
-            this.имяDataGridViewTextBoxColumn1,
-            this.отчествоDataGridViewTextBoxColumn1,
-            this.направлениеDataGridViewTextBoxColumn,
-            this.предметыDataGridViewTextBoxColumn,
-            this.баллыDataGridViewTextBoxColumn});
+            this.numberDataGridViewTextBoxColumn,
+            this.surnameDataGridViewTextBoxColumn1,
+            this.nameDataGridViewTextBoxColumn1,
+            this.middleNameDataGridViewTextBoxColumn1,
+            this.fieldOfStudyDataGridViewTextBoxColumn,
+            this.subjectsDataGridViewTextBoxColumn,
+            this.pointsDataGridViewTextBoxColumn,
+            this.addDataGridViewTextBoxColumn});
+            this.applicantsDataGridView.DataSource = this.applicantForBindingBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
@@ -494,61 +502,69 @@
             this.applicantsDataGridView.Size = new System.Drawing.Size(1112, 504);
             this.applicantsDataGridView.TabIndex = 0;
             // 
-            // номерDataGridViewTextBoxColumn
+            // numberDataGridViewTextBoxColumn
             // 
-            this.номерDataGridViewTextBoxColumn.DataPropertyName = "Номер";
-            this.номерDataGridViewTextBoxColumn.HeaderText = "Номер";
-            this.номерDataGridViewTextBoxColumn.Name = "номерDataGridViewTextBoxColumn";
-            this.номерDataGridViewTextBoxColumn.ReadOnly = true;
-            this.номерDataGridViewTextBoxColumn.Width = 94;
+            this.numberDataGridViewTextBoxColumn.DataPropertyName = "Number";
+            this.numberDataGridViewTextBoxColumn.HeaderText = "Номер дела";
+            this.numberDataGridViewTextBoxColumn.Name = "numberDataGridViewTextBoxColumn";
+            this.numberDataGridViewTextBoxColumn.ReadOnly = true;
+            this.numberDataGridViewTextBoxColumn.Width = 130;
             // 
-            // фамилияDataGridViewTextBoxColumn1
+            // surnameDataGridViewTextBoxColumn1
             // 
-            this.фамилияDataGridViewTextBoxColumn1.DataPropertyName = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn1.Name = "фамилияDataGridViewTextBoxColumn1";
-            this.фамилияDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.фамилияDataGridViewTextBoxColumn1.Width = 116;
+            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Фамилия";
+            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
+            this.surnameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.surnameDataGridViewTextBoxColumn1.Width = 116;
             // 
-            // имяDataGridViewTextBoxColumn1
+            // nameDataGridViewTextBoxColumn1
             // 
-            this.имяDataGridViewTextBoxColumn1.DataPropertyName = "Имя";
-            this.имяDataGridViewTextBoxColumn1.HeaderText = "Имя";
-            this.имяDataGridViewTextBoxColumn1.Name = "имяDataGridViewTextBoxColumn1";
-            this.имяDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.имяDataGridViewTextBoxColumn1.Width = 71;
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Имя";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            this.nameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn1.Width = 71;
             // 
-            // отчествоDataGridViewTextBoxColumn1
+            // middleNameDataGridViewTextBoxColumn1
             // 
-            this.отчествоDataGridViewTextBoxColumn1.DataPropertyName = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn1.HeaderText = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn1.Name = "отчествоDataGridViewTextBoxColumn1";
-            this.отчествоDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.отчествоDataGridViewTextBoxColumn1.Width = 123;
+            this.middleNameDataGridViewTextBoxColumn1.DataPropertyName = "MiddleName";
+            this.middleNameDataGridViewTextBoxColumn1.HeaderText = "Отчество";
+            this.middleNameDataGridViewTextBoxColumn1.Name = "middleNameDataGridViewTextBoxColumn1";
+            this.middleNameDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.middleNameDataGridViewTextBoxColumn1.Width = 123;
             // 
-            // направлениеDataGridViewTextBoxColumn
+            // fieldOfStudyDataGridViewTextBoxColumn
             // 
-            this.направлениеDataGridViewTextBoxColumn.DataPropertyName = "Направление";
-            this.направлениеDataGridViewTextBoxColumn.HeaderText = "Направление";
-            this.направлениеDataGridViewTextBoxColumn.Name = "направлениеDataGridViewTextBoxColumn";
-            this.направлениеDataGridViewTextBoxColumn.ReadOnly = true;
-            this.направлениеDataGridViewTextBoxColumn.Width = 155;
+            this.fieldOfStudyDataGridViewTextBoxColumn.DataPropertyName = "FieldOfStudy";
+            this.fieldOfStudyDataGridViewTextBoxColumn.HeaderText = "Направление подготовки";
+            this.fieldOfStudyDataGridViewTextBoxColumn.Name = "fieldOfStudyDataGridViewTextBoxColumn";
+            this.fieldOfStudyDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fieldOfStudyDataGridViewTextBoxColumn.Width = 241;
             // 
-            // предметыDataGridViewTextBoxColumn
+            // subjectsDataGridViewTextBoxColumn
             // 
-            this.предметыDataGridViewTextBoxColumn.DataPropertyName = "Предметы";
-            this.предметыDataGridViewTextBoxColumn.HeaderText = "Предметы";
-            this.предметыDataGridViewTextBoxColumn.Name = "предметыDataGridViewTextBoxColumn";
-            this.предметыDataGridViewTextBoxColumn.ReadOnly = true;
-            this.предметыDataGridViewTextBoxColumn.Width = 129;
+            this.subjectsDataGridViewTextBoxColumn.DataPropertyName = "Subjects";
+            this.subjectsDataGridViewTextBoxColumn.HeaderText = "Предметы";
+            this.subjectsDataGridViewTextBoxColumn.Name = "subjectsDataGridViewTextBoxColumn";
+            this.subjectsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.subjectsDataGridViewTextBoxColumn.Width = 129;
             // 
-            // баллыDataGridViewTextBoxColumn
+            // pointsDataGridViewTextBoxColumn
             // 
-            this.баллыDataGridViewTextBoxColumn.DataPropertyName = "Баллы";
-            this.баллыDataGridViewTextBoxColumn.HeaderText = "Баллы";
-            this.баллыDataGridViewTextBoxColumn.Name = "баллыDataGridViewTextBoxColumn";
-            this.баллыDataGridViewTextBoxColumn.ReadOnly = true;
-            this.баллыDataGridViewTextBoxColumn.Width = 91;
+            this.pointsDataGridViewTextBoxColumn.DataPropertyName = "Points";
+            this.pointsDataGridViewTextBoxColumn.HeaderText = "Сумма баллов";
+            this.pointsDataGridViewTextBoxColumn.Name = "pointsDataGridViewTextBoxColumn";
+            this.pointsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pointsDataGridViewTextBoxColumn.Width = 147;
+            // 
+            // addDataGridViewTextBoxColumn
+            // 
+            this.addDataGridViewTextBoxColumn.DataPropertyName = "Add";
+            this.addDataGridViewTextBoxColumn.HeaderText = "Дополнительная информация";
+            this.addDataGridViewTextBoxColumn.Name = "addDataGridViewTextBoxColumn";
+            this.addDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addDataGridViewTextBoxColumn.Width = 277;
             // 
             // tableLayoutPanel4
             // 
@@ -574,7 +590,7 @@
             // editApplicantInfoTextBox
             // 
             this.editApplicantInfoTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.editApplicantInfoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.applicantForBindingBindingSource, "Номер", true));
+            this.editApplicantInfoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.applicantForBindingBindingSource, "Number", true));
             this.editApplicantInfoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.editApplicantInfoTextBox.Location = new System.Drawing.Point(381, 11);
             this.editApplicantInfoTextBox.Name = "editApplicantInfoTextBox";
@@ -1009,7 +1025,7 @@
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.additionalTextBox.Size = new System.Drawing.Size(589, 198);
+            this.additionalTextBox.Size = new System.Drawing.Size(572, 198);
             this.additionalTextBox.TabIndex = 99;
             // 
             // additionalLabel
@@ -1039,7 +1055,7 @@
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.organizationTextBox.Location = new System.Drawing.Point(23, 332);
             this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(586, 29);
+            this.organizationTextBox.Size = new System.Drawing.Size(569, 29);
             this.organizationTextBox.TabIndex = 98;
             // 
             // addressLabel
@@ -1059,7 +1075,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.addressTextBox.Location = new System.Drawing.Point(20, 155);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(594, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(577, 29);
             this.addressTextBox.TabIndex = 95;
             // 
             // diplomaLabel
@@ -1135,7 +1151,7 @@
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.examsTableLayoutPanel.Size = new System.Drawing.Size(636, 183);
+            this.examsTableLayoutPanel.Size = new System.Drawing.Size(619, 183);
             this.examsTableLayoutPanel.TabIndex = 30;
             // 
             // subject1CheckBox
@@ -1215,7 +1231,7 @@
             "Химия"});
             this.subject1ComboBox.Location = new System.Drawing.Point(164, 7);
             this.subject1ComboBox.Name = "subject1ComboBox";
-            this.subject1ComboBox.Size = new System.Drawing.Size(393, 30);
+            this.subject1ComboBox.Size = new System.Drawing.Size(379, 30);
             this.subject1ComboBox.TabIndex = 7;
             // 
             // subject2ComboBox
@@ -1238,7 +1254,7 @@
             "Химия"});
             this.subject2ComboBox.Location = new System.Drawing.Point(164, 52);
             this.subject2ComboBox.Name = "subject2ComboBox";
-            this.subject2ComboBox.Size = new System.Drawing.Size(393, 30);
+            this.subject2ComboBox.Size = new System.Drawing.Size(379, 30);
             this.subject2ComboBox.TabIndex = 10;
             // 
             // subject3ComboBox
@@ -1261,7 +1277,7 @@
             "Химия"});
             this.subject3ComboBox.Location = new System.Drawing.Point(164, 97);
             this.subject3ComboBox.Name = "subject3ComboBox";
-            this.subject3ComboBox.Size = new System.Drawing.Size(393, 30);
+            this.subject3ComboBox.Size = new System.Drawing.Size(379, 30);
             this.subject3ComboBox.TabIndex = 13;
             // 
             // subject4ComboBox
@@ -1284,7 +1300,7 @@
             "Химия"});
             this.subject4ComboBox.Location = new System.Drawing.Point(164, 144);
             this.subject4ComboBox.Name = "subject4ComboBox";
-            this.subject4ComboBox.Size = new System.Drawing.Size(393, 30);
+            this.subject4ComboBox.Size = new System.Drawing.Size(379, 30);
             this.subject4ComboBox.TabIndex = 16;
             // 
             // subject1numericUpDown
@@ -1293,9 +1309,9 @@
             this.subject1numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject1numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
             this.subject1numericUpDown.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.subject1numericUpDown.Location = new System.Drawing.Point(563, 8);
+            this.subject1numericUpDown.Location = new System.Drawing.Point(549, 8);
             this.subject1numericUpDown.Name = "subject1numericUpDown";
-            this.subject1numericUpDown.Size = new System.Drawing.Size(70, 29);
+            this.subject1numericUpDown.Size = new System.Drawing.Size(67, 29);
             this.subject1numericUpDown.TabIndex = 8;
             // 
             // subject2numericUpDown
@@ -1303,9 +1319,9 @@
             this.subject2numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject2numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject2numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.subject2numericUpDown.Location = new System.Drawing.Point(563, 53);
+            this.subject2numericUpDown.Location = new System.Drawing.Point(549, 53);
             this.subject2numericUpDown.Name = "subject2numericUpDown";
-            this.subject2numericUpDown.Size = new System.Drawing.Size(70, 29);
+            this.subject2numericUpDown.Size = new System.Drawing.Size(67, 29);
             this.subject2numericUpDown.TabIndex = 11;
             // 
             // subject4numericUpDown
@@ -1313,9 +1329,9 @@
             this.subject4numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject4numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject4numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.subject4numericUpDown.Location = new System.Drawing.Point(563, 144);
+            this.subject4numericUpDown.Location = new System.Drawing.Point(549, 144);
             this.subject4numericUpDown.Name = "subject4numericUpDown";
-            this.subject4numericUpDown.Size = new System.Drawing.Size(70, 29);
+            this.subject4numericUpDown.Size = new System.Drawing.Size(67, 29);
             this.subject4numericUpDown.TabIndex = 17;
             // 
             // subject3numericUpDown
@@ -1323,9 +1339,9 @@
             this.subject3numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject3numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject3numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.subject3numericUpDown.Location = new System.Drawing.Point(563, 98);
+            this.subject3numericUpDown.Location = new System.Drawing.Point(549, 98);
             this.subject3numericUpDown.Name = "subject3numericUpDown";
-            this.subject3numericUpDown.Size = new System.Drawing.Size(70, 29);
+            this.subject3numericUpDown.Size = new System.Drawing.Size(67, 29);
             this.subject3numericUpDown.TabIndex = 14;
             // 
             // label1
@@ -1439,7 +1455,7 @@
             "41.03.03 - Востоковедение и африканистика"});
             this.areasComboBox.Location = new System.Drawing.Point(32, 363);
             this.areasComboBox.Name = "areasComboBox";
-            this.areasComboBox.Size = new System.Drawing.Size(419, 30);
+            this.areasComboBox.Size = new System.Drawing.Size(402, 30);
             this.areasComboBox.TabIndex = 19;
             // 
             // areasLabel
@@ -1532,6 +1548,10 @@
             this.loginToDeleteTextBox.ReadOnly = true;
             this.loginToDeleteTextBox.Size = new System.Drawing.Size(216, 29);
             this.loginToDeleteTextBox.TabIndex = 1;
+            // 
+            // workerForBindingBindingSource
+            // 
+            this.workerForBindingBindingSource.DataSource = typeof(Курсовая_работа.WorkerForBinding);
             // 
             // deleteWorkerButton
             // 
@@ -1695,6 +1715,42 @@
             this.workersDataGridView.ReadOnly = true;
             this.workersDataGridView.Size = new System.Drawing.Size(1104, 499);
             this.workersDataGridView.TabIndex = 5;
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // middleNameDataGridViewTextBoxColumn
+            // 
+            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName";
+            this.middleNameDataGridViewTextBoxColumn.HeaderText = "Отчество";
+            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
+            this.middleNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "Логин";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adminDataGridViewCheckBoxColumn
+            // 
+            this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
+            this.adminDataGridViewCheckBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.adminDataGridViewCheckBoxColumn.HeaderText = "Администратор";
+            this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
+            this.adminDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
@@ -2004,51 +2060,6 @@
             this.orderLabel.TabIndex = 1;
             this.orderLabel.Text = "Формирование приказа о зачислении";
             // 
-            // workerForBindingBindingSource
-            // 
-            this.workerForBindingBindingSource.DataSource = typeof(Курсовая_работа.WorkerForBinding);
-            // 
-            // applicantForBindingBindingSource
-            // 
-            this.applicantForBindingBindingSource.DataSource = typeof(Курсовая_работа.ApplicantForBinding);
-            this.applicantForBindingBindingSource.Sort = "";
-            // 
-            // surnameDataGridViewTextBoxColumn
-            // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // middleNameDataGridViewTextBoxColumn
-            // 
-            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName";
-            this.middleNameDataGridViewTextBoxColumn.HeaderText = "Отчество";
-            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
-            this.middleNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "Логин";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // adminDataGridViewCheckBoxColumn
-            // 
-            this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
-            this.adminDataGridViewCheckBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.adminDataGridViewCheckBoxColumn.HeaderText = "Администратор";
-            this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
-            this.adminDataGridViewCheckBoxColumn.ReadOnly = true;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2056,10 +2067,10 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1139, 630);
             this.Controls.Add(this.mainMenuStrip);
-            this.Controls.Add(this.workersPanel);
-            this.Controls.Add(this.OrderOfEnrollmentPanel);
             this.Controls.Add(this.dataBasePanel);
             this.Controls.Add(this.applicantPanel);
+            this.Controls.Add(this.workersPanel);
+            this.Controls.Add(this.OrderOfEnrollmentPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenuStrip;
             this.MinimumSize = new System.Drawing.Size(1000, 600);
@@ -2075,6 +2086,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicantsDataGridView)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -2103,6 +2115,7 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -2124,8 +2137,6 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
             this.tableLayoutPanel11.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2243,14 +2254,6 @@
         private System.Windows.Forms.Button EditApplicantInfoButton;
         private System.Windows.Forms.ToolStripComboBox sortOptionToolStripComboBox;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.BindingSource applicantForBindingBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn номерDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn фамилияDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn имяDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn отчествоDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn направлениеDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn предметыDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn баллыDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel OrderOfEnrollmentPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
@@ -2280,5 +2283,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn adminDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.BindingSource applicantForBindingBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fieldOfStudyDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pointsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addDataGridViewTextBoxColumn;
     }
 }

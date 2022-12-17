@@ -52,66 +52,66 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutForm.cs">
+    <Compile Include="View\AboutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutForm.Designer.cs">
+    <Compile Include="View\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Applicant.cs" />
-    <Compile Include="ApplicantForBinding.cs" />
+    <Compile Include="ClassesForBinding\ApplicantForBinding.cs" />
     <Compile Include="Authorization.cs" />
-    <Compile Include="AuthorizationForm.cs">
+    <Compile Include="View\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AuthorizationForm.Designer.cs">
+    <Compile Include="View\AuthorizationForm.Designer.cs">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AuthorizationFormViewModel.cs" />
+    <Compile Include="ViewModel\AuthorizationFormViewModel.cs" />
     <Compile Include="CompareApplicantsByPoints.cs" />
     <Compile Include="CompareApplicantsByID.cs" />
     <Compile Include="CurrentSession.cs" />
     <Compile Include="DocumentsStatus.cs" />
     <Compile Include="Exam.cs" />
     <Compile Include="Human.cs" />
-    <Compile Include="IApplicant.cs" />
-    <Compile Include="IAuthorization.cs" />
-    <Compile Include="ICredentials.cs" />
-    <Compile Include="ICurrentSession.cs" />
-    <Compile Include="IDocumentStatus.cs" />
-    <Compile Include="IExam.cs" />
-    <Compile Include="IHuman.cs" />
-    <Compile Include="IPassport.cs" />
-    <Compile Include="ISchoolDiploma.cs" />
-    <Compile Include="IWorker.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Interfaces\IApplicant.cs" />
+    <Compile Include="Interfaces\IAuthorization.cs" />
+    <Compile Include="Interfaces\ICredentials.cs" />
+    <Compile Include="Interfaces\ICurrentSession.cs" />
+    <Compile Include="Interfaces\IDocumentStatus.cs" />
+    <Compile Include="Interfaces\IExam.cs" />
+    <Compile Include="Interfaces\IHuman.cs" />
+    <Compile Include="Interfaces\IPassport.cs" />
+    <Compile Include="Interfaces\ISchoolDiploma.cs" />
+    <Compile Include="Interfaces\IWorker.cs" />
+    <Compile Include="View\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="View\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainFormViewModel.cs" />
+    <Compile Include="ViewModel\MainFormViewModel.cs" />
     <Compile Include="Passport.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolDiploma.cs" />
     <Compile Include="Worker.cs" />
-    <Compile Include="WorkerForBinding.cs" />
-    <Compile Include="WorkerRegisrtationFormViewModel.cs" />
-    <Compile Include="WorkersRegistrationForm.cs">
+    <Compile Include="ClassesForBinding\WorkerForBinding.cs" />
+    <Compile Include="ViewModel\WorkerRegisrtationFormViewModel.cs" />
+    <Compile Include="View\WorkersRegistrationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WorkersRegistrationForm.Designer.cs">
+    <Compile Include="View\WorkersRegistrationForm.Designer.cs">
       <DependentUpon>WorkersRegistrationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Сredentials.cs" />
-    <EmbeddedResource Include="AboutForm.resx">
+    <EmbeddedResource Include="View\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AuthorizationForm.resx">
+    <EmbeddedResource Include="View\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="View\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -124,14 +124,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="WorkersRegistrationForm.resx">
+    <EmbeddedResource Include="View\WorkersRegistrationForm.resx">
       <DependentUpon>WorkersRegistrationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="dataFiles\ApplicantsData.json" />
-    <None Include="dataFiles\FieldsOfStudyData.json" />
-    <None Include="dataFiles\SubjectsData.json" />
-    <None Include="dataFiles\WorkersData.json" />
-    <None Include="packages.config" />
+    <None Include="DataFiles\ApplicantsData.json" />
+    <None Include="DataFiles\FieldsOfStudyData.json" />
+    <None Include="DataFiles\SubjectsData.json" />
+    <None Include="DataFiles\WorkersData.json" />
+    <None Include="DataFiles\packages.config" />
     <None Include="Properties\DataSources\Applicant.datasource" />
     <None Include="Properties\DataSources\ApplicantForBinding.datasource" />
     <None Include="Properties\DataSources\Worker.datasource" />
@@ -147,12 +147,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="DataFiles\App.config" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="images\icon.ico" />
-    <Content Include="images\logo1.png" />
+    <Content Include="Images\icon.ico" />
+    <Content Include="Images\logo1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
