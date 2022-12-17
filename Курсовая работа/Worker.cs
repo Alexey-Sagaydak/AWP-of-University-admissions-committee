@@ -19,7 +19,7 @@ namespace Курсовая_работа
         Admin = 1
     };
 
-    public class Worker : Human
+    public class Worker : Human, IWorker
     {
         [JsonProperty("status")]
         public Status Status { get; set; }

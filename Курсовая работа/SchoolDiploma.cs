@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public class SchoolDiploma
+    public class SchoolDiploma : ISchoolDiploma
     {
         private string series;
         private string number;

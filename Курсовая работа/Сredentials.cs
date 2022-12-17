@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public class Credentials
+    public class Credentials : ICredentials
     {
         private string login;
         private string password;

@@ -74,7 +74,16 @@
     <Compile Include="DocumentsStatus.cs" />
     <Compile Include="Exam.cs" />
     <Compile Include="Human.cs" />
+    <Compile Include="IApplicant.cs" />
+    <Compile Include="IAuthorization.cs" />
+    <Compile Include="ICredentials.cs" />
     <Compile Include="ICurrentSession.cs" />
+    <Compile Include="IDocumentStatus.cs" />
+    <Compile Include="IExam.cs" />
+    <Compile Include="IHuman.cs" />
+    <Compile Include="IPassport.cs" />
+    <Compile Include="ISchoolDiploma.cs" />
+    <Compile Include="IWorker.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -10,7 +10,7 @@ using System.IO;
 
 namespace Курсовая_работа
 {
-    public class Authorization
+    public class Authorization : IAuthorization
     {
         private List<Worker> Workers = new List<Worker>();
 

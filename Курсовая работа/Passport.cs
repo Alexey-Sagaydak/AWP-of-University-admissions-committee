@@ -9,7 +9,7 @@ using System.Xml.Linq;
 
 namespace Курсовая_работа
 {
-    public class Passport
+    public class Passport : IPassport
     {
         private string series;
         private string number;

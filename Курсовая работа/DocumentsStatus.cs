@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public class DocumentsStatus
+    public class DocumentsStatus : IDocumentStatus
     {
         [JsonProperty("is_statement_signed")]
         public bool isStatementSigned { get; set; }

@@ -10,7 +10,7 @@ using Курсовая_работа;
 
 namespace Курсовая_работа
 {
-    public class Exam
+    public class Exam : IExam
     {
         [JsonProperty("subject")]
         public int Subject { get; set; }

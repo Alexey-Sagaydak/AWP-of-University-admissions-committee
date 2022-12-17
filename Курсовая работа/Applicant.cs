@@ -11,7 +11,7 @@ using System.IO;
 
 namespace Курсовая_работа
 {
-    public class Applicant : Human
+    public class Applicant : Human, IApplicant
     {
         [JsonProperty("id")]
         public int ID { get; set; }
