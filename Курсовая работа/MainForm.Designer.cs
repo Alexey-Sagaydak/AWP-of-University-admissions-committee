@@ -46,7 +46,6 @@
             this.dataBasePanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.bindingNavigator2 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.applicantForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
@@ -136,7 +135,6 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.workerLoginLabel = new System.Windows.Forms.Label();
             this.loginToDeleteTextBox = new System.Windows.Forms.TextBox();
-            this.workerForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.deleteWorkerButton = new System.Windows.Forms.Button();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -150,11 +148,6 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.workersDataGridView = new System.Windows.Forms.DataGridView();
-            this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.отчествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.логинDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.администраторDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.OrderOfEnrollmentPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -176,12 +169,18 @@
             this.copeButton = new System.Windows.Forms.Button();
             this.orderButton = new System.Windows.Forms.Button();
             this.orderLabel = new System.Windows.Forms.Label();
+            this.workerForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.applicantForBindingBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.middleNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.adminDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.mainMenuStrip.SuspendLayout();
             this.dataBasePanel.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).BeginInit();
             this.bindingNavigator2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicantsDataGridView)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
             this.applicantPanel.SuspendLayout();
@@ -201,7 +200,6 @@
             this.workersPanel.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.workersDataGridView)).BeginInit();
@@ -216,6 +214,8 @@
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenuStrip
@@ -355,11 +355,6 @@
             this.bindingNavigator2.Size = new System.Drawing.Size(529, 27);
             this.bindingNavigator2.TabIndex = 0;
             this.bindingNavigator2.Text = "bindingNavigator2";
-            // 
-            // applicantForBindingBindingSource
-            // 
-            this.applicantForBindingBindingSource.DataSource = typeof(Курсовая_работа.ApplicantForBinding);
-            this.applicantForBindingBindingSource.Sort = "";
             // 
             // bindingNavigatorCountItem1
             // 
@@ -1014,7 +1009,7 @@
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.additionalTextBox.Size = new System.Drawing.Size(606, 198);
+            this.additionalTextBox.Size = new System.Drawing.Size(589, 198);
             this.additionalTextBox.TabIndex = 99;
             // 
             // additionalLabel
@@ -1044,7 +1039,7 @@
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.organizationTextBox.Location = new System.Drawing.Point(23, 332);
             this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(603, 29);
+            this.organizationTextBox.Size = new System.Drawing.Size(586, 29);
             this.organizationTextBox.TabIndex = 98;
             // 
             // addressLabel
@@ -1064,7 +1059,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.addressTextBox.Location = new System.Drawing.Point(20, 155);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(611, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(594, 29);
             this.addressTextBox.TabIndex = 95;
             // 
             // diplomaLabel
@@ -1140,7 +1135,7 @@
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.examsTableLayoutPanel.Size = new System.Drawing.Size(653, 183);
+            this.examsTableLayoutPanel.Size = new System.Drawing.Size(636, 183);
             this.examsTableLayoutPanel.TabIndex = 30;
             // 
             // subject1CheckBox
@@ -1151,7 +1146,7 @@
             this.subject1CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.subject1CheckBox.Enabled = false;
             this.subject1CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject1CheckBox.Location = new System.Drawing.Point(144, 15);
+            this.subject1CheckBox.Location = new System.Drawing.Point(143, 15);
             this.subject1CheckBox.Name = "subject1CheckBox";
             this.subject1CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject1CheckBox.TabIndex = 6;
@@ -1166,7 +1161,7 @@
             this.subject2CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.subject2CheckBox.Enabled = false;
             this.subject2CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject2CheckBox.Location = new System.Drawing.Point(144, 60);
+            this.subject2CheckBox.Location = new System.Drawing.Point(143, 60);
             this.subject2CheckBox.Name = "subject2CheckBox";
             this.subject2CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject2CheckBox.TabIndex = 9;
@@ -1181,7 +1176,7 @@
             this.subject3CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.subject3CheckBox.Enabled = false;
             this.subject3CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject3CheckBox.Location = new System.Drawing.Point(144, 105);
+            this.subject3CheckBox.Location = new System.Drawing.Point(143, 105);
             this.subject3CheckBox.Name = "subject3CheckBox";
             this.subject3CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject3CheckBox.TabIndex = 12;
@@ -1193,7 +1188,7 @@
             this.subject4CheckBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.subject4CheckBox.AutoSize = true;
             this.subject4CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject4CheckBox.Location = new System.Drawing.Point(144, 152);
+            this.subject4CheckBox.Location = new System.Drawing.Point(143, 152);
             this.subject4CheckBox.Name = "subject4CheckBox";
             this.subject4CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject4CheckBox.TabIndex = 15;
@@ -1218,9 +1213,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject1ComboBox.Location = new System.Drawing.Point(165, 7);
+            this.subject1ComboBox.Location = new System.Drawing.Point(164, 7);
             this.subject1ComboBox.Name = "subject1ComboBox";
-            this.subject1ComboBox.Size = new System.Drawing.Size(406, 30);
+            this.subject1ComboBox.Size = new System.Drawing.Size(393, 30);
             this.subject1ComboBox.TabIndex = 7;
             // 
             // subject2ComboBox
@@ -1241,9 +1236,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject2ComboBox.Location = new System.Drawing.Point(165, 52);
+            this.subject2ComboBox.Location = new System.Drawing.Point(164, 52);
             this.subject2ComboBox.Name = "subject2ComboBox";
-            this.subject2ComboBox.Size = new System.Drawing.Size(406, 30);
+            this.subject2ComboBox.Size = new System.Drawing.Size(393, 30);
             this.subject2ComboBox.TabIndex = 10;
             // 
             // subject3ComboBox
@@ -1264,9 +1259,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject3ComboBox.Location = new System.Drawing.Point(165, 97);
+            this.subject3ComboBox.Location = new System.Drawing.Point(164, 97);
             this.subject3ComboBox.Name = "subject3ComboBox";
-            this.subject3ComboBox.Size = new System.Drawing.Size(406, 30);
+            this.subject3ComboBox.Size = new System.Drawing.Size(393, 30);
             this.subject3ComboBox.TabIndex = 13;
             // 
             // subject4ComboBox
@@ -1287,9 +1282,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject4ComboBox.Location = new System.Drawing.Point(165, 144);
+            this.subject4ComboBox.Location = new System.Drawing.Point(164, 144);
             this.subject4ComboBox.Name = "subject4ComboBox";
-            this.subject4ComboBox.Size = new System.Drawing.Size(406, 30);
+            this.subject4ComboBox.Size = new System.Drawing.Size(393, 30);
             this.subject4ComboBox.TabIndex = 16;
             // 
             // subject1numericUpDown
@@ -1298,9 +1293,9 @@
             this.subject1numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject1numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
             this.subject1numericUpDown.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.subject1numericUpDown.Location = new System.Drawing.Point(577, 8);
+            this.subject1numericUpDown.Location = new System.Drawing.Point(563, 8);
             this.subject1numericUpDown.Name = "subject1numericUpDown";
-            this.subject1numericUpDown.Size = new System.Drawing.Size(73, 29);
+            this.subject1numericUpDown.Size = new System.Drawing.Size(70, 29);
             this.subject1numericUpDown.TabIndex = 8;
             // 
             // subject2numericUpDown
@@ -1308,9 +1303,9 @@
             this.subject2numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject2numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject2numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.subject2numericUpDown.Location = new System.Drawing.Point(577, 53);
+            this.subject2numericUpDown.Location = new System.Drawing.Point(563, 53);
             this.subject2numericUpDown.Name = "subject2numericUpDown";
-            this.subject2numericUpDown.Size = new System.Drawing.Size(73, 29);
+            this.subject2numericUpDown.Size = new System.Drawing.Size(70, 29);
             this.subject2numericUpDown.TabIndex = 11;
             // 
             // subject4numericUpDown
@@ -1318,9 +1313,9 @@
             this.subject4numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject4numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject4numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.subject4numericUpDown.Location = new System.Drawing.Point(577, 144);
+            this.subject4numericUpDown.Location = new System.Drawing.Point(563, 144);
             this.subject4numericUpDown.Name = "subject4numericUpDown";
-            this.subject4numericUpDown.Size = new System.Drawing.Size(73, 29);
+            this.subject4numericUpDown.Size = new System.Drawing.Size(70, 29);
             this.subject4numericUpDown.TabIndex = 17;
             // 
             // subject3numericUpDown
@@ -1328,9 +1323,9 @@
             this.subject3numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject3numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject3numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.subject3numericUpDown.Location = new System.Drawing.Point(577, 98);
+            this.subject3numericUpDown.Location = new System.Drawing.Point(563, 98);
             this.subject3numericUpDown.Name = "subject3numericUpDown";
-            this.subject3numericUpDown.Size = new System.Drawing.Size(73, 29);
+            this.subject3numericUpDown.Size = new System.Drawing.Size(70, 29);
             this.subject3numericUpDown.TabIndex = 14;
             // 
             // label1
@@ -1444,7 +1439,7 @@
             "41.03.03 - Востоковедение и африканистика"});
             this.areasComboBox.Location = new System.Drawing.Point(32, 363);
             this.areasComboBox.Name = "areasComboBox";
-            this.areasComboBox.Size = new System.Drawing.Size(436, 30);
+            this.areasComboBox.Size = new System.Drawing.Size(419, 30);
             this.areasComboBox.TabIndex = 19;
             // 
             // areasLabel
@@ -1529,7 +1524,7 @@
             // loginToDeleteTextBox
             // 
             this.loginToDeleteTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.loginToDeleteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workerForBindingBindingSource, "Логин", true));
+            this.loginToDeleteTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.workerForBindingBindingSource, "Login", true));
             this.loginToDeleteTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.loginToDeleteTextBox.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.loginToDeleteTextBox.Location = new System.Drawing.Point(435, 11);
@@ -1537,10 +1532,6 @@
             this.loginToDeleteTextBox.ReadOnly = true;
             this.loginToDeleteTextBox.Size = new System.Drawing.Size(216, 29);
             this.loginToDeleteTextBox.TabIndex = 1;
-            // 
-            // workerForBindingBindingSource
-            // 
-            this.workerForBindingBindingSource.DataSource = typeof(Курсовая_работа.WorkerForBinding);
             // 
             // deleteWorkerButton
             // 
@@ -1685,11 +1676,11 @@
             this.workersDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.workersDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.workersDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.фамилияDataGridViewTextBoxColumn,
-            this.имяDataGridViewTextBoxColumn,
-            this.отчествоDataGridViewTextBoxColumn,
-            this.логинDataGridViewTextBoxColumn,
-            this.администраторDataGridViewCheckBoxColumn});
+            this.surnameDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.middleNameDataGridViewTextBoxColumn,
+            this.loginDataGridViewTextBoxColumn,
+            this.adminDataGridViewCheckBoxColumn});
             this.workersDataGridView.DataSource = this.workerForBindingBindingSource;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
@@ -1704,41 +1695,6 @@
             this.workersDataGridView.ReadOnly = true;
             this.workersDataGridView.Size = new System.Drawing.Size(1104, 499);
             this.workersDataGridView.TabIndex = 5;
-            // 
-            // фамилияDataGridViewTextBoxColumn
-            // 
-            this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
-            this.фамилияDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // имяDataGridViewTextBoxColumn
-            // 
-            this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
-            this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
-            this.имяDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // отчествоDataGridViewTextBoxColumn
-            // 
-            this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
-            this.отчествоDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // логинDataGridViewTextBoxColumn
-            // 
-            this.логинDataGridViewTextBoxColumn.DataPropertyName = "Логин";
-            this.логинDataGridViewTextBoxColumn.HeaderText = "Логин";
-            this.логинDataGridViewTextBoxColumn.Name = "логинDataGridViewTextBoxColumn";
-            this.логинDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // администраторDataGridViewCheckBoxColumn
-            // 
-            this.администраторDataGridViewCheckBoxColumn.DataPropertyName = "Администратор";
-            this.администраторDataGridViewCheckBoxColumn.HeaderText = "Администратор";
-            this.администраторDataGridViewCheckBoxColumn.Name = "администраторDataGridViewCheckBoxColumn";
-            this.администраторDataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
@@ -2048,6 +2004,51 @@
             this.orderLabel.TabIndex = 1;
             this.orderLabel.Text = "Формирование приказа о зачислении";
             // 
+            // workerForBindingBindingSource
+            // 
+            this.workerForBindingBindingSource.DataSource = typeof(Курсовая_работа.WorkerForBinding);
+            // 
+            // applicantForBindingBindingSource
+            // 
+            this.applicantForBindingBindingSource.DataSource = typeof(Курсовая_работа.ApplicantForBinding);
+            this.applicantForBindingBindingSource.Sort = "";
+            // 
+            // surnameDataGridViewTextBoxColumn
+            // 
+            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
+            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
+            this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // middleNameDataGridViewTextBoxColumn
+            // 
+            this.middleNameDataGridViewTextBoxColumn.DataPropertyName = "MiddleName";
+            this.middleNameDataGridViewTextBoxColumn.HeaderText = "Отчество";
+            this.middleNameDataGridViewTextBoxColumn.Name = "middleNameDataGridViewTextBoxColumn";
+            this.middleNameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "Логин";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // adminDataGridViewCheckBoxColumn
+            // 
+            this.adminDataGridViewCheckBoxColumn.DataPropertyName = "Admin";
+            this.adminDataGridViewCheckBoxColumn.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.adminDataGridViewCheckBoxColumn.HeaderText = "Администратор";
+            this.adminDataGridViewCheckBoxColumn.Name = "adminDataGridViewCheckBoxColumn";
+            this.adminDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2055,10 +2056,10 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1139, 630);
             this.Controls.Add(this.mainMenuStrip);
-            this.Controls.Add(this.applicantPanel);
             this.Controls.Add(this.workersPanel);
             this.Controls.Add(this.OrderOfEnrollmentPanel);
             this.Controls.Add(this.dataBasePanel);
+            this.Controls.Add(this.applicantPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mainMenuStrip;
             this.MinimumSize = new System.Drawing.Size(1000, 600);
@@ -2074,7 +2075,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator2)).EndInit();
             this.bindingNavigator2.ResumeLayout(false);
             this.bindingNavigator2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicantsDataGridView)).EndInit();
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -2103,7 +2103,6 @@
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
@@ -2125,6 +2124,8 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel10.PerformLayout();
             this.tableLayoutPanel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.workerForBindingBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.applicantForBindingBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2205,7 +2206,6 @@
         private System.Windows.Forms.Label workerLoginLabel;
         private System.Windows.Forms.TextBox loginToDeleteTextBox;
         private System.Windows.Forms.Button deleteWorkerButton;
-        private System.Windows.Forms.BindingSource workerForBindingBindingSource;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -2274,5 +2274,11 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Button copeButton;
         private System.Windows.Forms.Button orderButton;
+        private System.Windows.Forms.BindingSource workerForBindingBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn middleNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn adminDataGridViewCheckBoxColumn;
     }
 }

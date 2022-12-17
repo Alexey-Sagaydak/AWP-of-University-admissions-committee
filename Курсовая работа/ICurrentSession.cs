@@ -13,5 +13,6 @@ namespace Курсовая_работа
         void AddApplicant(Applicant applicant);
         bool DeleteApplicant(int ID);
         Applicant GetApplicant(int ID);
+        void Load();
     }
 }

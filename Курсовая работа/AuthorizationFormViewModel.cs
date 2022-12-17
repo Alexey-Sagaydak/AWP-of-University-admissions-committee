@@ -10,7 +10,7 @@ namespace Курсовая_работа
 {
     public class AuthorizationFormViewModel
     {
-        public Authorization authorization;
+        public IAuthorization authorization;
 
         public bool CheckWorker(string login, string password, out Worker worker)
         {
