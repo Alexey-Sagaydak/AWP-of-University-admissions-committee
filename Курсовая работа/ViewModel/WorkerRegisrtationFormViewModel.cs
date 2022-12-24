@@ -8,7 +8,7 @@ namespace Курсовая_работа
 {
     public class WorkerRegisrtationFormViewModel
     {
-        CurrentSession currentSession;
+        public ICurrentSession currentSession;
 
         public void AddWorker(Worker worker)
         {

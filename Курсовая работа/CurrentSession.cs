@@ -19,8 +19,16 @@ namespace Курсовая_работа
 
         private void SaveChanges<T>(T obj, string filename)
         {
-            var textJson = JsonConvert.SerializeObject(obj);
-			File.WriteAllText(filename, textJson);
+			try
+			{
+				var textJson = JsonConvert.SerializeObject(obj);
+				File.WriteAllText(filename, textJson);
+			}
+			catch
+			{
+				throw new ArgumentException("Ошибка! Не удалось сериализовать объект.");
+			}
+            
         }
 
 		private void LoadChanges<T>(out T obj, string filename)
@@ -31,7 +39,6 @@ namespace Курсовая_работа
 			}
 			else
 			{
-				MessageBox.Show($"Не удалось найти '{filename }'!", "Критическая ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Environment.Exit(1);
                 throw new FileNotFoundException($"'{ filename }' не существует.");
 			}
@@ -45,39 +52,53 @@ namespace Курсовая_работа
 
         public void AddApplicant(Applicant applicant)
 		{
-			foreach (Applicant i in Applicants)
+			if (applicant != null)
 			{
-				if (i.ID == applicant.ID)
+				foreach (Applicant i in Applicants)
 				{
-                    DeleteApplicant(i.ID);
-					break;
+					if (i.ID == applicant.ID)
+					{
+						DeleteApplicant(i.ID);
+						break;
+					}
 				}
-			}
 
-			Applicants.Add(applicant);
-			SaveChanges(Applicants, "ApplicantsData.json");
+				Applicants.Add(applicant);
+				SaveChanges(Applicants, "ApplicantsData.json");
+			}
+			else
+			{
+				throw new ArgumentException("Абитуриент не должен равняться null");
+			}
 		}
 
 		public void AddWorker(Worker worker)
 		{
-			bool flag = true;
-			foreach (Worker i in Workers)
+			if (worker != null)
 			{
-				if (worker.credentials.Login == i.credentials.Login ||
-					worker.credentials.Hash.SequenceEqual(i.credentials.Hash))
+				bool flag = true;
+				foreach (Worker i in Workers)
 				{
-					flag = false;
-					break;
+					if (worker.credentials.Login == i.credentials.Login ||
+						worker.credentials.Hash.SequenceEqual(i.credentials.Hash))
+					{
+						flag = false;
+						break;
+					}
 				}
-			}
 
-			if (flag)
-			{
-				Workers.Add(worker);
-				SaveChanges(Workers, "WorkersData.json");
+				if (flag)
+				{
+					Workers.Add(worker);
+					SaveChanges(Workers, "WorkersData.json");
+				}
+				else
+					throw new ArgumentException("Не удалось добавить работника, так как данное ID уже используется.");
 			}
 			else
-				throw new ArgumentException("Не удалось добавить работника, так как данное ID уже используется.");
+			{
+				throw new ArgumentException("Работник не должен равняться null");
+            }
 		}
 
 		public bool DeleteApplicant(int ID)
@@ -104,28 +125,33 @@ namespace Курсовая_работа
 		public bool DeleteWorker(Worker worker)
 		{
 			bool flag = false;
-			if (CurrentWorker.Status == Status.Admin)
-			{
-				if (!worker.Equals(CurrentWorker))
+			if (worker != null)
+				if (CurrentWorker.Status == Status.Admin && worker != null)
 				{
-					for (int i = 0; i < Workers.Count; i++)
+					if (!worker.Equals(CurrentWorker))
 					{
-						if (Workers[i].Equals(worker))
+						for (int i = 0; i < Workers.Count; i++)
 						{
-							flag = Workers.Remove(Workers[i]);
+							if (Workers[i].Equals(worker))
+							{
+								flag = Workers.Remove(Workers[i]);
+							}
 						}
+					}
+					else
+					{
+						throw new ArgumentException("Нельзя удалить текущего работника.");
 					}
 				}
 				else
 				{
-					throw new ArgumentException("Нельзя удалить текущего работника.");
+					throw new ArgumentException("У вас недостаточно прав для выполнения данного действия.");
 				}
-			}
+				if (flag) SaveChanges(Workers, "WorkersData.json");
 			else
 			{
-				throw new ArgumentException("У вас недостаточно прав для выполнения данного действия.");
+				throw new ArgumentException("Работник не должен равняться null");
 			}
-			if (flag) SaveChanges(Workers, "WorkersData.json");
 			return flag;
 		}
 

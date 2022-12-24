@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
-    public abstract class Human
+    public class Human : IHuman
     {
         private string name;
         private string surname;

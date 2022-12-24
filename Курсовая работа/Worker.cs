@@ -13,9 +13,14 @@ namespace Курсовая_работа
 {
     public enum Status : byte
     {
-        [Description("Worker can add, delete and find applicants")]
+        /// <summary>
+        /// Status Worker allows worker to add, delete and find applicants
+        /// </summary>
         Worker = 0,
-        [Description("Admin can add, delete workers, add, delete and find applicants")]
+        
+        /// <summary>
+        /// Status Admin allows worker to add, delete and find applicants and workers
+        /// </summary>
         Admin = 1
     };
 
@@ -33,6 +38,5 @@ namespace Курсовая_работа
             credentials = _credentials;
             Status = _status;
         }
-        
     }
 }
