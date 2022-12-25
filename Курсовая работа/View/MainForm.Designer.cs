@@ -1025,7 +1025,7 @@
             this.additionalTextBox.Multiline = true;
             this.additionalTextBox.Name = "additionalTextBox";
             this.additionalTextBox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.additionalTextBox.Size = new System.Drawing.Size(538, 198);
+            this.additionalTextBox.Size = new System.Drawing.Size(521, 198);
             this.additionalTextBox.TabIndex = 99;
             // 
             // additionalLabel
@@ -1055,7 +1055,7 @@
             this.organizationTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.organizationTextBox.Location = new System.Drawing.Point(23, 332);
             this.organizationTextBox.Name = "organizationTextBox";
-            this.organizationTextBox.Size = new System.Drawing.Size(535, 29);
+            this.organizationTextBox.Size = new System.Drawing.Size(518, 29);
             this.organizationTextBox.TabIndex = 98;
             // 
             // addressLabel
@@ -1075,7 +1075,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Arial", 14.25F);
             this.addressTextBox.Location = new System.Drawing.Point(20, 155);
             this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(543, 29);
+            this.addressTextBox.Size = new System.Drawing.Size(526, 29);
             this.addressTextBox.TabIndex = 95;
             // 
             // diplomaLabel
@@ -1151,7 +1151,7 @@
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.examsTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.examsTableLayoutPanel.Size = new System.Drawing.Size(585, 183);
+            this.examsTableLayoutPanel.Size = new System.Drawing.Size(568, 183);
             this.examsTableLayoutPanel.TabIndex = 30;
             // 
             // subject1CheckBox
@@ -1162,7 +1162,7 @@
             this.subject1CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.subject1CheckBox.Enabled = false;
             this.subject1CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject1CheckBox.Location = new System.Drawing.Point(141, 15);
+            this.subject1CheckBox.Location = new System.Drawing.Point(140, 15);
             this.subject1CheckBox.Name = "subject1CheckBox";
             this.subject1CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject1CheckBox.TabIndex = 6;
@@ -1177,7 +1177,7 @@
             this.subject2CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.subject2CheckBox.Enabled = false;
             this.subject2CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject2CheckBox.Location = new System.Drawing.Point(141, 60);
+            this.subject2CheckBox.Location = new System.Drawing.Point(140, 60);
             this.subject2CheckBox.Name = "subject2CheckBox";
             this.subject2CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject2CheckBox.TabIndex = 9;
@@ -1192,7 +1192,7 @@
             this.subject3CheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.subject3CheckBox.Enabled = false;
             this.subject3CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject3CheckBox.Location = new System.Drawing.Point(141, 105);
+            this.subject3CheckBox.Location = new System.Drawing.Point(140, 105);
             this.subject3CheckBox.Name = "subject3CheckBox";
             this.subject3CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject3CheckBox.TabIndex = 12;
@@ -1204,7 +1204,7 @@
             this.subject4CheckBox.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.subject4CheckBox.AutoSize = true;
             this.subject4CheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.25F);
-            this.subject4CheckBox.Location = new System.Drawing.Point(141, 152);
+            this.subject4CheckBox.Location = new System.Drawing.Point(140, 152);
             this.subject4CheckBox.Name = "subject4CheckBox";
             this.subject4CheckBox.Size = new System.Drawing.Size(15, 14);
             this.subject4CheckBox.TabIndex = 15;
@@ -1229,9 +1229,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject1ComboBox.Location = new System.Drawing.Point(162, 7);
+            this.subject1ComboBox.Location = new System.Drawing.Point(161, 7);
             this.subject1ComboBox.Name = "subject1ComboBox";
-            this.subject1ComboBox.Size = new System.Drawing.Size(352, 30);
+            this.subject1ComboBox.Size = new System.Drawing.Size(338, 30);
             this.subject1ComboBox.TabIndex = 7;
             // 
             // subject2ComboBox
@@ -1252,9 +1252,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject2ComboBox.Location = new System.Drawing.Point(162, 52);
+            this.subject2ComboBox.Location = new System.Drawing.Point(161, 52);
             this.subject2ComboBox.Name = "subject2ComboBox";
-            this.subject2ComboBox.Size = new System.Drawing.Size(352, 30);
+            this.subject2ComboBox.Size = new System.Drawing.Size(338, 30);
             this.subject2ComboBox.TabIndex = 10;
             // 
             // subject3ComboBox
@@ -1275,9 +1275,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject3ComboBox.Location = new System.Drawing.Point(162, 97);
+            this.subject3ComboBox.Location = new System.Drawing.Point(161, 97);
             this.subject3ComboBox.Name = "subject3ComboBox";
-            this.subject3ComboBox.Size = new System.Drawing.Size(352, 30);
+            this.subject3ComboBox.Size = new System.Drawing.Size(338, 30);
             this.subject3ComboBox.TabIndex = 13;
             // 
             // subject4ComboBox
@@ -1298,9 +1298,9 @@
             "География",
             "Биология",
             "Химия"});
-            this.subject4ComboBox.Location = new System.Drawing.Point(162, 144);
+            this.subject4ComboBox.Location = new System.Drawing.Point(161, 144);
             this.subject4ComboBox.Name = "subject4ComboBox";
-            this.subject4ComboBox.Size = new System.Drawing.Size(352, 30);
+            this.subject4ComboBox.Size = new System.Drawing.Size(338, 30);
             this.subject4ComboBox.TabIndex = 16;
             // 
             // subject1numericUpDown
@@ -1309,9 +1309,9 @@
             this.subject1numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject1numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
             this.subject1numericUpDown.ForeColor = System.Drawing.SystemColors.MenuText;
-            this.subject1numericUpDown.Location = new System.Drawing.Point(520, 8);
+            this.subject1numericUpDown.Location = new System.Drawing.Point(505, 8);
             this.subject1numericUpDown.Name = "subject1numericUpDown";
-            this.subject1numericUpDown.Size = new System.Drawing.Size(62, 29);
+            this.subject1numericUpDown.Size = new System.Drawing.Size(60, 29);
             this.subject1numericUpDown.TabIndex = 8;
             // 
             // subject2numericUpDown
@@ -1319,9 +1319,9 @@
             this.subject2numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject2numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject2numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.subject2numericUpDown.Location = new System.Drawing.Point(520, 53);
+            this.subject2numericUpDown.Location = new System.Drawing.Point(505, 53);
             this.subject2numericUpDown.Name = "subject2numericUpDown";
-            this.subject2numericUpDown.Size = new System.Drawing.Size(62, 29);
+            this.subject2numericUpDown.Size = new System.Drawing.Size(60, 29);
             this.subject2numericUpDown.TabIndex = 11;
             // 
             // subject4numericUpDown
@@ -1329,9 +1329,9 @@
             this.subject4numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject4numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject4numericUpDown.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.subject4numericUpDown.Location = new System.Drawing.Point(520, 144);
+            this.subject4numericUpDown.Location = new System.Drawing.Point(505, 144);
             this.subject4numericUpDown.Name = "subject4numericUpDown";
-            this.subject4numericUpDown.Size = new System.Drawing.Size(62, 29);
+            this.subject4numericUpDown.Size = new System.Drawing.Size(60, 29);
             this.subject4numericUpDown.TabIndex = 17;
             // 
             // subject3numericUpDown
@@ -1339,9 +1339,9 @@
             this.subject3numericUpDown.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.subject3numericUpDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.subject3numericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.subject3numericUpDown.Location = new System.Drawing.Point(520, 98);
+            this.subject3numericUpDown.Location = new System.Drawing.Point(505, 98);
             this.subject3numericUpDown.Name = "subject3numericUpDown";
-            this.subject3numericUpDown.Size = new System.Drawing.Size(62, 29);
+            this.subject3numericUpDown.Size = new System.Drawing.Size(60, 29);
             this.subject3numericUpDown.TabIndex = 14;
             // 
             // label1
@@ -1455,7 +1455,7 @@
             "41.03.03 - Востоковедение и африканистика"});
             this.areasComboBox.Location = new System.Drawing.Point(32, 363);
             this.areasComboBox.Name = "areasComboBox";
-            this.areasComboBox.Size = new System.Drawing.Size(368, 30);
+            this.areasComboBox.Size = new System.Drawing.Size(351, 30);
             this.areasComboBox.TabIndex = 19;
             // 
             // areasLabel

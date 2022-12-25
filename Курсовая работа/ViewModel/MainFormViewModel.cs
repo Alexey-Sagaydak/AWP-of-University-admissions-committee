@@ -11,6 +11,7 @@ namespace Курсовая_работа
     {
         public CurrentSession currentSession;
         
+        // Удалить работника
         public void DeleteWorker(string Login)
         {
             foreach (Worker worker in currentSession.Workers)
@@ -31,6 +32,7 @@ namespace Курсовая_работа
             }
         }
 
+        // Сформировать приказ о зачислении
         public string FormOrder(int fieldOfStudy, int budget, int contract, int minPoints)
         {
             List<Applicant> ResultList = new List<Applicant>();
@@ -58,6 +60,7 @@ namespace Курсовая_работа
             return ResultString;
         }
 
+        // Возвратить максимальный номер дела абитуриента
         public int MaxID()
         {
             int maxID = 0;
@@ -65,6 +68,7 @@ namespace Курсовая_работа
             return maxID;
         }
 
+        // Посчитать баллы абитуриента
         private int CountPoints(Applicant a)
         {
             int points = 0, minPoints = 100;

@@ -48,7 +48,9 @@ namespace Курсовая_работа
             }
         }
 
+        // Список направлений подготовки
         public static List<string> FieldsOfStudy = new List<string>();
+
         public Applicant(int _ID, string _name, string _surname, string _middleName, DateTime _dateOfBirth, Passport _passport,
             SchoolDiploma _schoolDiploma, List<Exam> _exams, int _achivements,
             string _additionalInformation, DocumentsStatus _documentsStatus, int _fieldOfStudy) :

@@ -17,6 +17,7 @@ namespace Курсовая_работа
 		public List<Worker> Workers = new List<Worker>();
 		public Worker CurrentWorker;
 
+		// Сохранить изменения
         private void SaveChanges<T>(T obj, string filename)
         {
 			try
@@ -31,7 +32,8 @@ namespace Курсовая_работа
             
         }
 
-		private void LoadChanges<T>(out T obj, string filename)
+        // Загрузить изменения
+        private void LoadChanges<T>(out T obj, string filename)
 		{
 			if (File.Exists(filename))
 			{
@@ -44,12 +46,14 @@ namespace Курсовая_работа
 			}
 		}
 
-		public void Load()
+        // Загрузить списки работников и абитуриентов
+        public void Load()
 		{
 			LoadChanges(out Applicants, "ApplicantsData.json");
 			LoadChanges(out Workers, "WorkersData.json");
 		}
 
+        // Добавить абитуриента
         public void AddApplicant(Applicant applicant)
 		{
 			if (applicant != null)
@@ -72,7 +76,8 @@ namespace Курсовая_работа
 			}
 		}
 
-		public void AddWorker(Worker worker)
+        // Добавить работника
+        public void AddWorker(Worker worker)
 		{
 			if (worker != null)
 			{
@@ -101,7 +106,8 @@ namespace Курсовая_работа
             }
 		}
 
-		public bool DeleteApplicant(int ID)
+        // Удалить абитуриента
+        public bool DeleteApplicant(int ID)
 		{
 			bool flag = false;
 			if (CurrentWorker.Status == Status.Admin)
@@ -122,7 +128,8 @@ namespace Курсовая_работа
 			return flag;
 		}
 
-		public bool DeleteWorker(Worker worker)
+        // Удалить работника
+        public bool DeleteWorker(Worker worker)
 		{
 			bool flag = false;
 			if (worker != null)
@@ -155,7 +162,8 @@ namespace Курсовая_работа
 			return flag;
 		}
 
-		public Applicant GetApplicant(int ID)
+        // Получить объект абитуриента по его номеру дела
+        public Applicant GetApplicant(int ID)
 		{
 			Applicant applicant = null;
             foreach (Applicant i in Applicants)

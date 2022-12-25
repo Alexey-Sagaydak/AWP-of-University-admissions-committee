@@ -9,6 +9,8 @@ namespace Курсовая_работа
 {
     public class CompareApplicantsByPoints : IComparer<Applicant>
     {
+
+        // Посчитать баллы абитуриента
         private int CountPoints(Applicant a)
         {
             int points = 0, minPoints = 100;
@@ -26,6 +28,8 @@ namespace Курсовая_работа
 
             return points;
         }
+
+        // Реализация интерфейса IComparer
         public int Compare(Applicant a, Applicant b)
         {
             int flag = 1, countA = CountPoints(a), countB = CountPoints(b);

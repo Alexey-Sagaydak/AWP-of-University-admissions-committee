@@ -12,6 +12,7 @@ namespace Курсовая_работа
     {
         public IAuthorization authorization;
 
+        // Проверка наличия работника в базе
         public bool CheckWorker(string login, string password, out Worker worker)
         {
             return authorization.CheckWorker(login, password, out worker);

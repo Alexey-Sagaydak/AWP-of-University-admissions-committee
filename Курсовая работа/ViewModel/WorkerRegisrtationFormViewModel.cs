@@ -10,6 +10,7 @@ namespace Курсовая_работа
     {
         public ICurrentSession currentSession;
 
+        // Добавить работника
         public void AddWorker(Worker worker)
         {
             currentSession.Load();

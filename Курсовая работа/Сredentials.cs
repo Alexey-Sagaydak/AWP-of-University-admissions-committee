@@ -18,10 +18,12 @@ namespace Курсовая_работа
         [JsonProperty("password_hash")]
         public byte[] Hash { get; set; }
 
+        // Регулярные выражения, проверяющие пароль на безопасность
         private Regex hasNumber = new Regex(@"[0-9]+");
         private Regex hasUpperChar = new Regex(@"[A-Z]+");
         private Regex hasMinimum6Chars = new Regex(@".{6,}");
 
+        // Метод, превращающий пароль в хэш
         private void HashPassword()
         {
             UnicodeEncoding ue = new UnicodeEncoding();
@@ -32,6 +34,7 @@ namespace Курсовая_работа
             //Console.WriteLine("\n");
         }
 
+        // Проверка пароля на безопасность
         private bool ValidatePassword(string password)
         {
             bool flag = false;

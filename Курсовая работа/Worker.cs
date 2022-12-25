@@ -11,6 +11,7 @@ using System.Xml.Linq;
 
 namespace Курсовая_работа
 {
+    // Перечисление, указывающее на статус и права работника
     public enum Status : byte
     {
         /// <summary>

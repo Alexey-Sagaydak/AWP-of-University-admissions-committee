@@ -14,6 +14,7 @@ namespace Курсовая_работа
         private string number;
         private string educationalInstitution;
 
+        // Регулярные выражения для проверки серии и номера аттестата
         private Regex fiveNumbers = new Regex(@"[0-9]{5}");
         private Regex nineNumbers = new Regex(@"[0-9]{9}");
 

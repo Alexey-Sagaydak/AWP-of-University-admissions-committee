@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Курсовая_работа
 {
+    // Подписано ли заявление, согласие и зачислен ли абитуриент
     public class DocumentsStatus : IDocumentStatus
     {
         [JsonProperty("is_statement_signed")]

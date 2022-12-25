@@ -15,6 +15,7 @@ namespace Курсовая_работа
         private string number;
         private string address;
 
+        // Резулярные выражения для проверки серии и номера паспорта
         private Regex fourNumbers = new Regex(@"[0-9]{4}");
         private Regex sixNumbers = new Regex(@"[0-9]{6}");
 

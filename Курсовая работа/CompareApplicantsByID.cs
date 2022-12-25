@@ -9,6 +9,7 @@ namespace Курсовая_работа
 {
     public class CompareApplicantsByID : IComparer<Applicant>
     {
+        // Реализация интерфейса IComparer
         public int Compare(Applicant a, Applicant b)
         {
             int flag = 1;

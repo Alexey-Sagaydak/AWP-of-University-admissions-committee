@@ -14,6 +14,7 @@ namespace Курсовая_работа
     {
         private List<Worker> Workers = new List<Worker>();
 
+        // Проверка наличия работника в базе
         public bool CheckWorker(string login, string password, out Worker a)
         {
             bool flag = false;

@@ -12,9 +12,11 @@ namespace Курсовая_работа
 {
     public class Exam : IExam
     {
+        // Индекс предмета
         [JsonProperty("subject")]
         public int Subject { get; set; }
 
+        // Количество баллов за экзамен
         private int points;
 
         [JsonProperty("points")]
@@ -29,6 +31,7 @@ namespace Курсовая_работа
             }
         }
 
+        // Список предметов
         public static List<string> Subjects = new List<string>();
         public Exam(int _subject, int _points)
         {
