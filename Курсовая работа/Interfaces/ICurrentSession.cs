@@ -14,5 +14,6 @@ namespace Курсовая_работа
         bool DeleteApplicant(int ID);
         Applicant GetApplicant(int ID);
         void Load();
+        string FormOrder(int fieldOfStudy, int budget, int contract, int minPoints);
     }
 }

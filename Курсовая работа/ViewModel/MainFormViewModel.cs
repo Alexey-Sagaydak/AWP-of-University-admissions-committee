@@ -32,34 +32,6 @@ namespace Курсовая_работа
             }
         }
 
-        // Сформировать приказ о зачислении
-        public string FormOrder(int fieldOfStudy, int budget, int contract, int minPoints)
-        {
-            List<Applicant> ResultList = new List<Applicant>();
-            string ResultString;
-
-            foreach (Applicant applicant in currentSession.Applicants)
-            {
-                if (applicant.fieldOfStudy == fieldOfStudy && applicant.documentsStatus.isStatementSigned &&
-                    applicant.documentsStatus.isEnrollmentSigned && CountPoints(applicant) >= minPoints)
-                {
-                    ResultList.Add(applicant);
-                }
-            }
-            ResultList.Sort(new CompareApplicantsByPoints());
-            ResultString = (ResultList.Count() != 0 && budget != 0) ? "Зачислить на бюджетной основе:\r\n" : "";
-
-
-            for (int i = 0; i < ResultList.Count(); i++)
-            {
-                if (i == budget + contract) break;
-                if (i == budget) 
-                    ResultString += "\r\nЗачислить на контрактной основе:\r\n";
-                ResultString += $"{i + 1}. {ResultList[i].Surname} {ResultList[i].Name} {ResultList[i].MiddleName} — {CountPoints(ResultList[i])}\r\n";
-            }
-            return ResultString;
-        }
-
         // Возвратить максимальный номер дела абитуриента
         public int MaxID()
         {
@@ -68,18 +40,9 @@ namespace Курсовая_работа
             return maxID;
         }
 
-        // Посчитать баллы абитуриента
-        private int CountPoints(Applicant a)
+        public string FormOrder(int fieldOfStudy, int budget, int contract, int minPoints)
         {
-            int points = 0, minPoints = 100;
-            foreach (Exam exam in a.exams)
-            {
-                points += exam.Points;
-                minPoints = (exam.Points < minPoints) ? exam.Points : minPoints;
-            }
-            if (a.exams.Count == 4) points -= minPoints;
-            points += a.Achivements;
-            return points;
+            return currentSession.FormOrder(fieldOfStudy, budget, contract, minPoints);
         }
 
         public MainFormViewModel(Worker CurrentWorker)
